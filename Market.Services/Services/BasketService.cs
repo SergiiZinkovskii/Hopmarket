@@ -33,7 +33,7 @@ public class BasketService : IBasketService
             {
                 return new BaseResponse<IEnumerable<OrderViewModel>>()
                 {
-                    Description = "Пользователь не найден",
+                    Description = "Користувача не знайдено",
                     StatusCode = StatusCode.UserNotFound
                 };
             }
@@ -80,7 +80,7 @@ public class BasketService : IBasketService
             {
                 return new BaseResponse<OrderViewModel>()
                 {
-                    Description = "Пользователь не найден",
+                    Description = "Користувача не знайдено",
                     StatusCode = StatusCode.UserNotFound
                 };
             }
@@ -90,7 +90,7 @@ public class BasketService : IBasketService
             {
                 return new BaseResponse<OrderViewModel>()
                 {
-                    Description = "Заказов нет",
+                    Description = "Замовлень немає",
                     StatusCode = StatusCode.OrderNotFound
                 };
             }

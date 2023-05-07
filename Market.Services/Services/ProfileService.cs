@@ -52,7 +52,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<ProfileViewModel>()
                 {
                     StatusCode = StatusCode.InternalServerError,
-                    Description = $"Внутренняя ошибка: {ex.Message}"
+                    Description = $"Внутрішня помилка: {ex.Message}"
                 };
             }
         }
@@ -72,7 +72,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<Profile>()
                 {
                     Data = profile,
-                    Description = "Данные обновлены",
+                    Description = "Дані оновлено",
                     StatusCode = StatusCode.OK
                 };
             }
@@ -82,7 +82,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<Profile>()
                 {
                     StatusCode = StatusCode.InternalServerError,
-                    Description = $"Внутренняя ошибка: {ex.Message}"
+                    Description = $"Внутрішня помилка: {ex.Message}"
                 };
             }
         }

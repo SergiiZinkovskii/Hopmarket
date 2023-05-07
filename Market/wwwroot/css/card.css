@@ -19,8 +19,9 @@
 
 .card-image {
     filter: grayscale(1);
+    height: 200px;
+
     transition: 1s;
 }
 .card-image:hover {
     filter: grayscale(0);
-}

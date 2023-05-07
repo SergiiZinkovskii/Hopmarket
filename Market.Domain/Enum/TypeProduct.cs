@@ -16,5 +16,10 @@ namespace Market.Domain.Enum
         ElectricalAppliances = 4,
         [Display(Name = "Краса та здоров'я")]
         BeautyAndHealth = 5,
+        [Display(Name = "Мобільні аксесуари")]
+        MobileAccessories = 6,
+        [Display(Name = "Товари для дітей")]
+        ForChild = 7,
+
     }
 }

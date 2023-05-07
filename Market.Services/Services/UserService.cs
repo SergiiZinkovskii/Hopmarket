@@ -38,7 +38,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<User>()
                     {
-                        Description = "Пользователь с таким логином уже есть",
+                        Description = "Користувач з таким логіном вже зареєстрований",
                         StatusCode = StatusCode.UserAlreadyExists
                     };
                 }
@@ -63,7 +63,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<User>()
                 {
                     Data = user,
-                    Description = "Пользователь добавлен",
+                    Description = "Користувача додано",
                     StatusCode = StatusCode.OK
                 };
             }
@@ -73,7 +73,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<User>()
                 {
                     StatusCode = StatusCode.InternalServerError,
-                    Description = $"Внутренняя ошибка: {ex.Message}"
+                    Description = $"Внутрішня помилка: {ex.Message}"
                 };
             }
         }
@@ -114,7 +114,7 @@ namespace Market.Service.Implementations
                     })
                     .ToListAsync();
 
-                _logger.LogInformation($"[UserService.GetUsers] получено элементов {users.Count}");
+                _logger.LogInformation($"[UserService.GetUsers] отримання елементів {users.Count}");
                 return new BaseResponse<IEnumerable<UserViewModel>>()
                 {
                     Data = users,
@@ -127,7 +127,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<IEnumerable<UserViewModel>>()
                 {
                     StatusCode = StatusCode.InternalServerError,
-                    Description = $"Внутренняя ошибка: {ex.Message}"
+                    Description = $"Внутрішня помилка: {ex.Message}"
                 };
             }
         }
@@ -146,7 +146,7 @@ namespace Market.Service.Implementations
                     };
                 }
                 await _userRepository.Delete(user);
-                _logger.LogInformation($"[UserService.DeleteUser] пользователь удален");
+                _logger.LogInformation($"[UserService.DeleteUser] користувача видалено");
 
                 return new BaseResponse<bool>
                 {
@@ -160,7 +160,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<bool>()
                 {
                     StatusCode = StatusCode.InternalServerError,
-                    Description = $"Внутренняя ошибка: {ex.Message}"
+                    Description = $"Внутрішня помилка: {ex.Message}"
                 };
             }
         }

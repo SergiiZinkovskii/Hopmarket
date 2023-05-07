@@ -119,7 +119,7 @@ namespace Market.DAL
                 new Product
                 {
                     Id = 5,
-                    Name = "Мультиварка",
+                    Name = "М'ясорубка",
                     Description = new string('A', 50),
                     DateCreate = DateTime.Now,
                     Speed = 900,

@@ -50,7 +50,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<ProductViewModel>()
                     {
-                        Description = "Пользователь не найден",
+                        Description = "Товар не знайдено",
                         StatusCode = StatusCode.UserNotFound
                     };
                 }
@@ -88,7 +88,7 @@ namespace Market.Service.Implementations
             var baseResponse = new BaseResponse<Dictionary<long, string>>();
             try
             {
-                var cars = await _productRepository.GetAll()
+                var products = await _productRepository.GetAll()
                     .Select(x => new ProductViewModel()
                     {
                         Id = x.Id,
@@ -103,7 +103,7 @@ namespace Market.Service.Implementations
                     .Where(x => EF.Functions.Like(x.Name, $"%{term}%"))
                     .ToDictionaryAsync(x => x.Id, t => t.Name);
 
-                baseResponse.Data = cars;
+                baseResponse.Data = products;
                 return baseResponse;
             }
             catch (Exception ex)
@@ -120,7 +120,7 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var car = new Product()
+                var product = new Product()
                 {
                     Name = model.Name,
                     Model = model.Model,
@@ -131,12 +131,12 @@ namespace Market.Service.Implementations
                     Price = model.Price,
                     Avatar = imageData
                 };
-                await _productRepository.Create(car);
+                await _productRepository.Create(product);
 
                 return new BaseResponse<Product>()
                 {
                     StatusCode = StatusCode.OK,
-                    Data = car
+                    Data = product
                 };
             }
             catch (Exception ex)
@@ -153,8 +153,8 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var car = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
-                if (car == null)
+                var product = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                if (product == null)
                 {
                     return new BaseResponse<bool>()
                     {
@@ -164,7 +164,7 @@ namespace Market.Service.Implementations
                     };
                 }
 
-                await _productRepository.Delete(car);
+                await _productRepository.Delete(product);
 
                 return new BaseResponse<bool>()
                 {
@@ -186,8 +186,8 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var car = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
-                if (car == null)
+                var product = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                if (product == null)
                 {
                     return new BaseResponse<Product>()
                     {
@@ -196,19 +196,19 @@ namespace Market.Service.Implementations
                     };
                 }
 
-                car.Description = model.Description;
-                car.Model = model.Model;
-                car.Price = model.Price;
-                car.Speed = model.Speed;
-                car.DateCreate = DateTime.ParseExact(model.DateCreate, "yyyyMMdd HH:mm", null);
-                car.Name = model.Name;
+                product.Description = model.Description;
+                product.Model = model.Model;
+                product.Price = model.Price;
+                product.Speed = model.Speed;
+                product.DateCreate = DateTime.ParseExact(model.DateCreate, "yyyyMMdd HH:mm", null);
+                product.Name = model.Name;
 
-                await _productRepository.Update(car);
+                await _productRepository.Update(product);
 
 
                 return new BaseResponse<Product>()
                 {
-                    Data = car,
+                    Data = product,
                     StatusCode = StatusCode.OK,
                 };
                 // TypeProduct
@@ -227,19 +227,19 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var cars = _productRepository.GetAll().ToList();
-                if (!cars.Any())
+                var products = _productRepository.GetAll().ToList();
+                if (!products.Any())
                 {
                     return new BaseResponse<List<Product>>()
                     {
-                        Description = "Найдено 0 элементов",
+                        Description = "Знайдено 0 елементів",
                         StatusCode = StatusCode.OK
                     };
                 }
 
                 return new BaseResponse<List<Product>>()
                 {
-                    Data = cars,
+                    Data = products,
                     StatusCode = StatusCode.OK
                 };
             }

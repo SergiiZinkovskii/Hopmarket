@@ -31,6 +31,107 @@ namespace Market.Controllers
             return View("Error", $"{response.Description}");
         }
 
+
+        [HttpGet]
+        public IActionResult GetCategory(string category)
+        {
+
+            var response = _productService.GetProducts();
+            var list = response.Data;
+            var newList = new List<Market.Domain.Entity.Product>();
+
+            if (string.Equals("MilitaryEquipment", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.MilitaryEquipment)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("Dishes", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.Dishes)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("AppliancesForHome", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.AppliancesForHome)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("BeautyAndHealth", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.BeautyAndHealth)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("MobileAccessories", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.MobileAccessories)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("ForChild", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.ForChild)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("Clothes", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.Clothes)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+            if (string.Equals("ElectricalAppliances", category, StringComparison.OrdinalIgnoreCase))
+            {
+                foreach (var item in list)
+                {
+                    if (item.TypeProduct == Domain.Enum.TypeProduct.ElectricalAppliances)
+                    {
+                        newList.Add(item);
+                    }
+                }
+                return View(newList);
+            }
+
+            return View("Error", $"{response.Description}");
+        }
+
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
@@ -43,6 +144,8 @@ namespace Market.Controllers
         }
 
         public IActionResult Compare() => PartialView();
+
+
 
         [HttpGet]
         public async Task<IActionResult> Save(int id)
@@ -64,8 +167,8 @@ namespace Market.Controllers
         {
             ModelState.Remove("Id");
             ModelState.Remove("DateCreate");
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 if (viewModel.Id == 0)
                 {
                     byte[] imageData;
@@ -79,8 +182,8 @@ namespace Market.Controllers
                 {
                     await _productService.Edit(viewModel.Id, viewModel);
                 }
-            }
-            return RedirectToAction("GetProduct");
+            //}
+            return RedirectToAction("GetProducts");
         }
 
 

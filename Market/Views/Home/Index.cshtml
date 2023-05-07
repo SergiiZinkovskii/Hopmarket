@@ -19,54 +19,55 @@
 
             <div class="col">
                 <div class="card h-100">
-                    <img src="~/img/odyag.webp" class="card-img-top card-image" />
+
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes"><img src="~/img/odyag.webp" class="card-img-top card-image" /></a>
                     <div class="card-body text-center">
                         <h5 class="card-title">Одяг</h5>
                     <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                     </div>
                     <div class="card-footer text-center">
-                        <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes" class="btn btn-success">До категорії</a>
                     </div>
                 </div>
             </div>
 
     <div class="col">
         <div class="card h-100">
-            <img src="~/img/mobilni-aksesuari.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories"><img src="~/img/mobilni-aksesuari.webp" class="card-img-top card-image" /></a>
             <div class="card-body text-center">
                 <h5 class="card-title">Мобільні аксесуари</h5>
                 <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories" class="btn btn-success">До категорії</a>
             </div>
         </div>
     </div>
         
         <div class="col">
             <div class="card h-100">
-                <img src="~/img/tovari-dlya-ditej.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild"><img src="~/img/tovari-dlya-ditej.webp" class="card-img-top card-image" /></a>
                 <div class="card-body text-center">
                     <h5 class="card-title">Товари для дітей</h5>
                     <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                     </p>
                 </div>
                 <div class="card-footer text-center">
-                    <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild" class="btn btn-success">До категорії</a>
                 </div>
             </div>
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="~/img/sport-zdorovya-vidpochinok.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth"><img src="~/img/sport-zdorovya-vidpochinok.webp" class="card-img-top card-image" /></a>
                 <div class="card-body text-center">
                     <h5 class="card-title">Краса та здоров'я'</h5>
                 <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
                 <div class="card-footer text-center">
-                    <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
-                </div>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth" class="btn btn-success">До категорії</a>
+            </div>
             </div>
         </div>
     </div>
@@ -80,7 +81,7 @@
                 <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a href="/Product/MilitaryEquipment" class="card-link">До категорії</a>
             </div>
         </div>
     </div>
@@ -93,7 +94,7 @@
                 <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a href="/Product/ElectricalAppliances" class="card-link">До категорії</a>
             </div>
         </div>
     </div>
@@ -102,13 +103,13 @@
         <div class="card h-100">
             <img src="~/img/posud.webp" class="card-img-top card-image" />
             <div class="card-body text-center">
-                <h5 class="card-title">Одяг</h5>
+                <h5 class="card-title">Посуд</h5>
                 <p class="card-text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a href="/Product/ElectricalAppliances" class="card-link">До категорії</a>
             </div>
         </div>
     </div>
@@ -120,7 +121,7 @@
                 <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             </div>
             <div class="card-footer text-center">
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Список товарів</a>
+                <a href="/Product/AppliancesForHome" class="card-link">До категорії</a>
             </div>
         </div>
     </div>
