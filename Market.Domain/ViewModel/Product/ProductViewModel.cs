@@ -16,7 +16,7 @@ namespace Market.Domain.ViewModels.Product
         public string Name { get; set; }
 
         [Display(Name = "Опис")]
-        [MinLength(50, ErrorMessage = "Опис має складатися більше ніж з 50 символів")]
+        [Required(ErrorMessage = "Введіть опис")]
         public string Description { get; set; }
 
         [Display(Name = "Модель")]

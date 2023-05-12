@@ -1,11 +1,11 @@
-﻿.navbar .dropdown-menu div[class*="col"] {
+﻿/*.navbar .dropdown-menu div[class*="col"] {
     margin-bottom: 1rem;
 }
 
 .navbar .dropdown-menu {
     border: none;
-    background-color: black !important; /*Смена цвета #2C3539*/
-}
+    background-color: black !important;*/ /*Смена цвета #2C3539*/
+/*}
 
 @media screen and (min-width: 992px) {
     .navbar {
@@ -23,11 +23,10 @@
     }
 
     .navbar .dropdown-menu {
-        width: 100%;
+        width: 50%;
         left: 0;
         right: 0;
         top: 45px;
-        display: block;
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 0.3s linear;
@@ -45,4 +44,4 @@
         border: 1px solid rgba(0,0,0,.15);
         background-color: #fff;
     }
-}
+}*/

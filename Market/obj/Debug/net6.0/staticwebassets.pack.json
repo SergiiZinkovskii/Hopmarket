@@ -37,8 +37,128 @@
       "PackagePath": "staticwebassets\\img\\Backgraund.jpg"
     },
     {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\avtomobilna-akustika.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\avtomobilna-akustika.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\avtotovari.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\avtotovari.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\dityachi-basejni.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\dityachi-basejni.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\electro.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\electro.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\elektrobritvi.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\elektrobritvi.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\elektronika.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\elektronika.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\kameri-sposterezhennya.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\kameri-sposterezhennya.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\krasa-ta-zdorovya.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\krasa-ta-zdorovya.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\kuhonni-kombajni.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\kuhonni-kombajni.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\lihtari-lampi-zapalnichki.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\lihtari-lampi-zapalnichki.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\lihtari.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\lihtari.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\masazheri.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\masazheri.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\mobilni-aksesuari.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\mobilni-aksesuari.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\myasorubki.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\myasorubki.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\odyag.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\odyag.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\posud.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\posud.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\schiptsi-ta-plojki.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\schiptsi-ta-plojki.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\sport-fitnes-turizm.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\sport-fitnes-turizm.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\sport-zdorovya-vidpochinok.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\sport-zdorovya-vidpochinok.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\sumki-ryukzaki-remeni.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\sumki-ryukzaki-remeni.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\suveniri.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\suveniri.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\tehnika-dlya-domu.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\tehnika-dlya-domu.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\tovari-dlya-ditej.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\tovari-dlya-ditej.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\tovari-dlya-domu.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\tovari-dlya-domu.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\tovari-dlya-turizmu.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\tovari-dlya-turizmu.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\videoreyestratori.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\videoreyestratori.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\vijskove-obmundiruvannya.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\vijskove-obmundiruvannya.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\vse-dlya-kuhni.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\vse-dlya-kuhni.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\categoryImage\\zasobi-individualnogo-zahistu.webp",
+      "PackagePath": "staticwebassets\\img\\categoryImage\\zasobi-individualnogo-zahistu.webp"
+    },
+    {
       "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\electro.webp",
       "PackagePath": "staticwebassets\\img\\electro.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\first.avif",
+      "PackagePath": "staticwebassets\\img\\first.avif"
     },
     {
       "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\mobilni-aksesuari.webp",
@@ -61,12 +181,32 @@
       "PackagePath": "staticwebassets\\img\\productImages\\холодильник.webp"
     },
     {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\second.avif",
+      "PackagePath": "staticwebassets\\img\\second.avif"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\slide-1.jpg",
+      "PackagePath": "staticwebassets\\img\\slide-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\slide-2.jpg",
+      "PackagePath": "staticwebassets\\img\\slide-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\slide-3.jpg",
+      "PackagePath": "staticwebassets\\img\\slide-3.jpg"
+    },
+    {
       "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\sport-zdorovya-vidpochinok.webp",
       "PackagePath": "staticwebassets\\img\\sport-zdorovya-vidpochinok.webp"
     },
     {
       "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\tehnika-dlya-domu.webp",
       "PackagePath": "staticwebassets\\img\\tehnika-dlya-domu.webp"
+    },
+    {
+      "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\third.avif",
+      "PackagePath": "staticwebassets\\img\\third.avif"
     },
     {
       "Id": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\tovari-dlya-ditej.webp",

@@ -35,101 +35,18 @@ namespace Market.Controllers
         [HttpGet]
         public IActionResult GetCategory(string category)
         {
-
             var response = _productService.GetProducts();
             var list = response.Data;
             var newList = new List<Market.Domain.Entity.Product>();
+                foreach (var item in list)
+                {
 
-            if (string.Equals("MilitaryEquipment", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.MilitaryEquipment)
+                    if (item.TypeProduct.ToString() == category)
                     {
                         newList.Add(item);
                     }
                 }
                 return View(newList);
-            }
-            if (string.Equals("Dishes", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.Dishes)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("AppliancesForHome", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.AppliancesForHome)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("BeautyAndHealth", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.BeautyAndHealth)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("MobileAccessories", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.MobileAccessories)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("ForChild", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.ForChild)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("Clothes", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.Clothes)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-            if (string.Equals("ElectricalAppliances", category, StringComparison.OrdinalIgnoreCase))
-            {
-                foreach (var item in list)
-                {
-                    if (item.TypeProduct == Domain.Enum.TypeProduct.ElectricalAppliances)
-                    {
-                        newList.Add(item);
-                    }
-                }
-                return View(newList);
-            }
-
-            return View("Error", $"{response.Description}");
         }
 
         [Authorize(Roles = "Admin")]

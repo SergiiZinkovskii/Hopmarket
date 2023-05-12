@@ -7,9 +7,17 @@
 
 <div style="padding: 20px;"></div>
 
+@if (!User.Identity.IsAuthenticated)
+{
+    <a asp-controller="Account" asp-action="Register"  type="button" class="btn-danger d-block">Авторизуйтесь для створення замовлення! </a>
+}
+     @if (User.Identity.IsAuthenticated)
+            {
 <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
         <div class="card">
+
+       
             <form id="orderFormId">
                 <input asp-for="Login" hidden />
                 <input asp-for="CarId" hidden />
@@ -44,27 +52,12 @@
                     <button class="btn btn-success" id="createOrderId">Відправити</button>
                 </div>
             </form>
+             
         </div>
     </div>
-    <div class="col-sm-6">
-        <div class="card">
-            <img src="https://img3.akspic.ru/previews/2/3/6/3632/3632-skuderiya_ferrari-gonki-krasnyj-krasnyj_cvet-splochenie-x750.jpg" height="300" width="300" class="card-img-top">
-            <div class="card-body">
-                <h5 class="card-title">Інструкція з отримання товару</h5>
-                <p class="card-text">Як відбувається отримання товару:</p>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">○ Стоврюєте замовлення</li>
-                <li class="list-group-item">○ Ми телефонуємо і уточнюємо інформацію</li>
-                <li class="list-group-item">○ Відправляємо зручним для вас поштовим сервісом</li>
-            </ul>
-            <div class="card-body">
-                <a asp-controller="Home" asp-action="Index" class="card-link">Головна</a>
-                <a asp-controller="Product" asp-action="GetProducts" class="card-link">Товари</a>
-            </div>
-        </div>
-    </div>
+
 </div>
+}
 
 @section pageScripts
     {

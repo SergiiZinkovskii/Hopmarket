@@ -2,28 +2,68 @@
     ViewData["Title"] = "Головна";
 }
 
-<div style="padding: 10px;"></div>
 
-    <div class="card col-md-12">
-        <div class="card-body">
-            <h5 class="card-title text-center">Ласкаво просимо на сайт Hop-Shop</h5>
-            <p class="card-text">
-                Найкращий сайт з найнижчими цінами та неперевершеним сервісом!
-            </p>
-            <p class="card-text"><small class="text-muted">Hop-Shop</small></p>
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img src="~/img/slide-1.jpg" class="d-block w-100 h-25 object-fit-cover" alt="Slide 1">
+
+            <div class="container">
+                <div class="carousel-caption text-start">
+                    <h1>Example headline.</h1>
+                    <p>Some representative placeholder content for the first slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item active carousel-item-start">
+            <img src="~/img/slide-2.jpg" class="d-block w-100 h-25 object-fit-cover" alt="Slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Some representative placeholder content for the second slide of the carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item carousel-item-next carousel-item-start">
+            <img src="~/img/slide-3.jpg" class="d-block w-100 h-25 object-fit-cover" alt="Slide 3">
+            <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>One more for good measure.</h1>
+                    <p>Some representative placeholder content for the third slide of this carousel.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                </div>
+            </div>
         </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+    
 
-    <div style="padding: 10px;"></div>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-
-            <div class="col">
+<div class="row ">
+       
+          
+        <div class="col-md-3">
                 <div class="card h-100">
 
-            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes"><img src="~/img/odyag.webp" class="card-img-top card-image" /></a>
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes"><img src="~/img/categoryImage/odyag.webp" class="card-img-top card-image" /></a>
                     <div class="card-body text-center">
                         <h5 class="card-title">Одяг</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                     </div>
                     <div class="card-footer text-center">
                 <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes" class="btn btn-success">До категорії</a>
@@ -31,113 +71,335 @@
                 </div>
             </div>
 
-    <div class="col">
+    <div class="col-md-3">
         <div class="card h-100">
-            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories"><img src="~/img/mobilni-aksesuari.webp" class="card-img-top card-image" /></a>
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories"><img src="~/img/categoryImage/mobilni-aksesuari.webp" class="card-img-top  card-image" /></a>
             <div class="card-body text-center">
                 <h5 class="card-title">Мобільні аксесуари</h5>
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="card-footer text-center">
                 <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories" class="btn btn-success">До категорії</a>
             </div>
         </div>
     </div>
-        
-        <div class="col">
+
+    <div class="col-md-3">
             <div class="card h-100">
-            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild"><img src="~/img/tovari-dlya-ditej.webp" class="card-img-top card-image" /></a>
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild"><img src="~/img/categoryImage/tovari-dlya-ditej.webp" class="card-img-top  card-image" /></a>
                 <div class="card-body text-center">
                     <h5 class="card-title">Товари для дітей</h5>
                     <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dhe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dhe 1500s.</p>
                 </div>
                 <div class="card-footer text-center">
                 <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild" class="btn btn-success">До категорії</a>
                 </div>
             </div>
         </div>
-        <div class="col">
+    <div class="col-md-3">
             <div class="card h-100">
-            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth"><img src="~/img/sport-zdorovya-vidpochinok.webp" class="card-img-top card-image" /></a>
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth"><img src="~/img/categoryImage/krasa-ta-zdorovya.webp" class="card-img-top card-image" /></a>
                 <div class="card-body text-center">
-                    <h5 class="card-title">Краса та здоров'я'</h5>
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <h5 class="card-title">Краса та здоров'я</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
                 <div class="card-footer text-center">
                 <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth" class="btn btn-success">До категорії</a>
             </div>
             </div>
         </div>
-    </div>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <div class="col">
+    <div class="col-md-3">
         <div class="card h-100">
-            <img src="~/img/vijskove-obmundiruvannya.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MilitaryEquipment"><img src="~/img/categoryImage/vijskove-obmundiruvannya.webp" class="card-img-top  card-image" /></a>
             <div class="card-body text-center">
                 <h5 class="card-title">Військове спорядженяя</h5>
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="card-footer text-center">
-                <a href="/Product/MilitaryEquipment" class="card-link">До категорії</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MilitaryEquipment" class="btn btn-success">До категорії</a>
             </div>
         </div>
     </div>
 
-    <div class="col">
+    <div class="col-md-3">
         <div class="card h-100">
-            <img src="~/img/electro.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricalAppliances"><img src="~/img/categoryImage/electro.webp" class="card-img-top  card-image " /></a>
             <div class="card-body text-center">
                 <h5 class="card-title">Електроприлади</h5>
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="card-footer text-center">
-                <a href="/Product/ElectricalAppliances" class="card-link">До категорії</a>
-            </div>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricalAppliances" class="btn btn-success">До категорії</a>
+             </div>
         </div>
     </div>
 
-    <div class="col">
+    <div class="col-md-3">
         <div class="card h-100">
-            <img src="~/img/posud.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Dishes"><img src="~/img/categoryImage/posud.webp" class="card-img-top  card-image" /></a>
             <div class="card-body text-center">
                 <h5 class="card-title">Посуд</h5>
                 <p class="card-text">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="card-footer text-center">
-                <a href="/Product/ElectricalAppliances" class="card-link">До категорії</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Dishes" class="btn btn-success">До категорії</a>
+             </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="AppliancesForHome"><img src="~/img/categoryImage/tehnika-dlya-domu.webp" class="card-img-top card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Техніка для дому</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="AppliancesForHome" class="btn btn-success">До категорії</a>
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md-3">
         <div class="card h-100">
-            <img src="~/img/tehnika-dlya-domu.webp" class="card-img-top card-image" />
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Lamp"><img src="~/img/categoryImage/lihtari.webp" class="card-img-top  card-image" /></a>
             <div class="card-body text-center">
-                <h5 class="card-title">Техніка для дому</h5>
-                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h5 class="card-title">Ліхтарі</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="card-footer text-center">
-                <a href="/Product/AppliancesForHome" class="card-link">До категорії</a>
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Lamp" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BagsBackpacksBelts"><img src="~/img/categoryImage/sumki-ryukzaki-remeni.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Сумки, рюкзаки, ремені та інші аксесуари</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="BagsBackpacksBelts" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="TourismProducts"><img src="~/img/categoryImage/tovari-dlya-turizmu.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Товари для туризму</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="TourismProducts" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="PersonalProtectiveEquipment"><img src="~/img/categoryImage/zasobi-individualnogo-zahistu.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Засоби індивідуального захисту</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="PersonalProtectiveEquipment" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="KitchenBlenders"><img src="~/img/categoryImage/kuhonni-kombajni.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Кухонні комбайни</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="KitchenBlenders" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Massagers"><img src="~/img/categoryImage/masazheri.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Масажери</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Massagers" asp-action="GetCategory" asp-route-category="Massagers" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MeatGrinders"><img src="~/img/categoryImage/myasorubki.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">М'ясорубки</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="MeatGrinders" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SurveillanceCameras"><img src="~/img/categoryImage/kameri-sposterezhennya.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Камери спостереження</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SurveillanceCameras" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Dashcams"><img src="~/img/categoryImage/videoreyestratori.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Відеореєстратори</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Dashcams" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricShavers"><img src="~/img/categoryImage/elektrobritvi.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Електробритви</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricShavers" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="CarAudio"><img src="~/img/categoryImage/avtomobilna-akustika.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Автомобільна акустика</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="CarAudio" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Souvenirs"><img src="~/img/categoryImage/suveniri.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Сувеніри</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Souvenirs" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="CurlingIronsAndHairStraighteners"><img src="~/img/categoryImage/schiptsi-ta-plojki.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Щипці та плойки для волосся</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="CurlingIronsAndHairStraighteners" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsHealthLeisure"><img src="~/img/categoryImage/sport-zdorovya-vidpochinok.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Спорт, здоров'я, відпочино</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsHealthLeisure" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ChildrensPools"><img src="~/img/categoryImage/dityachi-basejni.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Дитячі басейни</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="ChildrensPools" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Electronics"><img src="~/img/categoryImage/elektronika.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Електроніка</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="Electronics" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="HomeAndGarden"><img src="~/img/categoryImage/tovari-dlya-domu.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Товари для дому та саду</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="HomeAndGarden" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="FlashlightsLampsLighters"><img src="~/img/categoryImage/lihtari-lampi-zapalnichki.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Світильники, лампи, запальнички</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="FlashlightsLampsLighters" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsFitnessTourism"><img src="~/img/categoryImage/sport-fitnes-turizm.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Спорт, фітнес, туризм</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsFitnessTourism" class="btn btn-success">До категорії</a>
+            </div>
+        </div>
+    </div>   <div class="col-md-3">
+        <div class="card h-100">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="EverythingForKitchen"><img src="~/img/categoryImage/vse-dlya-kuhni.webp" class="card-img-top  card-image" /></a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Все для кухні</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="Product" asp-action="GetCategory" asp-route-category="EverythingForKitchen" class="btn btn-success">До категорії</a>
             </div>
         </div>
     </div>
 </div>
-
-    <div style="padding: 10px;"></div>
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Some content</h5>
-            <p class="card-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+<div class="col-md-3">
+    <div class="card h-100">
+        <a asp-controller="Product" asp-action="GetCategory" asp-route-category="AutoProducts"><img src="~/img/categoryImage/avtotovari.webp" class="card-img-top  card-image" /></a>
+        <div class="card-body text-center">
+            <h5 class="card-title">Автотовари</h5>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+        </div>
+        <div class="card-footer text-center">
+            <a asp-controller="Product" asp-action="GetCategory" asp-route-category="AutoProducts" class="btn btn-success">До категорії</a>
         </div>
     </div>
+</div>
+
+
+
+  
+
 
 
 
