@@ -24,7 +24,7 @@ namespace Market.Controllers
         {
             var orderModel = new CreateOrderViewModel()
             {
-                CarId = id,
+                ProductId = id,
                 Login = User.Identity.Name,
                 Quantity = 0
             };

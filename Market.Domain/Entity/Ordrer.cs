@@ -4,7 +4,7 @@
     {
         public long Id { get; set; }
 
-        public long? CarId { get; set; }
+        public long? ProductId { get; set; }
 
         public DateTime DateCreated { get; set; }
 
@@ -15,6 +15,14 @@
         public string LastName { get; set; }
 
         public string MiddleName { get; set; }
+
+        public int Phone { get; set; }
+
+        public string Post { get; set; }
+
+        public string Payment{ get; set; }
+
+        public string Comments{ get; set; }
 
         public long? BasketId { get; set; }
 

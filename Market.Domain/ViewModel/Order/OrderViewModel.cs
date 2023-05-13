@@ -8,7 +8,7 @@
 
         public string Model { get; set; }
 
-        public double Speed { get; set; }
+        public double Power { get; set; }
 
         public string TypeProduct { get; set; }
 

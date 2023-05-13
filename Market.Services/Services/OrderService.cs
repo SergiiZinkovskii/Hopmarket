@@ -43,14 +43,19 @@ namespace Market.Service.Implementations
                     Address = model.Address,
                     DateCreated = DateTime.Now,
                     BasketId = user.Basket.Id,
-                    CarId = model.CarId
-                };
+                    ProductId = model.ProductId,
+                    Phone = model.Phone,
+                    Post = model.Post,
+                    Payment = model.Payment,
+                    Comments = model.Comments
+
+    };
 
                 await _orderRepository.Create(order);
 
                 return new BaseResponse<Order>()
                 {
-                    Description = "Заказ создан",
+                    Description = "Замовлення створено",
                     StatusCode = StatusCode.OK
                 };
             }
@@ -85,7 +90,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<bool>()
                 {
                     StatusCode = StatusCode.OK,
-                    Description = "Заказ удален"
+                    Description = "Замовлення видалено"
                 };
             }
             catch (Exception ex)

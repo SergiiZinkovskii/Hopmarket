@@ -40,12 +40,12 @@ public class BasketService : IBasketService
 
             var orders = user.Basket?.Orders;
             var response = from p in orders
-                           join c in _carRepository.GetAll() on p.CarId equals c.Id
+                           join c in _carRepository.GetAll() on p.ProductId equals c.Id
                            select new OrderViewModel()
                            {
                                Id = p.Id,
                                ProductName = c.Name,
-                               Speed = c.Speed,
+                               Power = c.Power,
                                TypeProduct = c.TypeProduct.GetDisplayName(),
                                Model = c.Model,
                                Image = c.Avatar
@@ -96,12 +96,12 @@ public class BasketService : IBasketService
             }
 
             var response = (from p in orders
-                            join c in _carRepository.GetAll() on p.CarId equals c.Id
+                            join c in _carRepository.GetAll() on p.ProductId equals c.Id
                             select new OrderViewModel()
                             {
                                 Id = p.Id,
                                 ProductName = c.Name,
-                                Speed = c.Speed,
+                                Power = c.Power,
                                 TypeProduct = c.TypeProduct.GetDisplayName(),
                                 Model = c.Model,
                                 Address = p.Address,

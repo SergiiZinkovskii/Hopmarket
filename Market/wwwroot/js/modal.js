@@ -4,7 +4,7 @@
     const modal = $('#modal');
     
     if (id === undefined || url === undefined) {
-        alert('Упссс.... что-то пошло не так')
+        alert('Помилка при завантаженні сторінки')
         return;
     }
     
@@ -25,8 +25,3 @@
     });
 };
 
-$(_Layaut).ready(function () {
-    $('#мodal').on('hidden.bs.modal', function () {
-        $(this).find('form')[0].reset();
-    });
-});

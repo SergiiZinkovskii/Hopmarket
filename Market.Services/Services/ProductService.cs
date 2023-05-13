@@ -62,7 +62,7 @@ namespace Market.Service.Implementations
                     Name = product.Name,
                     Price = product.Price,
                     TypeProduct = product.TypeProduct.GetDisplayName(),
-                    Speed = product.Speed,
+                    Power = product.Power,
                     Model = product.Model,
                     Image = product.Avatar,
                 };
@@ -92,7 +92,7 @@ namespace Market.Service.Implementations
                     .Select(x => new ProductViewModel()
                     {
                         Id = x.Id,
-                        Speed = x.Speed,
+                        Power = x.Power,
                         Name = x.Name,
                         Description = x.Description,
                         Model = x.Model,
@@ -126,7 +126,7 @@ namespace Market.Service.Implementations
                     Model = model.Model,
                     Description = model.Description,
                     DateCreate = DateTime.Now,
-                    Speed = model.Speed,
+                    Power = model.Power,
                     TypeProduct = (TypeProduct)Convert.ToInt32(model.TypeProduct),
                     Price = model.Price,
                     Avatar = imageData
@@ -199,7 +199,7 @@ namespace Market.Service.Implementations
                 product.Description = model.Description;
                 product.Model = model.Model;
                 product.Price = model.Price;
-                product.Speed = model.Speed;
+                product.Power = model.Power;
                 product.DateCreate = DateTime.ParseExact(model.DateCreate, "yyyyMMdd HH:mm", null);
                 product.Name = model.Name;
 

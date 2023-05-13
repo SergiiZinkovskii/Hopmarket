@@ -76,7 +76,7 @@ namespace Market.DAL
                     Description = new string('A', 50),
                     DateCreate = DateTime.Now,
                     Price = 2500,
-                    Speed = 900,
+                    Power = 900,
                     Model = "Zepline",
                     Avatar = null,
                     TypeProduct = TypeProduct.ElectricalAppliances
@@ -103,7 +103,7 @@ namespace Market.DAL
                     Description = new string('A', 50),
                     DateCreate = DateTime.Now,
                     Price = 3000,
-                    Speed = 4200,
+                    Power = 4200,
                     Model = "Rainberg RB-653TB",
                     Avatar = null,
                     TypeProduct = TypeProduct.AppliancesForHome
@@ -115,7 +115,7 @@ namespace Market.DAL
                     Description = new string('A', 50),
                     DateCreate = DateTime.Now,
                     Price = 120,
-                    Speed = 900,
+                    Power = 900,
                     Model = "Lacoste",
                     Avatar = null,
                     TypeProduct = TypeProduct.Clothes
@@ -127,7 +127,7 @@ namespace Market.DAL
                     Description = new string('A', 50),
                     DateCreate = DateTime.Now,
                     Price = 3000,
-                    Speed = 900,
+                    Power = 900,
                     Model = "Grunhelm",
                     Avatar = null,
                     TypeProduct = TypeProduct.ElectricalAppliances

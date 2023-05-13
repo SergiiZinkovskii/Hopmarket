@@ -8,6 +8,7 @@ using Market.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Market.Controllers
 {
@@ -38,6 +39,8 @@ namespace Market.Controllers
             var response = _productService.GetProducts();
             var list = response.Data;
             var newList = new List<Market.Domain.Entity.Product>();
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
                 foreach (var item in list)
                 {
 
@@ -47,6 +50,8 @@ namespace Market.Controllers
                     }
                 }
                 return View(newList);
+            }
+            return View("Error", $"{response.Description}");
         }
 
         [Authorize(Roles = "Admin")]
@@ -112,7 +117,7 @@ namespace Market.Controllers
             {
                 return Json(response.Data);
             }
-            return PartialView("GetProduct", response.Data);
+            return View("GetProduct", response.Data);
         }
 
         [HttpPost]
@@ -128,5 +133,9 @@ namespace Market.Controllers
             var types = _productService.GetTypes();
             return Json(types.Data);
         }
+
+      
+
+
     }
 }

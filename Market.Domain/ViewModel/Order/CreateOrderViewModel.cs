@@ -13,13 +13,13 @@ namespace Market.Domain.ViewModels.Order
         [Display(Name = "Дата створення")]
         public DateTime DateCreated { get; set; }
 
-        [Display(Name = "Адреса")]
-        [Required(ErrorMessage = "Вкажіть адресу")]
+        [Display(Name = "Адреса доставки")]
+        [Required(ErrorMessage = "Вкажіть адресу доставки")]
         [MinLength(5, ErrorMessage = "Адреса має містити більше 5 символів")]
         [MaxLength(200, ErrorMessage = "Адреса має быть меньше  200 символів")]
         public string Address { get; set; }
 
-        [Display(Name = "Им'я")]
+        [Display(Name = "м'я")]
         [Required(ErrorMessage = "Вкажіть ім'я")]
         [MaxLength(20, ErrorMessage = "Ім'я має складатися меньше ніж з  20 символів")]
         [MinLength(2, ErrorMessage = "Ім'я має складатися більше ніж з 1 символу")]
@@ -35,7 +35,25 @@ namespace Market.Domain.ViewModels.Order
         [MinLength(2, ErrorMessage = "По батькові должно иметь длину больше 2 символов")]
         public string MiddleName { get; set; }
 
-        public long CarId { get; set; }
+
+        [Display(Name = "Телефон")]
+        [Required(ErrorMessage = "Вкажіть номер телефону")]
+        public int Phone { get; set; }
+
+        [Display(Name = "Поштовий оператор")]
+        [Required(ErrorMessage = "Оберіть поштового оператора")]
+        public string Post { get; set; }
+
+        [Display(Name = "Форма оплати")]
+        [Required(ErrorMessage = "Оберіть вид оплати")]
+        public string Payment { get; set; }
+
+        [Display(Name = "Коментарі до замовлення")]
+        [Required(ErrorMessage = "Додайте коментарі до замовлення")]
+        public string Comments { get; set; }
+
+
+        public long ProductId { get; set; }
 
         public string Login { get; set; }
     }

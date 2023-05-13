@@ -51,51 +51,47 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Категорії товару</a>
-                        <ul class="dropdown-menu d-flex flex-column flex-lg-row align-items-stretch justify-content-start p-3 rounded-3 shadow-lg">
-                            <div class="col-lg-auto pe-3">
-                                <nav>
-                                    <ul class="d-flex flex-column gap-2 list-unstyled small">
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MilitaryEquipment">Військове спорядження</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Dishes">Посуд</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="AppliancesForHome">Товари для дому</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes">Одяг</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricalAppliances">Електроприлади</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth">Краса та здоров'я</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories">Мобільні аксесуари</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild">Товари для дітей</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Lamp">Ліхтарі</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="BagsBackpacksBelts">Сумки, рюкзаки, ремені та інші аксесуари</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="TourismProducts">Товари для туризму</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="PersonalProtectiveEquipment">Засоби індивідуального захисту</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Massagers">Масажери</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MeatGrinders">М'ясорубки</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="KitchenBlenders">Кухонні комбайни</a></li>
-                            </ul>
-                            </nav>
-                            </div>
 
-                            <div class="col-lg-auto pe-3">
-                            <nav>
-                            <ul class="d-flex flex-column gap-2 list-unstyled small">
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SurveillanceCameras">Камери спостереження</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Dashcams">Відеореєстратори</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricShavers">Електробритви</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="CarAudio">Автомобільна акустика</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Souvenirs">Сувеніри</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="CurlingIronsAndHairStraighteners">Щипці та плойки для волосся</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsHealthLeisure">Спорт, здоров'я, відпочинок</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ChildrensPools">Дитячі басейни</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Electronics">Електроніка</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="HomeAndGarden">Товари для дому та саду</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="FlashlightsLampsLighters">Ліхтарі, лампи, запальнички</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsFitnessTourism"></a>Спорт, фітнес, туризм</li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="EverythingForKitchen">Все для кухні</a></li>
-                            <li><a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="AutoProducts">Автотовари</a></li>
-                             </ul>
-                            </nav>
-                            </div>
-                      </ul>
+
+                        <div class="dropdown-menu w-200 flex-column flex-lg-row align-items-stretch justify-content-start overflow-hidden">
+                            <div class="row" style="width: 500px">
+                                <div class="col-md-6">
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MilitaryEquipment">Військове спорядження</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Dishes">Посуд</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="AppliancesForHome">Товари для дому</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Clothes">Одяг</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricalAppliances">Електроприлади</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="BeautyAndHealth">Краса та здоров'я</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MobileAccessories">Мобільні аксесуари</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ForChild">Товари для дітей</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Lamp">Ліхтарі</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="BagsBackpacksBelts">Сумки, рюкзаки, ремені та ін.</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="TourismProducts">Товари для туризму</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="PersonalProtectiveEquipment">Засоби індивідуального захисту</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Massagers">Масажери</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="MeatGrinders">М'ясорубки</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="KitchenBlenders">Кухонні комбайни</a>
+                        </div> 
+                        <div class="col-md-6">
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SurveillanceCameras">Камери спостереження</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Dashcams">Відеореєстратори</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ElectricShavers">Електробритви</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="CarAudio">Автомобільна акустика</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Souvenirs">Сувеніри</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="CurlingIronsAndHairStraighteners">Щипці та плойки для волосся</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsHealthLeisure">Спорт, здоров'я, відпочинок</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="ChildrensPools">Дитячі басейни</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="Electronics">Електроніка</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="HomeAndGarden">Товари для дому та саду</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="FlashlightsLampsLighters">Ліхтарі, лампи, запальнички</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="SportsFitnessTourism">Спорт, фітнес, туризм</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="EverythingForKitchen">Все для кухні</a>
+                            <a class="dropdown-item" asp-controller="Product" asp-action="GetCategory" asp-route-category="AutoProducts">Автотовари</a>
+                      </div> 
+                      </div>
                 </li>
+
+
             </ul>
             @if (User.IsInRole("Admin"))
             {
