@@ -34,7 +34,7 @@
     <div class="row">
         <div class="form-group col-md-12">
             <label asp-for="@Model.Description" class="col-form-label"></label>
-            <textarea type="text" class="form-control" asp-for="@Model.Description"></textarea>
+            <textarea id="description" type="text" class="form-control" asp-for="@Model.Description"></textarea>
         </div>
     </div>
     <div class="row">
@@ -59,7 +59,7 @@
    
     @if (User.IsInRole("Admin"))
     {
-        <button onСlick="editProduct(productId)" class="btn btn-secondary">Змінити</button>
+        <button onclick="editProduct(productId)" class="btn btn-secondary">Змінити</button>
 
         <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Видалити</a>
     }
@@ -71,10 +71,13 @@
     }
 </style>
 
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        function editProduct(productId) {
+
+    <script>
+        var productId = '@Model.Id';
+
+    function editProduct(productId) {
             var formData = new FormData($('#edit-product-form')[0]);
             console.log(formData);
             $.ajax({
@@ -83,6 +86,7 @@
                 processData: false,
                 contentType: false,
                 data: formData,
+
                 success: function (result) {
                     // handle success
                 },
@@ -90,9 +94,21 @@
                     // handle error
                 }
             });
-        }
+        };
+
+        $('#edit-product-btn').click(function () {
+        editProduct(productId);
+        });
+    
+</script>
 
         
-        editProduct(123);
+
+<script>
+    $(function () {
+        var $description = $('#description');
+         var lineHeight = parseInt($description.css('lineHeight'));
+        var lines = $description.val().split('\n').length;
+        $description.height(lineHeight * lines);
     });
 </script>

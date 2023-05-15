@@ -25,7 +25,7 @@ namespace Market.Domain.ViewModels.Product
         public string Model { get; set; }
 
         [Display(Name = "Потужність")]
-        [Required(ErrorMessage = "Вкажіть потужність")]
+        
         [Range(0, 10, ErrorMessage = "Довжина має бути в діапазоні від 0 до 600")]
         public double Power { get; set; }
 

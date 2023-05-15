@@ -41,14 +41,17 @@
                 <li class="nav-item">
                         <a class="nav-link" asp-controller="Company" asp-action="Delivery">Оплата та доставка</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Авторизуватись</a>
+            @if (!User.Identity.IsAuthenticated)
+            {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Авторизуватись</a>
                     <ul class="dropdown-menu">
                         <li> <a class="dropdown-item" asp-controller="Account" asp-action="Register">Реєстрація</a></li>
                         <li><a class="dropdown-item" asp-controller="Account" asp-action="Login">Вхід</a>
                         </li>
                     </ul>
                 </li>
+            }
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Категорії товару</a>
 
@@ -177,8 +180,7 @@
         <li class="nav-item"><a asp-controller="Company" asp-action="About"  class="nav-link px-2 text-body-secondary">Про нас</a></li>
         <li class="nav-item"><a  class="nav-link px-2 text-body-secondary">Всі товари</a></li>
         <li class="nav-item"><a asp-controller="Company" asp-action="Delivery" class="nav-link px-2 text-body-secondary">Оплата й доставка</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-    </ul>
+     </ul>
     <p class="text-center text-body-secondary">© 2023 Hop-Shop, Inc</p>
 </footer>
 

@@ -142,8 +142,8 @@ namespace Market.Controllers
         {
 
             var newModel = await _productService.Edit( model, Id);
-            
-            return View(newModel);
+
+            return RedirectToAction("GetProducts");
         }
 
 
