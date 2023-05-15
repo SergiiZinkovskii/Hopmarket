@@ -5,7 +5,7 @@
         UserNotFound = 0,
         UserAlreadyExists = 1,
 
-        CarNotFound = 10,
+        ProductNotFound = 10,
 
         OrderNotFound = 20,
 

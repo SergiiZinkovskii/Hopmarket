@@ -14,10 +14,10 @@ namespace Market.Service.Interfaces
 
         Task<BaseResponse<Dictionary<long, string>>> GetProduct(string term);
 
-        Task<IBaseResponse<Product>> Create(ProductViewModel car, byte[] imageData);
+        Task<IBaseResponse<Product>> Create(ProductViewModel product, byte[] imageData);
 
         Task<IBaseResponse<bool>> DeleteProduct(long id);
 
-        Task<IBaseResponse<Product>> Edit(long id, ProductViewModel model);
+        Task<IBaseResponse<Product>> Edit(ProductViewModel model, long Id);
     }
 }

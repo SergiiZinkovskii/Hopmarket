@@ -182,17 +182,17 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Product>> Edit(long id, ProductViewModel model)
+        public async Task<IBaseResponse<Product>> Edit(ProductViewModel model, long Id)
         {
             try
             {
-                var product = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                var product = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == Id);
                 if (product == null)
                 {
                     return new BaseResponse<Product>()
                     {
                         Description = "Product not found",
-                        StatusCode = StatusCode.CarNotFound
+                        StatusCode = StatusCode.ProductNotFound
                     };
                 }
 

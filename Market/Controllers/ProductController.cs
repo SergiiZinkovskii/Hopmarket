@@ -91,8 +91,9 @@ namespace Market.Controllers
             ModelState.Remove("DateCreate");
             //if (ModelState.IsValid)
             //{
-                if (viewModel.Id == 0)
+            if (viewModel.Id == 0)
                 {
+
                     byte[] imageData;
                     using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
                     {
@@ -102,7 +103,7 @@ namespace Market.Controllers
                 }
                 else
                 {
-                    await _productService.Edit(viewModel.Id, viewModel);
+                    await _productService.Edit(viewModel, viewModel.Id);
                 }
             //}
             return RedirectToAction("GetProducts");
@@ -134,7 +135,16 @@ namespace Market.Controllers
             return Json(types.Data);
         }
 
-      
+
+        [HttpPost]
+        
+        public async Task<IActionResult> Edit(ProductViewModel model, long Id)
+        {
+
+            var newModel = await _productService.Edit( model, Id);
+            
+            return View(newModel);
+        }
 
 
     }

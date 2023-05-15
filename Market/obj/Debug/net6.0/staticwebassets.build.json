@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wKAmHAZSo6696M1F9rpZXtHs+/awFwI/vPGDjcdwgN8=",
+  "Hash": "wT+M6wdG92ZEXxk1+54FaJYenyqxg4a3JQaZnA00s4w=",
   "Source": "Market",
   "BasePath": "_content/Market",
   "Mode": "Default",
@@ -763,6 +763,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\posud.webp"
+    },
+    {
+      "Identity": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\productImages\\4182083819_ruchnij-lihtar-dvofunktsionalnij.webp",
+      "SourceId": "Market",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\",
+      "BasePath": "_content/Market",
+      "RelativePath": "img/productImages/4182083819_ruchnij-lihtar-dvofunktsionalnij.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\productImages\\4182083819_ruchnij-lihtar-dvofunktsionalnij.webp"
     },
     {
       "Identity": "C:\\Users\\zsirc\\OneDrive\\Desktop\\Hopmarket\\Market\\wwwroot\\img\\productImages\\4307459055_w640_h640_4307459055.webp",

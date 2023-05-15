@@ -12,12 +12,12 @@ namespace Market.Service.Implementations;
 public class BasketService : IBasketService
 {
     private readonly IBaseRepository<User> _userRepository;
-    private readonly IBaseRepository<Product> _carRepository;
+    private readonly IBaseRepository<Product> _productRepository;
 
-    public BasketService(IBaseRepository<User> userRepository, IBaseRepository<Product> carRepository)
+    public BasketService(IBaseRepository<User> userRepository, IBaseRepository<Product> productRepository)
     {
         _userRepository = userRepository;
-        _carRepository = carRepository;
+        _productRepository = productRepository;
     }
 
     public async Task<IBaseResponse<IEnumerable<OrderViewModel>>> GetItems(string userName)
@@ -40,7 +40,7 @@ public class BasketService : IBasketService
 
             var orders = user.Basket?.Orders;
             var response = from p in orders
-                           join c in _carRepository.GetAll() on p.ProductId equals c.Id
+                           join c in _productRepository.GetAll() on p.ProductId equals c.Id
                            select new OrderViewModel()
                            {
                                Id = p.Id,
@@ -96,7 +96,7 @@ public class BasketService : IBasketService
             }
 
             var response = (from p in orders
-                            join c in _carRepository.GetAll() on p.ProductId equals c.Id
+                            join c in _productRepository.GetAll() on p.ProductId equals c.Id
                             select new OrderViewModel()
                             {
                                 Id = p.Id,

@@ -1,6 +1,16 @@
-﻿@model Market.Domain.ViewModels.Product.ProductViewModel
+﻿
+@model Market.Domain.ViewModels.Product.ProductViewModel
+
+@{
+    ViewBag.Title = "Товар";
+    Layout = "_Layout";
+}
 
 <form class="bg-light" id="edit-product-form">
+    @* class="bg-light" id="edit-product-form" method="post" action="@Url.Action("Edit", "Product", new { id = Model.Id })">
+    @Html.AntiForgeryToken()*@
+    
+@{var productId=Model.Id;}
     <div class="row">
         <div class="col-md-12">
             <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image ?? Array.Empty<byte>())"
@@ -31,7 +41,7 @@
         <div class="form-group col-md-6">
             <label asp-for="@Model.TypeProduct" class="col-form-label"></label>
             <select class="form-control" id="productTypeId2">
-                <option value="@Model.TypeProduct">@Model.TypeProduct</option>
+                <option value="@Model.TypeProduct">@Model.TypeProduct.</option>
             </select>
         </div>
             @if (User.IsInRole("Admin"))
@@ -46,11 +56,10 @@
     </form>
 <div class="modal-body">
     <a asp-controller="Order" asp-action="CreateOrder" asp-route-id="@Model.Id" class="btn btn-success">В кошик</a>
-    <a asp-controller="Product" asp-action="GetCategory" asp-route-category="@Model.TypeProduct"  class="btn btn-secondary">Назад</a>
-
+   
     @if (User.IsInRole("Admin"))
     {
-        <a onclick="editProduct('@Model.Id')" class="btn btn-secondary">Змінити</a>
+        <button onСlick="editProduct(productId)" class="btn btn-secondary">Змінити</button>
 
         <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Видалити</a>
     }
@@ -62,22 +71,28 @@
     }
 </style>
 
-<script src="~/lib/select2/js/select2.full.min.js"></script>
-@*<script>
-    function editProduct(@Model.Id) {
-        var formData = new FormData($('#edit-product-form')[0]);
-        $.ajax({
-            url: '/Product/Save/,
-            type: 'POST',
-            processData: false,
-            contentType: false,
-            data: formData,
-            success: function (result) {
-                // handle success
-            },
-            error: function (xhr, status, error) {
-                // handle error
-            }
-        });
-    }
-</script>*@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function editProduct(productId) {
+            var formData = new FormData($('#edit-product-form')[0]);
+            console.log(formData);
+            $.ajax({
+                url: '/Product/Edit/' + productId,
+                type: 'POST',
+                processData: false,
+                contentType: false,
+                data: formData,
+                success: function (result) {
+                    // handle success
+                },
+                error: function (xhr, status, error) {
+                    // handle error
+                }
+            });
+        }
+
+        
+        editProduct(123);
+    });
+</script>
