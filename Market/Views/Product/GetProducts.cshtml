@@ -86,6 +86,7 @@ else
                             @if (User.IsInRole("Admin"))
                             {
                                 <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Видалити</a>
+                                <a asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" id="editProductId" class="btn btn-danger">Змінити</a>
                             }
                             <a asp-controller="Order" asp-action="CreateOrder" asp-route-id="@product.Id" class="btn btn-success">В кошик</a>
                         </div>
@@ -103,41 +104,47 @@ else
 
 
     <script>
-        let modal = $('#modalWhButtons');
+        $(function() {
+            let modal = $('#modalWhButtons');
 
-        $('#compareBtnId').on('click', function () {
-            $.ajax({
-                type: 'GET',
-                url: '@Url.Action("Compare")',
-                success: function (response) {
-                    $('.modal-dialog').addClass("modal-lg");
-                    modal.find(".modal-body").html(response);
-                    modal.modal('show')
-                }
+            $('#compareBtnId').on('click', function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '@Url.Action("Compare")',
+                    success: function (response) {
+                        $('.modal-dialog').addClass("modal-lg");
+                        modal.find(".modal-body").html(response);
+                        modal.modal('show')
+                    }
+                });
+            });
+
+            $(".btn-close").click(function () {
+                modal.modal('hide');
+            });
+
+
+
+            $('#addProductId').on('click', function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '/Product/Save',
+                    success: function (response) {
+                        $('.modal-dialog').removeClass("modal-lg");
+                        modal.find(".modal-body").html(response);
+
+                        app.initProductTypeSelect(modal.find('.product-type-select'));
+
+                        modal.modal('show');
+                    },
+                    failure: function () {
+                        modal.modal('hide')
+                    },
+                    error: function (response) {
+                        alert(response.responseText);
+                    }
+                });
             });
         });
-
-        $(".btn-close").click(function () {
-            modal.modal('hide');
-        });
-
-        $('#addProductId').on('click', function () {
-            $.ajax({
-                type: 'GET',
-                url: '/Product/Save',
-                success: function (response) {
-                    $('.modal-dialog').removeClass("modal-lg");
-                    modal.find(".modal-body").html(response);
-                    modal.modal('show')
-                },
-                failure: function () {
-                    modal.modal('hide')
-                },
-                error: function (response) {
-                    alert(response.responseText);
-                }
-            });
-        });
-
     </script>
 }

@@ -92,19 +92,19 @@ namespace Market.Controllers
             //if (ModelState.IsValid)
             //{
             if (viewModel.Id == 0)
-                {
+            {
 
-                    byte[] imageData;
-                    using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
-                    {
-                        imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
-                    }
-                    await _productService.Create(viewModel, imageData);
-                }
-                else
+                byte[] imageData;
+                using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
                 {
-                    await _productService.Edit(viewModel, viewModel.Id);
+                    imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
                 }
+                await _productService.Create(viewModel, imageData);
+            }
+            else
+            {
+                await _productService.Edit(viewModel, viewModel.Id);
+            }
             //}
             return RedirectToAction("GetProducts");
         }
@@ -137,15 +137,46 @@ namespace Market.Controllers
 
 
         [HttpPost]
-        
-        public async Task<IActionResult> Edit(ProductViewModel model, long Id)
-        {
 
-            var newModel = await _productService.Edit( model, Id);
+        public async Task<IActionResult> Edit([FromForm] ProductViewModel viewModel)
+        {
+            Dictionary<string, string> requesBody = new Dictionary<string, string>();
+            foreach (var field in Request.Form)
+            {
+                requesBody.Add(field.Key, field.Value);
+            }
+            viewModel.Id = Int32.Parse(requesBody["Id"]);
+            viewModel.Name = requesBody["Name"];
+            viewModel.Description = requesBody["Description"];
+            viewModel.DateCreate = requesBody["DateCreate"];
+            viewModel.Model = requesBody["Model"];
+            viewModel.Price = Int32.Parse(requesBody["Price"]);
+
+
+            byte[] imageData;
+            using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
+            {
+                imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
+            }
+             await _productService.Edit(viewModel, viewModel.Id);
 
             return RedirectToAction("GetProducts");
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Edit(long id)
+        
+        {
+            if (id == 0)
+                return View();
 
+            var response = await _productService.GetProduct(id);
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                return View(response.Data);
+            }
+            ModelState.AddModelError("", response.Description);
+            return View();
+        }
     }
 }
