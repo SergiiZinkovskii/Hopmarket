@@ -19,7 +19,7 @@ builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connection));
+    options.UseSqlServer(connection, b => b.MigrationsAssembly("Market")));
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

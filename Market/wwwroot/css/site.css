@@ -4,33 +4,6 @@ for details on configuring this project to bundle and minify static web assets.
 
 
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-label {
-  color: black;
-}
-
- Provide sufficient contrast against white background 
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
  Sticky footer styles
 -------------------------------------------------- 
 html {
@@ -58,8 +31,10 @@ button.accept-policy {
   line-height: inherit;
 }
 
- Sticky footer styles
--------------------------------------------------- 
+
+
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -73,3 +48,20 @@ body {
 header{
     position: fixed;
 }
+
+
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnail-image {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+

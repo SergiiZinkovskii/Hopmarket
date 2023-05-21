@@ -14,7 +14,7 @@ namespace Market.Service.Interfaces
 
         Task<BaseResponse<Dictionary<long, string>>> GetProduct(string term);
 
-        Task<IBaseResponse<Product>> Create(ProductViewModel product, byte[] imageData);
+        Task<IBaseResponse<Product>> Create(ProductViewModel product, byte[] imageData, byte[] imageData2, byte[] imageData3, byte[] imageData4, byte[] imageData5);
 
         Task<IBaseResponse<bool>> DeleteProduct(long id);
 

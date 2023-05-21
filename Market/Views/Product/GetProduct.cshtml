@@ -1,105 +1,300 @@
-﻿
-@model Market.Domain.ViewModels.Product.ProductViewModel
+﻿@model Market.Domain.ViewModels.Product.ProductViewModel
 
 @{
     ViewBag.Title = "Товар";
     Layout = "_Layout";
 }
 
-<form class="bg-light" id="edit-product-form" method="post" action="@Url.Action("Edit", "Product", new { id = Model.Id })">
-    @Html.AntiForgeryToken()
-    <input type="hidden" asp-for="@Model.Id" />
+<style>
+
+    .main-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .thumbnail-image {
+        width: 100px;
+        height: auto;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 5px;
+    }
+</style>
+
+
+
+<form id="product-form">
+
     <div class="row">
-        <div class="col-md-12">
-            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image ?? Array.Empty<byte>())"
-                 class="img-fluid rounded-start rounded">
+        <div class="col-md-8 text-center">
+
+            <img class="main-image" style="max-width: 100%;" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image ?? Array.Empty<byte>())" alt="@Model.Name" />
+        </div>
+        <div class="col-md-4">
+ 
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="thumbnail-image" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image ?? Array.Empty<byte>())" alt="@Model.Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="thumbnail-image" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image2 ?? Array.Empty<byte>())" alt="@Model.Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="thumbnail-image" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image3 ?? Array.Empty<byte>())" alt="@Model.Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="thumbnail-image" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image4 ?? Array.Empty<byte>())" alt="@Model.Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img class="thumbnail-image" src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image5 ?? Array.Empty<byte>())" alt="@Model.Name" />
+                </div>
+            </div>
         </div>
     </div>
+
+        <div class="row">
+        <div class="form-group col-md-6 d-none">
+            <label asp-for="@Model.Id" class="col-form-label"></label>
+            <input type="text" class="form-control" id="Id" asp-for="@Model.Id">
+        </div>
+        </div>
     <div class="row">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label asp-for="@Model.Name" class="col-form-label"></label>
             <input type="text" class="form-control" asp-for="@Model.Name">
         </div>
-        <div class="form-group col-md-4">
-            <label asp-for="@Model.Model" class="col-form-label"></label>
-            <input class="form-control" asp-for="@Model.Model" />
-        </div>
-        <div class="form-group col-md-4">
-            <label asp-for="@Model.Price" class="col-form-label"></label>
-            <input type="text" class="form-control" asp-for="@Model.Price" />
+        
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.ProdModel" class="col-form-label"></label>
+            <input class="form-control" asp-for="@Model.ProdModel" />
         </div>
     </div>
-    <div class="row">
+    <label asp-for="@Model.Price" class="col-form-label"></label>
+        <div class="row">
+        <div class="input-group col-md-6">
+            <input type="text" class="form-control col-md-6" asp-for="@Model.Price" />
+            <div class="input-group-append">
+                <span class="input-group-text">&#8372;</span>
+            </div>
+        </div>
+        </div>
+        <div class="row">
         <div class="form-group col-md-12">
             <label asp-for="@Model.Description" class="col-form-label"></label>
             <textarea id="description" type="text" class="form-control" asp-for="@Model.Description"></textarea>
         </div>
-    </div>
-    <div class="row">
+        </div>
+        <div class="row">
         <div class="form-group col-md-6">
             <label asp-for="@Model.TypeProduct" class="col-form-label"></label>
-            <select class="form-control product-type-select" id="productTypeId2">
-                <option value="@Model.TypeProduct">@Model.TypeProduct.</option>
-            </select>
-        </div>
-            @if (User.IsInRole("Admin"))
-            {
+            <select asp-for="@Model.TypeProduct" class="form-control product-type-select" data-types-url="@Url.Action("GetTypes", "Product")"></select>
+         </div>
+         </div>
+        @if (User.IsInRole("Admin"))
+        {
         <div class="form-group col-md-6">
-            <label asp-for="@Model.DateCreate" class="col-form-label"></label>
-            <input class="form-control" asp-for="@Model.DateCreate" />
+            <label class="col-form-label">Зображення</label>
+            <input asp-for="@Model.Avatar" class="form-control" type="file">
         </div>
-            }
-        
+
+            <div class="form-group col-md-6">
+                <label asp-for="@Model.DateCreate" class="col-form-label"></label>
+                <input class="form-control" asp-for="@Model.DateCreate" />
+            </div>
+        }
+
+ 
+
+    <div class="modal-body">
+
+        <input type="hidden" name="id" value="@Model.Id" /> <!-- Add a hidden input field to store the Id value -->
+        <a id="create-order-btn" class="btn btn-success">В кошик</a>
+        @if (User.IsInRole("Admin"))
+        {
+
+            <a id="edit-product-done" class="btn btn-succes">Змінити</a>
+
+            <a id="delete-product-btn" class="btn btn-danger">Видалити</a>
+        }
     </div>
 
-<div class="modal-body">
-    <a asp-controller="Order" asp-action="CreateOrder" asp-route-id="@Model.Id" class="btn btn-success">В кошик</a>
-   
-    @if (User.IsInRole("Admin"))
-    {
-       
-
-            <a asp-controller="Product"  onclick="editProduct" class="btn btn-danger">Змінити</a>
-        <a asp-controller="Product" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Видалити</a>
-
-    }
-</div>
 </form>
-<style>
-    label {
-        color: black;
-    }
-</style>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Коментарі</h4>
+        <div id="comments-container">
+            <!-- Comments will be dynamically added here -->
+        </div>
+        <div id="comment-form-container">
+            <h5>Залиште коментар:</h5>
+            <form id="comment-form">
+                <div class="form-group">
+                    <textarea id="comment-text" class="form-control" rows="3" placeholder="Напишіть свій коментар"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Додати коментар</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-<script>
-    function editProduct() {
-        var formData = new FormData($('#edit-product-form')[0]);
-        console.log(formData);
-        $.ajax({
-            url: '/Product/Save/'
-                type: 'POST',
-            processData: false,
-            contentType: false,
-            data: formData,
 
-            success: function (result) {
-                // handle success
-            },
-            error: function (xhr, status, error) {
-                // handle error
-            }
+
+@section pageScripts
+    {
+    <script>
+        $(function() {
+            $('#edit-product-done').on('click', function (e) {
+                e.preventDefault();
+                const model = $('#edit-product-form').serialize();
+                console.log(model);
+                $.ajax({
+                    url: '@Url.Action("Edit", "Product")',
+                    type: 'POST',
+                    data: model,
+                    success: function (result) {
+                        // handle success
+                    },
+                    error: function (xhr, status, error) {
+                        // handle error
+                    }
+                });
+            });
         });
-    };
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mainImage = document.querySelector('.main-image');
+            var thumbnailImages = document.querySelectorAll('.thumbnail-image');
+
+            thumbnailImages.forEach(function (thumbnail) {
+                thumbnail.addEventListener('click', function () {
+                    mainImage.src = thumbnail.src;
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            var $description = $('#description');
+            var lineHeight = parseInt($description.css('lineHeight'));
+            var lines = $description.val().split('\n').length;
+            $description.height(lineHeight * lines);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var createOrderBtn = document.getElementById('create-order-btn');
+            createOrderBtn.addEventListener('click', function () {
+                var form = document.getElementById('product-form');
+                var formData = new FormData(form);
+                var productId = formData.get('Id');                        
+                var url = '/Order/CreateOrder/' + productId;
+                window.location.href = url;
+            });
+        });
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var createOrderBtn = document.getElementById('delete-product-btn');
+            createOrderBtn.addEventListener('click', function () {
+                var form = document.getElementById('product-form');
+                var formData = new FormData(form);
+                var productId = formData.get('Id');
+                var url = '/Product/Delete/' + productId;
+                window.location.href = url;
+            });
+        });
+    </script>
+
+
+    <script>
+        var form = document.getElementById('product-form');
+        var formData = new FormData(form);
+        var productId = formData.get('Id');
+        // Function to display comments on the page
+        function displayComments(comments) {
+            var commentsContainer = document.getElementById('comments-container');
+            commentsContainer.innerHTML = '';
+
+            comments.forEach(function (comment) {
+                var commentElement = document.createElement('div');
+                commentElement.classList.add('comment');
+                commentElement.innerHTML = '<strong>' + comment.author + ':</strong> ' + comment.text;
+                commentsContainer.appendChild(commentElement);
+            });
+        }
+
+        // Function to retrieve comments for the product
+        function getComments() {
+            var form = document.getElementById('product-form');
+            var formData = new FormData(form);
+            var productId = formData.get('Id');
+            $.ajax({
+                url: '/Comment/GetComments/' + productId,
+                type: 'GET',
+                success: function (result) {
+                    displayComments(result);
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        $(function () {
+            // Get the product ID
+            var form = document.getElementById('product-form');
+            var formData = new FormData(form);
+            var productId = formData.get('Id');
+
+            // Load existing comments for the product
+            getComments(productId);
+
+            // Submit comment form
+      
+            $('#comment-form').on('submit', function (e) {
+                e.preventDefault();
+
+                var commentText = $('#comment-text').val();
+
+                $.ajax({
+                    url: '/Comment/AddComment/' + productId,
+                    type: 'POST',
+                    data: {
+                        productId: productId,
+                        text: commentText
+                    },
+                    success: function () {
+                        // Clear the comment input field
+                        $('#comment-text').val('');
+
+                        // Refresh the comments
+                        getComments(productId);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+                
+            });
+        });
+    </script>
 
 
 
-        
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(function () {
-        var $description = $('#description');
-         var lineHeight = parseInt($description.css('lineHeight'));
-        var lines = $description.val().split('\n').length;
-        $description.height(lineHeight * lines);
-    });
-</script>
+}

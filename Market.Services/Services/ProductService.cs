@@ -63,8 +63,12 @@ namespace Market.Service.Implementations
                     Price = product.Price,
                     TypeProduct = product.TypeProduct.GetDisplayName(),
                     Power = product.Power,
-                    Model = product.Model,
+                    ProdModel = product.Model,
                     Image = product.Avatar,
+                    Image2 = product.Avatar,
+                    Image3 = product.Avatar3,
+                    Image4 = product.Avatar4,
+                    Image5 = product.Avatar5,
                 };
 
                 return new BaseResponse<ProductViewModel>()
@@ -95,7 +99,7 @@ namespace Market.Service.Implementations
                         Power = x.Power,
                         Name = x.Name,
                         Description = x.Description,
-                        Model = x.Model,
+                        ProdModel = x.Model,
                         DateCreate = x.DateCreate.ToLongDateString(),
                         Price = x.Price,
                         TypeProduct = x.TypeProduct.GetDisplayName()
@@ -116,20 +120,24 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Product>> Create(ProductViewModel model, byte[] imageData)
+        public async Task<IBaseResponse<Product>> Create(ProductViewModel model, byte[] imageData, byte[] imageData2, byte[] imageData3, byte[] imageData4, byte[] imageData5)
         {
             try
             {
                 var product = new Product()
                 {
                     Name = model.Name,
-                    Model = model.Model,
+                    Model = model.ProdModel,
                     Description = model.Description,
                     DateCreate = DateTime.Now,
                     Power = model.Power,
                     TypeProduct = (TypeProduct)Convert.ToInt32(model.TypeProduct),
                     Price = model.Price,
-                    Avatar = imageData
+                    Avatar = imageData,
+                    Avatar2 = imageData2,
+                    Avatar3 = imageData3,
+                    Avatar4 = imageData4,
+                    Avatar5 = imageData5,
                 };
                 await _productRepository.Create(product);
 
@@ -197,7 +205,7 @@ namespace Market.Service.Implementations
                 }
 
                 product.Description = model.Description;
-                product.Model = model.Model;
+                product.Model = model.ProdModel;
                 product.Price = model.Price;
                 product.Power = model.Power;
                 product.DateCreate = DateTime.ParseExact(model.DateCreate, "yyyyMMdd HH:mm", null);

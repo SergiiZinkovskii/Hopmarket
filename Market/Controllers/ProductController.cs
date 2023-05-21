@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Azure.Core;
 using Market.Domain.Extensions;
 using Market.Domain.ViewModels.Product;
 using Market.Service.Interfaces;
@@ -94,12 +95,48 @@ namespace Market.Controllers
             if (viewModel.Id == 0)
             {
 
-                byte[] imageData;
-                using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
+
+               byte[] imageData = new byte[0];
+               if (viewModel.Avatar != null)
                 {
-                    imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
+                    using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
+                    {
+                        imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
+                    }
                 }
-                await _productService.Create(viewModel, imageData);
+                byte[] imageData2 = new byte[0];
+                if (viewModel.Avatar2 != null)
+                {
+                    using (var binaryReader2 = new BinaryReader(viewModel.Avatar2.OpenReadStream()))
+                    {
+                        imageData2 = binaryReader2.ReadBytes((int)viewModel.Avatar2.Length);
+                    }
+                }
+                byte[] imageData3 = new byte[0]; ;
+                if (viewModel.Avatar3 != null)
+                {
+                    using (var binaryReader3 = new BinaryReader(viewModel.Avatar3.OpenReadStream()))
+                    {
+                        imageData3 = binaryReader3.ReadBytes((int)viewModel.Avatar3.Length);
+                    }
+                }
+                byte[] imageData4 = new byte[0]; ;
+                if (viewModel.Avatar4 != null)
+                {
+                    using (var binaryReader4 = new BinaryReader(viewModel.Avatar4.OpenReadStream()))
+                    {
+                        imageData4 = binaryReader4.ReadBytes((int)viewModel.Avatar4.Length);
+                    }
+                }
+                byte[] imageData5 = new byte[0]; 
+                if (viewModel.Avatar5 != null)
+                {
+                    using (var binaryReader5 = new BinaryReader(viewModel.Avatar5.OpenReadStream()))
+                    {
+                        imageData5 = binaryReader5.ReadBytes((int)viewModel.Avatar5.Length);
+                    }
+                }
+                await _productService.Create(viewModel, imageData, imageData2, imageData3, imageData4, imageData5);
             }
             else
             {
@@ -111,9 +148,10 @@ namespace Market.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult> GetProduct(int id, bool isJson)
+        public async Task<IActionResult> GetProduct(int id, bool isJson)
         {
             var response = await _productService.GetProduct(id);
+            
             if (isJson)
             {
                 return Json(response.Data);
@@ -138,29 +176,26 @@ namespace Market.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Edit([FromForm] ProductViewModel viewModel)
+        public async Task<IActionResult> Edit(/*[FromForm] Request request*/string id,  string name, string prodModel, string price, string description)
         {
-            Dictionary<string, string> requesBody = new Dictionary<string, string>();
-            foreach (var field in Request.Form)
-            {
-                requesBody.Add(field.Key, field.Value);
-            }
-            viewModel.Id = Int32.Parse(requesBody["Id"]);
-            viewModel.Name = requesBody["Name"];
-            viewModel.Description = requesBody["Description"];
-            viewModel.DateCreate = requesBody["DateCreate"];
-            viewModel.Model = requesBody["Model"];
-            viewModel.Price = Int32.Parse(requesBody["Price"]);
+            //Dictionary<string, string> requesBody = new Dictionary<string, string>();
+            //foreach (var field in Request.Form)
+            //{
+            //    requesBody.Add(field.Key, field.Value);
+            //}
+            var viewModel = new ProductViewModel();
+            //viewModel.Id = Int32.Parse(requesBody["Id"]);
+            //viewModel.Name = requesBody["Name"];
+            //viewModel.Description = requesBody["Description"];
+            //viewModel.DateCreate = requesBody["DateCreate"];
+            //viewModel.ProdModel = requesBody["Model"];
+            //viewModel.Price = Int32.Parse(requesBody["Price"]);
+            viewModel.Id = Int32.Parse(id);
 
 
-            byte[] imageData;
-            using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
-            {
-                imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
-            }
              await _productService.Edit(viewModel, viewModel.Id);
 
-            return RedirectToAction("GetProducts");
+            return View();
         }
 
         [HttpGet]
@@ -171,6 +206,7 @@ namespace Market.Controllers
                 return View();
 
             var response = await _productService.GetProduct(id);
+            
             if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
                 return View(response.Data);
