@@ -176,22 +176,8 @@ namespace Market.Controllers
 
         [HttpPost]
 
-        public async Task<IActionResult> Edit(/*[FromForm] Request request*/string id,  string name, string prodModel, string price, string description)
+        public async Task<IActionResult> Edit(ProductViewModel viewModel)
         {
-            //Dictionary<string, string> requesBody = new Dictionary<string, string>();
-            //foreach (var field in Request.Form)
-            //{
-            //    requesBody.Add(field.Key, field.Value);
-            //}
-            var viewModel = new ProductViewModel();
-            //viewModel.Id = Int32.Parse(requesBody["Id"]);
-            //viewModel.Name = requesBody["Name"];
-            //viewModel.Description = requesBody["Description"];
-            //viewModel.DateCreate = requesBody["DateCreate"];
-            //viewModel.ProdModel = requesBody["Model"];
-            //viewModel.Price = Int32.Parse(requesBody["Price"]);
-            viewModel.Id = Int32.Parse(id);
-
 
              await _productService.Edit(viewModel, viewModel.Id);
 

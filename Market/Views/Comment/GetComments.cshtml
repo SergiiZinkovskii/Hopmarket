@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Market.Domain.ViewModel.Comment.CommentViewModel>
+
+@foreach (var comment in Model)
+{
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"> @comment.Author</h5>
+                <p class="card-text">Опис: @comment.Text ...</p>
+            </div>
+            
+        </div>
+    </div>
+
+}

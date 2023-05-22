@@ -25,6 +25,7 @@ namespace Market.DAL.Repositories
         {
             _db.Comments.Remove(entity);
             await _db.SaveChangesAsync();
+
         }
 
         public IQueryable<Comment> GetAll()

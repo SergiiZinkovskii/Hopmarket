@@ -121,7 +121,7 @@
         @if (User.IsInRole("Admin"))
         {
 
-            <a id="edit-product-done" class="btn btn-succes">Змінити</a>
+            <a id="edit-product-done" class="btn btn-danger">Змінити</a>
 
             <a id="delete-product-btn" class="btn btn-danger">Видалити</a>
         }
@@ -131,14 +131,12 @@
 <div class="row">
     <div class="col-md-12">
         <h4>Коментарі</h4>
-        <div id="comments-container">
-            <!-- Comments will be dynamically added here -->
-        </div>
+        <a asp-controller="Comment" asp-action="GetComments" asp-route-id="@Model.Id" class="btn btn-danger">Відгуки про товар</a>
         <div id="comment-form-container">
-            <h5>Залиште коментар:</h5>
+            <h5>Залиште відгук:</h5>
             <form id="comment-form">
                 <div class="form-group">
-                    <textarea id="comment-text" class="form-control" rows="3" placeholder="Напишіть свій коментар"></textarea>
+                    <textarea id="comment-text" class="form-control" rows="3" placeholder="Напишіть свій відгук про цей товар"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Додати коментар</button>
             </form>
@@ -151,16 +149,21 @@
 @section pageScripts
     {
     <script>
-        $(function() {
+        $(function () {
             $('#edit-product-done').on('click', function (e) {
                 e.preventDefault();
-                const model = $('#edit-product-form').serialize();
-                console.log(model);
+
+                var form = document.getElementById('product-form');
+                var formData = new FormData(form);
+                var productId = formData.get('Id');
+                var url = '@Url.Action("Edit", "Product")';
+
                 $.ajax({
-                    url: '@Url.Action("Edit", "Product")',
+                    url: url,
                     type: 'POST',
-                    data: model,
-                    success: function (result) {
+                    data: formData,
+                    processData: false,
+                     success: function (result) {
                         // handle success
                     },
                     error: function (xhr, status, error) {
@@ -246,6 +249,10 @@
             var productId = formData.get('Id');
             $.ajax({
                 url: '/Comment/GetComments/' + productId,
+                data: {
+                    productId: productId,
+                    
+                },
                 type: 'GET',
                 success: function (result) {
                     displayComments(result);
@@ -294,7 +301,4 @@
             });
         });
     </script>
-
-
-
 }

@@ -35,7 +35,7 @@ namespace Market.Services.Services
                 await _commentRepository.Create(comment);
             return new BaseResponse<Comment>()
             {
-                Description = "Замовлення створено",
+                Description = "Відгук залишено",
                 StatusCode = StatusCode.OK
             };
         }

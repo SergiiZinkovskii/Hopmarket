@@ -57,6 +57,7 @@ namespace Market.Service.Implementations
 
                 var data = new ProductViewModel()
                 {
+                    Id = product.Id,
                     DateCreate = product.DateCreate.ToLongDateString(),
                     Description = product.Description,
                     Name = product.Name,
