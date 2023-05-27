@@ -86,65 +86,37 @@ namespace Market.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Save(ProductViewModel viewModel)
+        public async Task<IActionResult> Save(ProductViewModel viewModel, IFormFile[] avatars)
         {
             ModelState.Remove("Id");
             ModelState.Remove("DateCreate");
-            //if (ModelState.IsValid)
-            //{
+
             if (viewModel.Id == 0)
             {
+                List<byte[]> imageDataList = new List<byte[]>();
 
+                if (avatars != null && avatars.Length > 0)
+                {
+                    foreach (var avatar in avatars)
+                    {
+                        using (var binaryReader = new BinaryReader(avatar.OpenReadStream()))
+                        {
+                            byte[] imageData = binaryReader.ReadBytes((int)avatar.Length);
+                            imageDataList.Add(imageData);
+                        }
+                    }
+                }
 
-               byte[] imageData = new byte[0];
-               if (viewModel.Avatar != null)
-                {
-                    using (var binaryReader = new BinaryReader(viewModel.Avatar.OpenReadStream()))
-                    {
-                        imageData = binaryReader.ReadBytes((int)viewModel.Avatar.Length);
-                    }
-                }
-                byte[] imageData2 = new byte[0];
-                if (viewModel.Avatar2 != null)
-                {
-                    using (var binaryReader2 = new BinaryReader(viewModel.Avatar2.OpenReadStream()))
-                    {
-                        imageData2 = binaryReader2.ReadBytes((int)viewModel.Avatar2.Length);
-                    }
-                }
-                byte[] imageData3 = new byte[0]; ;
-                if (viewModel.Avatar3 != null)
-                {
-                    using (var binaryReader3 = new BinaryReader(viewModel.Avatar3.OpenReadStream()))
-                    {
-                        imageData3 = binaryReader3.ReadBytes((int)viewModel.Avatar3.Length);
-                    }
-                }
-                byte[] imageData4 = new byte[0]; ;
-                if (viewModel.Avatar4 != null)
-                {
-                    using (var binaryReader4 = new BinaryReader(viewModel.Avatar4.OpenReadStream()))
-                    {
-                        imageData4 = binaryReader4.ReadBytes((int)viewModel.Avatar4.Length);
-                    }
-                }
-                byte[] imageData5 = new byte[0]; 
-                if (viewModel.Avatar5 != null)
-                {
-                    using (var binaryReader5 = new BinaryReader(viewModel.Avatar5.OpenReadStream()))
-                    {
-                        imageData5 = binaryReader5.ReadBytes((int)viewModel.Avatar5.Length);
-                    }
-                }
-                await _productService.Create(viewModel, imageData, imageData2, imageData3, imageData4, imageData5);
+                await _productService.Create(viewModel, imageDataList);
             }
             else
             {
                 await _productService.Edit(viewModel, viewModel.Id);
             }
-            //}
+
             return RedirectToAction("GetProducts");
         }
+
 
 
         [HttpGet]
@@ -175,13 +147,12 @@ namespace Market.Controllers
 
 
         [HttpPost]
-
         public async Task<IActionResult> Edit(ProductViewModel viewModel)
         {
 
-             await _productService.Edit(viewModel, viewModel.Id);
+            await _productService.Edit(viewModel, viewModel.Id);
 
-            return View();
+            return RedirectToAction("GetProducts");
         }
 
         [HttpGet]

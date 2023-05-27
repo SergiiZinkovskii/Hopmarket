@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Market.Domain.Entity;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -39,21 +40,7 @@ namespace Market.Domain.ViewModels.Product
         [Required(ErrorMessage = "Оберіть тип")]
         public string TypeProduct { get; set; }
 
-        public IFormFile Avatar { get; set; }
-
-        public byte[]? Image { get; set; }
-        public IFormFile Avatar2 { get; set; }
-
-        public byte[]? Image2 { get; set; }
-        public IFormFile Avatar3 { get; set; }
-
-        public byte[]? Image3 { get; set; }
-        public IFormFile Avatar4 { get; set; }
-
-        public byte[]? Image4 { get; set; }
-        public IFormFile Avatar5 { get; set; }
-
-        public byte[]? Image5 { get; set; }
+        public List<byte[]> Photos { get; set; }
 
 
 

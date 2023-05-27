@@ -8,17 +8,33 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Market.Migrations
 {
     /// <inheritdoc />
-    public partial class photos : Migration
+    public partial class first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductId = table.Column<int>(type: "int", nullable: false),
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    test = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -123,14 +139,14 @@ namespace Market.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Avatar", "Avatar2", "Avatar3", "Avatar4", "Avatar5", "DateCreate", "Description", "Model", "Name", "Power", "Price", "TypeProduct" },
+                columns: new[] { "Id", "Avatar", "Avatar2", "Avatar3", "Avatar4", "Avatar5", "DateCreate", "Description", "Model", "Name", "Power", "Price", "TypeProduct", "test" },
                 values: new object[,]
                 {
-                    { 1L, null, null, null, null, null, new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9811), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Zepline", "Мультиварка", 900.0, 2500m, 4 },
-                    { 2L, null, null, null, null, null, new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9878), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Пончо-намет 3 в 1", "Дощовик", 0.0, 800m, 0 },
-                    { 3L, null, null, null, null, null, new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9884), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Rainberg RB-653TB", "Пилосос", 4200.0, 3000m, 2 },
-                    { 4L, null, null, null, null, null, new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9889), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Lacoste", "Труси чоловічі", 900.0, 120m, 3 },
-                    { 5L, null, null, null, null, null, new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9893), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Grunhelm", "М'ясорубка", 900.0, 3000m, 4 }
+                    { 1L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3734), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Zepline", "Мультиварка", 900.0, 2500m, 4, 0 },
+                    { 2L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3811), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Пончо-намет 3 в 1", "Дощовик", 0.0, 800m, 0, 0 },
+                    { 3L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3817), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Rainberg RB-653TB", "Пилосос", 4200.0, 3000m, 2, 0 },
+                    { 4L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3822), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Lacoste", "Труси чоловічі", 900.0, 120m, 3, 0 },
+                    { 5L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3827), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Grunhelm", "М'ясорубка", 900.0, 3000m, 4, 0 }
                 });
 
             migrationBuilder.InsertData(
@@ -173,6 +189,9 @@ namespace Market.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Comments");
+
             migrationBuilder.DropTable(
                 name: "Orders");
 

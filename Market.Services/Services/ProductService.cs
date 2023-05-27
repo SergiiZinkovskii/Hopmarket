@@ -45,7 +45,10 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var product = await _productRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                var product = await _productRepository.GetAll()
+                    .Include(p => p.Photos) // Включити завантаження фотографій
+                    .FirstOrDefaultAsync(x => x.Id == id);
+
                 if (product == null)
                 {
                     return new BaseResponse<ProductViewModel>()
@@ -65,11 +68,7 @@ namespace Market.Service.Implementations
                     TypeProduct = product.TypeProduct.GetDisplayName(),
                     Power = product.Power,
                     ProdModel = product.Model,
-                    Image = product.Avatar,
-                    Image2 = product.Avatar,
-                    Image3 = product.Avatar3,
-                    Image4 = product.Avatar4,
-                    Image5 = product.Avatar5,
+                    Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
                 };
 
                 return new BaseResponse<ProductViewModel>()
@@ -121,7 +120,7 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Product>> Create(ProductViewModel model, byte[] imageData, byte[] imageData2, byte[] imageData3, byte[] imageData4, byte[] imageData5)
+        public async Task<IBaseResponse<Product>> Create(ProductViewModel model, List<byte[]> imageDataList)
         {
             try
             {
@@ -134,12 +133,18 @@ namespace Market.Service.Implementations
                     Power = model.Power,
                     TypeProduct = (TypeProduct)Convert.ToInt32(model.TypeProduct),
                     Price = model.Price,
-                    Avatar = imageData,
-                    Avatar2 = imageData2,
-                    Avatar3 = imageData3,
-                    Avatar4 = imageData4,
-                    Avatar5 = imageData5,
+                    Photos = new List<Photo>()
                 };
+
+                foreach (var imageData in imageDataList)
+                {
+                    var photo = new Photo()
+                    {
+                        ImageData = imageData
+                    };
+                    product.Photos.Add(photo);
+                }
+
                 await _productRepository.Create(product);
 
                 return new BaseResponse<Product>()
@@ -157,6 +162,7 @@ namespace Market.Service.Implementations
                 };
             }
         }
+
 
         public async Task<IBaseResponse<bool>> DeleteProduct(long id)
         {
@@ -208,8 +214,8 @@ namespace Market.Service.Implementations
                 product.Description = model.Description;
                 product.Model = model.ProdModel;
                 product.Price = model.Price;
-                product.Power = model.Power;
-                product.DateCreate = DateTime.ParseExact(model.DateCreate, "yyyyMMdd HH:mm", null);
+                product.Power = model.Power; 
+                product.DateCreate = DateTime.Now;
                 product.Name = model.Name;
 
                 await _productRepository.Update(product);
@@ -236,7 +242,10 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var products = _productRepository.GetAll().ToList();
+                var products = _productRepository.GetAll()
+                    .Include(p => p.Photos) 
+                    .ToList();
+
                 if (!products.Any())
                 {
                     return new BaseResponse<List<Product>>()
@@ -261,5 +270,6 @@ namespace Market.Service.Implementations
                 };
             }
         }
+
     }
 }

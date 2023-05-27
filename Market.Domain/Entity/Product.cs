@@ -22,10 +22,7 @@ namespace Market.Domain.Entity
 
         public TypeProduct TypeProduct { get; set; }
 
-        public byte[]? Avatar { get; set; }
-        public byte[]? Avatar2 { get; set; }
-        public byte[]? Avatar3 { get; set; }
-        public byte[]? Avatar4 { get; set; }
-        public byte[]? Avatar5 { get; set; }
+
+        public ICollection<Photo> Photos { get; set; }
     }
 }

@@ -2,8 +2,16 @@
 
 <div class="row">
     <div class="col-md-12">
-        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model?.Image ?? Array.Empty<byte>())"
-             class="img-fluid rounded-start rounded">
+        @if (Model.Photo != null)
+        {
+
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Photo?.ImageData ?? Array.Empty<byte>())" />
+        }
+        else
+        {
+            <img src="https://example.com/default-image.jpg"  />
+        }
+        
     </div>
     <div class="col-md-6">
         <ul class="list-group list-group-flush">

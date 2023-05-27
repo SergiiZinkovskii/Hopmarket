@@ -48,7 +48,7 @@ public class BasketService : IBasketService
                                Power = c.Power,
                                TypeProduct = c.TypeProduct.GetDisplayName(),
                                Model = c.Model,
-                               Image = c.Avatar
+                               Photo = c.Photos.FirstOrDefault(),
                            };
 
             return new BaseResponse<IEnumerable<OrderViewModel>>()
@@ -109,7 +109,7 @@ public class BasketService : IBasketService
                                 LastName = p.LastName,
                                 MiddleName = p.MiddleName,
                                 DateCreate = p.DateCreated.ToLongDateString(),
-                                Image = c.Avatar
+                                Photo = c.Photos.FirstOrDefault(),
                             }).FirstOrDefault();
 
             return new BaseResponse<OrderViewModel>()

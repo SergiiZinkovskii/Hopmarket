@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230519105804_photos")]
-    partial class photos
+    [Migration("20230525161014_first")]
+    partial class first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,6 +49,30 @@ namespace Market.Migrations
                             Id = 1L,
                             UserId = 1L
                         });
+                });
+
+            modelBuilder.Entity("Market.Domain.Entity.Comment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Author")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Comments");
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.Order", b =>
@@ -154,6 +178,9 @@ namespace Market.Migrations
                     b.Property<int>("TypeProduct")
                         .HasColumnType("int");
 
+                    b.Property<int>("test")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products", (string)null);
@@ -162,57 +189,62 @@ namespace Market.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreate = new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9811),
+                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3734),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Zepline",
                             Name = "Мультиварка",
                             Power = 900.0,
                             Price = 2500m,
-                            TypeProduct = 4
+                            TypeProduct = 4,
+                            test = 0
                         },
                         new
                         {
                             Id = 2L,
-                            DateCreate = new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9878),
+                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3811),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Пончо-намет 3 в 1",
                             Name = "Дощовик",
                             Power = 0.0,
                             Price = 800m,
-                            TypeProduct = 0
+                            TypeProduct = 0,
+                            test = 0
                         },
                         new
                         {
                             Id = 3L,
-                            DateCreate = new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9884),
+                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3817),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Rainberg RB-653TB",
                             Name = "Пилосос",
                             Power = 4200.0,
                             Price = 3000m,
-                            TypeProduct = 2
+                            TypeProduct = 2,
+                            test = 0
                         },
                         new
                         {
                             Id = 4L,
-                            DateCreate = new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9889),
+                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3822),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Lacoste",
                             Name = "Труси чоловічі",
                             Power = 900.0,
                             Price = 120m,
-                            TypeProduct = 3
+                            TypeProduct = 3,
+                            test = 0
                         },
                         new
                         {
                             Id = 5L,
-                            DateCreate = new DateTime(2023, 5, 19, 13, 58, 4, 175, DateTimeKind.Local).AddTicks(9893),
+                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3827),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Grunhelm",
                             Name = "М'ясорубка",
                             Power = 900.0,
                             Price = 3000m,
-                            TypeProduct = 4
+                            TypeProduct = 4,
+                            test = 0
                         });
                 });
 

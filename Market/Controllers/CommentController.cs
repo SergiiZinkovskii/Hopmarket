@@ -15,12 +15,12 @@ namespace Market.Controllers
         }
 
 
-            [HttpGet]
-            public async Task<IActionResult> GetComments(int productId)
+            [HttpPost]
+            public async Task<IActionResult> GetComments(int id)
             {
            
-            var productComments =  await _commentService.GetComments(productId);
-                return View(productComments.Data);
+            var productComments =  await _commentService.GetComments(id);
+                return PartialView(productComments.Data);
             }
 
             

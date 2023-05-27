@@ -65,3 +65,16 @@ header{
 }
 
 
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnail-image {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+}

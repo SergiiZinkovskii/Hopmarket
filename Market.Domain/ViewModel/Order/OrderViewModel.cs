@@ -1,4 +1,6 @@
-﻿namespace Market.Domain.ViewModels.Order
+﻿using Market.Domain.Entity;
+
+namespace Market.Domain.ViewModels.Order
 {
     public class OrderViewModel
     {
@@ -12,7 +14,7 @@
 
         public string TypeProduct { get; set; }
 
-        public byte[]? Image { get; set; }
+        public Photo Photo { get; set; }
 
         public string Address { get; set; }
 

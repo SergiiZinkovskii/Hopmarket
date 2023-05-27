@@ -11,7 +11,7 @@ namespace Market.DAL
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         public DbSet<Product> Products { get; set; }
@@ -24,6 +24,7 @@ namespace Market.DAL
 
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -80,7 +81,6 @@ namespace Market.DAL
                     Price = 2500,
                     Power = 900,
                     Model = "Zepline",
-                    Avatar = null,
                     TypeProduct = TypeProduct.ElectricalAppliances
                 },
 
@@ -93,7 +93,6 @@ namespace Market.DAL
                     DateCreate = DateTime.Now,
                     Price = 800,
                     Model = "Пончо-намет 3 в 1",
-                    Avatar = null,
                     TypeProduct = TypeProduct.MilitaryEquipment
                 },
 
@@ -107,7 +106,6 @@ namespace Market.DAL
                     Price = 3000,
                     Power = 4200,
                     Model = "Rainberg RB-653TB",
-                    Avatar = null,
                     TypeProduct = TypeProduct.AppliancesForHome
                 },
                 new Product
@@ -119,7 +117,6 @@ namespace Market.DAL
                     Price = 120,
                     Power = 900,
                     Model = "Lacoste",
-                    Avatar = null,
                     TypeProduct = TypeProduct.Clothes
                 }, 
                 new Product
@@ -131,7 +128,6 @@ namespace Market.DAL
                     Price = 3000,
                     Power = 900,
                     Model = "Grunhelm",
-                    Avatar = null,
                     TypeProduct = TypeProduct.ElectricalAppliances
                 }
 
@@ -171,6 +167,19 @@ namespace Market.DAL
 
                 builder.HasOne(r => r.Basket).WithMany(t => t.Orders)
                     .HasForeignKey(r => r.BasketId);
+            });
+
+            modelBuilder.Entity<Photo>(builder =>
+            {
+                builder.ToTable("Photos").HasKey(x => x.Id);
+
+                builder.Property(x => x.Id).ValueGeneratedOnAdd();
+                builder.Property(x => x.ImageData).IsRequired();
+
+                builder.HasOne(x => x.Product)
+                    .WithMany(x => x.Photos)
+                    .HasForeignKey(x => x.ProductId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
         }
     }

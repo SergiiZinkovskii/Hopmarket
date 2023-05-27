@@ -128,7 +128,7 @@ namespace Market.Migrations
                     b.ToTable("Orders", (string)null);
                 });
 
-            modelBuilder.Entity("Market.Domain.Entity.Product", b =>
+            modelBuilder.Entity("Market.Domain.Entity.Photo", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -136,20 +136,27 @@ namespace Market.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<byte[]>("Avatar")
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<byte[]>("Avatar2")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
 
-                    b.Property<byte[]>("Avatar3")
-                        .HasColumnType("varbinary(max)");
+                    b.HasKey("Id");
 
-                    b.Property<byte[]>("Avatar4")
-                        .HasColumnType("varbinary(max)");
+                    b.HasIndex("ProductId");
 
-                    b.Property<byte[]>("Avatar5")
-                        .HasColumnType("varbinary(max)");
+                    b.ToTable("Photos", (string)null);
+                });
+
+            modelBuilder.Entity("Market.Domain.Entity.Product", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<DateTime>("DateCreate")
                         .HasColumnType("datetime2");
@@ -186,7 +193,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreate = new DateTime(2023, 5, 21, 18, 1, 27, 383, DateTimeKind.Local).AddTicks(2914),
+                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5241),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Zepline",
                             Name = "Мультиварка",
@@ -198,7 +205,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 2L,
-                            DateCreate = new DateTime(2023, 5, 21, 18, 1, 27, 383, DateTimeKind.Local).AddTicks(2985),
+                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5299),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Пончо-намет 3 в 1",
                             Name = "Дощовик",
@@ -210,7 +217,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 3L,
-                            DateCreate = new DateTime(2023, 5, 21, 18, 1, 27, 383, DateTimeKind.Local).AddTicks(2990),
+                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5304),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Rainberg RB-653TB",
                             Name = "Пилосос",
@@ -222,7 +229,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 4L,
-                            DateCreate = new DateTime(2023, 5, 21, 18, 1, 27, 383, DateTimeKind.Local).AddTicks(2995),
+                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5308),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Lacoste",
                             Name = "Труси чоловічі",
@@ -234,7 +241,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 5L,
-                            DateCreate = new DateTime(2023, 5, 21, 18, 1, 27, 383, DateTimeKind.Local).AddTicks(2999),
+                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5311),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Grunhelm",
                             Name = "М'ясорубка",
@@ -342,6 +349,17 @@ namespace Market.Migrations
                     b.Navigation("Basket");
                 });
 
+            modelBuilder.Entity("Market.Domain.Entity.Photo", b =>
+                {
+                    b.HasOne("Market.Domain.Entity.Product", "Product")
+                        .WithMany("Photos")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Market.Domain.Entity.Profile", b =>
                 {
                     b.HasOne("Market.Domain.Entity.User", "User")
@@ -356,6 +374,11 @@ namespace Market.Migrations
             modelBuilder.Entity("Market.Domain.Entity.Basket", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Market.Domain.Entity.Product", b =>
+                {
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.User", b =>
