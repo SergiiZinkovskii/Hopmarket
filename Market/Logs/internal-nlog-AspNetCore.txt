@@ -1,0 +1,24 @@
+Info Message Template Auto Format enabled
+Info Loading assembly: NLog.Web.AspNetCore
+Info Adding target FileTarget(Name=allfile)
+Info Adding target FileTarget(Name=ownFile-web)
+Info Adding target ConsoleTarget(Name=lifetimeConsole)
+Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\Users\zsirc\OneDrive\Desktop\Automarket-develop\Automarket-develop\Automarket\NLog.config
+2023-05-28 17:25:33.0629 Info Message Template Auto Format enabled
+2023-05-28 17:25:33.0976 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-28 17:25:33.2832 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-28 17:25:33.2832 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-05-28 17:25:33.2832 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-05-28 17:25:33.4060 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\bin\Debug\net6.0\NLog.config
+2023-05-28 17:25:33.4883 Info Configuration initialized.
+2023-05-28 17:25:33.6723 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.5.1789. Product version: 5.1.5+5fa37c2002cc3e3255264e79f0eb30113a5544e7. GlobalAssemblyCache: False
+2023-05-28 17:25:33.6791 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\bin\Debug\net6.0\NLog.config
+2023-05-28 20:53:15.4205 Info Message Template Auto Format enabled
+2023-05-28 20:53:15.5314 Info Loading assembly: NLog.Web.AspNetCore
+2023-05-28 20:53:15.7062 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-05-28 20:53:15.7062 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-05-28 20:53:15.7062 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2023-05-28 20:53:15.8250 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\bin\Debug\net6.0\NLog.config
+2023-05-28 20:53:15.8753 Info Configuration initialized.
+2023-05-28 20:53:15.9108 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.5.1789. Product version: 5.1.5+5fa37c2002cc3e3255264e79f0eb30113a5544e7. GlobalAssemblyCache: False
+2023-05-28 20:53:15.9108 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=56, FilePath=C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\bin\Debug\net6.0\NLog.config
