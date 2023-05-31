@@ -22,6 +22,16 @@ namespace Market.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public async Task<IActionResult> AdminDetail()
+        {
+            var response = await _basketService.GetAllItems();
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                return View(response.Data.ToList());
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetItem(long id)
         {

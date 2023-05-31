@@ -38,5 +38,6 @@ namespace Market.DAL.Repositories
 
             return entity;
         }
+
     }
 }

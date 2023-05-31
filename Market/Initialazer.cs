@@ -19,6 +19,7 @@ namespace Market
             services.AddScoped<IBaseRepository<Basket>, BasketRepository>();
             services.AddScoped<IBaseRepository<Order>, OrderRepository>();
             services.AddScoped<IBaseRepository<Comment>, CommentRepository>();
+            services.AddScoped<IBaseRepository<Photo>, PhotoRepository>();
         }
 
         public static void InitializeServices(this IServiceCollection services)
@@ -30,6 +31,7 @@ namespace Market
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ICommentService, CommentService>();
+         
         }
     }
 }

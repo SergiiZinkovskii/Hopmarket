@@ -120,22 +120,26 @@ namespace Market.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> GetProduct(int id, bool isJson)
+        public async Task<IActionResult> GetProduct(int id)
         {
             var response = await _productService.GetProduct(id);
-            
-            if (isJson)
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
-                return Json(response.Data);
+ 
+                return View("GetProduct", response.Data);
             }
-            return View("GetProduct", response.Data);
+            return View("Error", $"{response.Description}");
         }
 
         [HttpPost]
         public async Task<IActionResult> GetProduct(string term)
         {
             var response = await _productService.GetProduct(term);
-            return Json(response.Data);
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                return Json(response.Data);
+            }
+            return View("Error", $"{response.Description}");
         }
 
         [HttpPost]
@@ -155,21 +159,5 @@ namespace Market.Controllers
             return RedirectToAction("GetProducts");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Edit(long id)
-        
-        {
-            if (id == 0)
-                return View();
-
-            var response = await _productService.GetProduct(id);
-            
-            if (response.StatusCode == Domain.Enum.StatusCode.OK)
-            {
-                return View(response.Data);
-            }
-            ModelState.AddModelError("", response.Description);
-            return View();
-        }
     }
 }

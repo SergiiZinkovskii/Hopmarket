@@ -1,0 +1,399 @@
+2023-05-31 09:09:38.0986|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:09:38.2756|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:09:38.2756|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:09:38.2970|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:09:38.2970|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:10:41.3681|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Product/GetProducts|action: GetProducts|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 09:11:28.2371|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 09:14:33.7871|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: |action: |Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log
+2023-05-31 09:17:13.6863|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:17:13.8142|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:17:13.8142|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:17:13.8142|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:17:13.8306|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:18:37.7455|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Product/GetProducts|action: GetProducts|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 09:19:40.0130|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 09:25:03.0026|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 09:55:46.6990|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:55:46.8259|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 09:55:46.8318|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:55:46.8463|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:55:46.8463|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 09:57:02.1817|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Product/GetProducts|action: GetProducts|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 09:57:20.7363|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 10:03:09.7899|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 11:32:32.0518|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 11:32:32.1487|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 11:32:32.1780|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:32:32.1904|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:32:32.1904|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:33:55.7662|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 11:37:45.3407|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.CompilationFailedException: One or more compilation failures occurred:
+C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Basket\Detail.cshtml(44,35): error CS1061: 'OrderViewModel' does not contain a definition for 'Photo' and no accessible extension method 'Photo' accepting a first argument of type 'OrderViewModel' could be found (are you missing a using directive or an assembly reference?)
+C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Basket\Detail.cshtml(47,92): error CS1061: 'OrderViewModel' does not contain a definition for 'Photo' and no accessible extension method 'Photo' accepting a first argument of type 'OrderViewModel' could be found (are you missing a using directive or an assembly reference?)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(RazorCodeDocument codeDocument, String generatedCode)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Razor.Compilation.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeResultAsync>g__Logged|22_0(ResourceInvoker invoker, IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 11:38:56.7755|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 11:38:56.8450|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 11:38:56.8450|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:38:56.8450|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:38:56.8450|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 11:39:42.4728|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 11:39:55.6430|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.ArgumentNullException: Value cannot be null. (Parameter 'source')
+   at System.Linq.ThrowHelper.ThrowArgumentNullException(ExceptionArgument argument)
+   at System.Linq.Enumerable.TryGetFirst[TSource](IEnumerable`1 source, Boolean& found)
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at Market.Service.Implementations.BasketService.<>c.<GetItems>b__3_2(Order p, Product c) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 44
+   at System.Linq.Enumerable.JoinIterator[TOuter,TInner,TKey,TResult](IEnumerable`1 outer, IEnumerable`1 inner, Func`2 outerKeySelector, Func`2 innerKeySelector, Func`3 resultSelector, IEqualityComparer`1 comparer)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:07:31.0535|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:07:31.1983|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:07:31.1983|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:07:31.2224|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:07:31.2224|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:08:27.6522|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Product/GetProducts|action: GetProducts|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:14:37.1376|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:14:37.2280|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:14:37.2280|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:14:37.2280|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:14:37.2280|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:15:45.8770|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:17:09.5160|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:17:09.5792|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:17:09.5878|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:17:09.5998|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:17:09.5998|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:18:24.9152|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Basket/Detail|action: Detail|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:18:59.6559|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Market.Service.Implementations.BasketService.GetItems(String userName) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 43
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:27:20.2995|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Market.Service.Implementations.BasketService.GetItems(String userName) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 43
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:27:38.9860|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Market.Service.Implementations.BasketService.GetItems(String userName) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 43
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:29:29.4037|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:29:29.6183|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:29:29.6183|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:29:29.6283|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:29:29.6283|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:31:00.0890|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:31:14.1762|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Market.Service.Implementations.BasketService.GetItems(String userName) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 43
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:32:32.9244|0|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at Market.Service.Implementations.BasketService.GetItems(String userName) in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market.Services\Services\BasketService.cs:line 43
+   at Market.Controllers.BasketController.Detail() in C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Controllers\BasketController.cs:line 17
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)|url: https://localhost/Basket/Detail|action: Detail|Microsoft.AspNetCore.Diagnostics.DiagnosticsLoggerExtensions.UnhandledException
+2023-05-31 17:33:15.6142|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:33:15.8222|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:33:15.8689|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:33:15.9510|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:33:15.9510|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:34:05.0658|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:36:34.3635|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:36:34.4250|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:36:34.4250|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:36:34.4250|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:36:34.4250|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:37:39.0788|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:39:48.5163|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:39:48.9463|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:39:48.9463|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:39:48.9658|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:39:48.9658|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:40:59.8035|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:49:00.2081|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:49:00.5057|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:49:00.5057|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:49:00.5503|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:49:00.5503|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:50:00.7620|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:53:41.8724|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:53:42.0678|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:53:42.0678|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:53:42.0809|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:53:42.0809|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:54:31.0042|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 17:55:58.9025|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:55:58.9789|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 17:55:58.9789|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:55:58.9999|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:55:59.0011|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 17:57:11.9852|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 18:01:32.9636|0|INFO|Market.Service.Implementations.UserService|[UserService.GetUsers] отримання елементів 3 |url: https://localhost/User/GetUsers|action: GetUsers|Market.Service.Implementations.UserService.GetUsers
+2023-05-31 18:04:31.1323|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 18:04:31.3547|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 18:04:31.3547|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:04:31.3972|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:04:31.3972|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:05:48.7914|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Register|action: Register|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 18:08:47.8662|0|INFO|Market.Service.Implementations.UserService|[UserService.GetUsers] отримання елементів 4 |url: https://localhost/User/GetUsers|action: GetUsers|Market.Service.Implementations.UserService.GetUsers
+2023-05-31 18:15:34.0143|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:15:34.5161|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:15:34.5174|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Automarket-develop\Automarket-develop\Automarket\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 18:16:31.9224|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Car'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 21:51:30.3237|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:51:30.4269|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:51:30.4269|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:51:30.4414|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:51:30.4414|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:52:37.1568|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 21:52:53.5122|0|INFO|Market.Service.Implementations.UserService|[UserService.GetUsers] отримання елементів 4 |url: https://localhost/User/GetUsers|action: GetUsers|Market.Service.Implementations.UserService.GetUsers
+2023-05-31 21:55:12.9327|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:55:12.9910|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:55:12.9910|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:55:12.9910|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:55:13.0022|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:56:39.4547|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
+2023-05-31 21:58:20.9358|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:58:21.0011|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-05-31 21:58:21.0011|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:58:21.0011|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 21:58:21.0011|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-05-31 22:00:03.1884|0|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'. |url: https://localhost/Account/Login|action: Login|Microsoft.EntityFrameworkCore.SqlServer.Extensions.Internal.SqlServerLoggerExtensions.DecimalTypeDefaultWarning
