@@ -1,4 +1,5 @@
 ﻿using Market.Domain.Entity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Market.Domain.ViewModels.Order
 {
@@ -24,6 +25,16 @@ namespace Market.Domain.ViewModels.Order
 
         public string MiddleName { get; set; }
 
-        public string DateCreate { get; set; }
+        public string DateCreate { get; set; }       
+        public int Phone { get; set; }
+        public decimal Price { get; set; }
+
+        public string Post { get; set; }
+
+        public string Payment { get; set; }
+
+        public string Comments { get; set; }
+
+        public int Quantity { get; set; }
     }
-}
+} 

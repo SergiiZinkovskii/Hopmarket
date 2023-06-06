@@ -19,7 +19,7 @@ namespace Market.Domain.ViewModels.Order
         [MaxLength(200, ErrorMessage = "Адреса має быть меньше  200 символів")]
         public string Address { get; set; }
 
-        [Display(Name = "м'я")]
+        [Display(Name = "Ім'я")]
         [Required(ErrorMessage = "Вкажіть ім'я")]
         [MaxLength(20, ErrorMessage = "Ім'я має складатися меньше ніж з  20 символів")]
         [MinLength(2, ErrorMessage = "Ім'я має складатися більше ніж з 1 символу")]
@@ -49,7 +49,7 @@ namespace Market.Domain.ViewModels.Order
         public string Payment { get; set; }
 
         [Display(Name = "Коментарі до замовлення")]
-        [Required(ErrorMessage = "Додайте коментарі до замовлення")]
+        
         public string Comments { get; set; }
 
 

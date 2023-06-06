@@ -32,7 +32,8 @@ public class BasketService : IBasketService
 
             var response = from order in orders
                            join product in _productRepository.GetAll() on order.ProductId equals product.Id
-
+                           join photo in _photoRepository.GetAll() on product.Id equals photo.ProductId into photos
+                           from photo in photos.DefaultIfEmpty()
                            select new OrderViewModel()
                            {
                                Id = order.Id,
@@ -40,7 +41,18 @@ public class BasketService : IBasketService
                                Power = product.Power,
                                TypeProduct = product.TypeProduct.GetDisplayName(),
                                Model = product.Model,
-                               
+                               Photo = photo,
+                               Address = order.Address,
+                               FirstName = order.FirstName,
+                               LastName = order.LastName,
+                               MiddleName = order.MiddleName,
+                               DateCreate = order.DateCreated.ToLongDateString(),
+                               Phone = order.Phone,
+                               Price = product.Price,
+                               Post = order.Post,
+                               Payment = order.Payment,
+                               Comments = order.Comments,
+                               Quantity = order.Quantity
                            };
 
             return new BaseResponse<IEnumerable<OrderViewModel>>()
@@ -57,8 +69,8 @@ public class BasketService : IBasketService
                 StatusCode = StatusCode.InternalServerError
             };
         }
-
     }
+
 
     public async Task<IBaseResponse<IEnumerable<OrderViewModel>>> GetItems(string userName)
     {
@@ -89,6 +101,7 @@ public class BasketService : IBasketService
                            select new OrderViewModel()
                            {
                                Id = p.Id,
+                               Price = c.Price,
                                ProductName = c.Name,
                                Power = c.Power,
                                TypeProduct = c.TypeProduct.GetDisplayName(),
@@ -158,6 +171,10 @@ public class BasketService : IBasketService
                                 MiddleName = p.MiddleName,
                                 DateCreate = p.DateCreated.ToLongDateString(),
                                 Photo = photo,
+                                Phone = p.Phone,
+                                Comments = p.Comments,
+                                Post = p.Post,
+                                Payment = p.Payment,
                             }).FirstOrDefault();
 
             return new BaseResponse<OrderViewModel>()
@@ -175,4 +192,71 @@ public class BasketService : IBasketService
             };
         }
     }
+
+    public async Task<IBaseResponse<OrderViewModel>> GetItemByAdmin(long id)
+    {
+        try
+        {
+            var order = await _orderRepository.GetAll()
+                .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order == null)
+            {
+                return new BaseResponse<OrderViewModel>()
+                {
+                    Description = "Замовлення не знайдено",
+                    StatusCode = StatusCode.OrderNotFound
+                };
+            }
+
+            var product = await _productRepository.GetAll()
+                .FirstOrDefaultAsync(p => p.Id == order.ProductId);
+
+            if (product == null)
+            {
+                return new BaseResponse<OrderViewModel>()
+                {
+                    Description = "Продукт не знайдено",
+                    StatusCode = StatusCode.ProductNotFound
+                };
+            }
+
+            var response = new OrderViewModel()
+            {
+                Id = order.Id,
+                ProductName = product.Name,
+                Power = product.Power,
+                TypeProduct = product.TypeProduct.GetDisplayName(),
+                Model = product.Model,
+                Address = order.Address,
+                FirstName = order.FirstName,
+                LastName = order.LastName,
+                MiddleName = order.MiddleName,
+                DateCreate = order.DateCreated.ToLongDateString(),
+                Phone = order.Phone,
+                Comments = order.Comments,
+                Post = order.Post,
+                Payment = order.Payment,
+                Quantity = order.Quantity,
+            };
+
+            return new BaseResponse<OrderViewModel>()
+            {
+                Data = response,
+                StatusCode = StatusCode.OK
+            };
+        }
+        catch (Exception ex)
+        {
+            return new BaseResponse<OrderViewModel>()
+            {
+                Description = ex.Message,
+                StatusCode = StatusCode.InternalServerError
+            };
+        }
+    }
+
+
+
+
 }

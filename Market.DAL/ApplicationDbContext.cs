@@ -2,8 +2,7 @@
 using Market.Domain.Enum;
 using Market.Domain.Helpers;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
+
 
 namespace Market.DAL
 {
@@ -181,6 +180,8 @@ namespace Market.DAL
                     .HasForeignKey(x => x.ProductId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
+
+
         }
     }
 }

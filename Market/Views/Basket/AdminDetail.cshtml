@@ -1,55 +1,47 @@
 ﻿@model List<Market.Domain.ViewModels.Order.OrderViewModel>
 
 @{
-    ViewBag.Title = "Кошик";
+    ViewBag.Title = "Замовлення";
     Layout = "_Layout";
 }
 
-@{
-    var cardStyle = "col-md-12";
-    if (Model != null)
-    {
-        switch (Model.Count)
+<div class="container">
+    <div class="row">
+        @if (Model == null || Model.Count == 0)
         {
-            case 2:
-                cardStyle = "col-md-6";
-                break;
-            case 3:
-                cardStyle = "col-md-4";
-                break;
-        }
-    }
-}
-@if (Model == null || Model.Count == 0)
-{
-    <div style="padding:40px;"></div>
-    <div class="card col-md-12">
-        <div class="row g-0">
-            <div class="col-md-12">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Список замовлень пустий :(</h5>
+            <div class="col-md-12 text-center">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Список замовлень пустий :(</h5>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-}
-else
-{
-    <div class="row">
-        @foreach (var item in Model)
+        }
+        else
         {
-            <div class="row row-cols-1 @cardStyle text-center">
-                <div class="col" style="padding: 10px;">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-3 mt-4">
                     <div class="card">
-                           <div class="card-body">
-                            <h5 class="card-title">Назва товару: @item.ProductName</h5>
+                       
+                        <div class="card-body">
+                            <h5 class="card-title">@item.ProductName</h5>
+                            <p class="card-text">Модель: @item.Model</p>
                             <p class="card-text">Тип: @item.TypeProduct</p>
+                            <p class="card-text">Ціна: @item.Price</p>
+                            <p class="card-text">Кількість: @item.Quantity</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Модель: @item.Model</li>
+                            <li class="list-group-item">Ім'я: @item.FirstName @item.LastName</li>
+                            <li class="list-group-item">Адреса: @item.Address</li>
+                            <li class="list-group-item">Телефон: @item.Phone</li>
+                            <li class="list-group-item">Дата створення: @item.DateCreate</li>
+                            <li class="list-group-item">Відправлення: @item.Post</li>
+                            <li class="list-group-item">Оплата: @item.Payment</li>
+                            <li class="list-group-item">Коментарі: @item.Comments</li>
                         </ul>
-                        <div class="card-body">
-                            <button class="btn btn-primary" onclick="openModal({ url: '/Basket/GetItem', data: '@item.Id' })"
+                        <div class="card-footer text-center">
+                            <button class="btn btn-primary" onclick="openModal({ url: '/Basket/GetItemByAdmin', data: '@item.Id' })"
                                     data-toggle="ajax-modal" data-target="Modal">
                                 Відкрити
                             </button>
@@ -57,7 +49,7 @@ else
                         </div>
                     </div>
                 </div>
-            </div>
+            }
         }
     </div>
-}
+</div>

@@ -5,6 +5,7 @@
     Layout = "_Layout";
 }
 
+
 <form id="product-form" asp-action="Edit" enctype="multipart/form-data">
     <input type="hidden" id="productId" value="@Model.Id" />
     <div class="row">
@@ -78,50 +79,25 @@
         }
     </div>
 </form >
-<div class="modal-body">
-    <!-- Розміщення відгуків -->
-    <div id="comments-section">
-        <h4 style="color: whitesmoke"> Відгуки про товар</h4>
-        <div id="comments-list"></div> <!-- Відображення списку відгуків -->
-        <form id="comment-form">
-            <div class="form-group">
-                <textarea id="comment-text" class="form-control" rows="3" placeholder="Залиште свій відгук про наш товар"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Додати відгук</button>
-
-        </form>
-    </div>
+<!-- Розміщення відгуків -->
+<div id="comments-section">
+    <h4 style="color: whitesmoke">Відгуки про товар</h4>
+    <div id="comments-list" style="font-size: small"></div> <!-- Відображення списку відгуків -->
+    <br />
+    <form id="comment-form">
+        <div class="form-group">
+            <textarea id="comment-text" class="form-control" rows="3" placeholder="Залиште свій відгук про наш товар"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Додати відгук</button>
+    </form>
 </div>
+
 
 
 
 @section pageScripts
     {
-@*    <script>
-        $(function () {
-            $('#edit-product-done').on('click', function (e) {
-                e.preventDefault();
 
-                var form = document.getElementById('product-form');
-                var formData = new FormData(form);
-                var url = '@Url.Action("Edit", "Product")';
-
-                $.ajax({
-                    url: url,
-                    type: 'POST',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function (result) {
-                        // handle success
-                    },
-                    error: function (xhr, status, error) {
-                        // handle error
-                    }
-                });
-            });
-        });
-    </script>*@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -134,18 +110,14 @@
                 });
             });
         });
-    </script>
-
-    <script>
+   
         $(function () {
             var $description = $('#description');
             var lineHeight = parseInt($description.css('lineHeight'));
             var lines = $description.val().split('\n').length;
             $description.height(lineHeight * lines);
         });
-    </script>
-
-    <script>
+    
         document.addEventListener('DOMContentLoaded', function () {
             var createOrderBtn = document.getElementById('create-order-btn');
             createOrderBtn.addEventListener('click', function () {
@@ -156,9 +128,7 @@
                 window.location.href = url;
             });
         });
-    </script>
-
-    <script>
+    
         document.addEventListener('DOMContentLoaded', function () {
             var deleteOrderBtn = $('delete-product-btn');
             if (deleteOrderBtn.length > 0) {
@@ -171,9 +141,7 @@
                 });
             }
         });
-    </script>
-
-    <script>
+   
         var productId = '@Model.Id';
 
         $(function () {
@@ -205,25 +173,35 @@
                     }
                 });
             });
-
-  
+        });
 
         function loadComments() {
             var productId = $('#productId').val(); // Отримати значення productId з прихованого поля
-            console.log($('#productId'), productId)
+            console.log($('#productId'), productId);
 
-            $.ajax({
-                url: '/Comment/GetComments/' + productId,
-                type: 'POST',
-                success: function (data) {
-                    // Оновлення списку коментарів
-                    $('#comments-list').html(data);
-                },
-                error: function (xhr, status, error) {
-                    console.log(error);
-                }
+            // Використання проміса для отримання коментарів
+            var getCommentsPromise = new Promise(function (resolve, reject) {
+                $.ajax({
+                    url: '/Comment/GetComments/' + productId,
+                    type: 'POST',
+                    success: function (data) {
+                        resolve(data); // Виклик resolve з отриманими даними
+                    },
+                    error: function (xhr, status, error) {
+                        reject(error); // Виклик reject з помилкою
+                    }
+                });
+            });
+
+            // Обробка результатів проміса
+            getCommentsPromise.then(function (data) {
+                // Оновлення списку коментарів
+                $('#comments-list').html(data);
+            }).catch(function (error) {
+                console.log(error);
             });
         }
     </script>
+
 
 }

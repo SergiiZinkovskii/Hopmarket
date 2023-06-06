@@ -9,5 +9,6 @@ namespace Market.Service.Interfaces
         Task<IBaseResponse<IEnumerable<OrderViewModel>>> GetAllItems();
 
         Task<IBaseResponse<OrderViewModel>> GetItem(string userName, long id);
+        Task<IBaseResponse<OrderViewModel>> GetItemByAdmin( long id);
     }
 }

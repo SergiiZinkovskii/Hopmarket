@@ -4,14 +4,12 @@
     <div class="col-md-12">
         @if (Model.Photo != null)
         {
-
-            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Photo?.ImageData ?? Array.Empty<byte>())" />
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Photo?.ImageData ?? Array.Empty<byte>())" class="img-fluid" />
         }
         else
         {
-            <img src="https://example.com/default-image.jpg"  />
+            <img src="https://example.com/default-image.jpg" class="img-fluid" />
         }
-        
     </div>
     <div class="col-md-6">
         <ul class="list-group list-group-flush">
@@ -26,7 +24,10 @@
             <li class="list-group-item">ПІБ: @Model.FirstName @Model.LastName.Substring(0, 1) @Model.MiddleName.Substring(0, 1)</li>
             <li class="list-group-item">Адреса: @Model.Address</li>
             <li class="list-group-item">Дата створення: @Model.DateCreate</li>
+            <li class="list-group-item">Телефон: @Model.Phone</li>
+            <li class="list-group-item">Відправлення: @Model.Post</li>
+            <li class="list-group-item">Оплата: @Model.Payment</li>
+            <li class="list-group-item">Коментарі: @Model.Comments</li>
         </ul>
     </div>
 </div>
-

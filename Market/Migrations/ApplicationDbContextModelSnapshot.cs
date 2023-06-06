@@ -121,6 +121,9 @@ namespace Market.Migrations
                     b.Property<long?>("ProductId")
                         .HasColumnType("bigint");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BasketId");
@@ -193,7 +196,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5241),
+                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4215),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Zepline",
                             Name = "Мультиварка",
@@ -205,7 +208,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 2L,
-                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5299),
+                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4298),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Пончо-намет 3 в 1",
                             Name = "Дощовик",
@@ -217,7 +220,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 3L,
-                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5304),
+                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4302),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Rainberg RB-653TB",
                             Name = "Пилосос",
@@ -229,7 +232,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 4L,
-                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5308),
+                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4305),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Lacoste",
                             Name = "Труси чоловічі",
@@ -241,7 +244,7 @@ namespace Market.Migrations
                         new
                         {
                             Id = 5L,
-                            DateCreate = new DateTime(2023, 5, 25, 21, 42, 5, 42, DateTimeKind.Local).AddTicks(5311),
+                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4308),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Grunhelm",
                             Name = "М'ясорубка",

@@ -32,6 +32,7 @@ namespace Market.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+
         [HttpGet]
         public async Task<IActionResult> GetItem(long id)
         {
@@ -39,6 +40,17 @@ namespace Market.Controllers
             if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
                 return PartialView(response.Data);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetItemByAdmin(long id)
+        {
+            var response = await _basketService.GetItemByAdmin( id);
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                return PartialView("GetItem", response.Data);
             }
             return RedirectToAction("Index", "Home");
         }

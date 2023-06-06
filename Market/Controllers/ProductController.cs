@@ -91,8 +91,7 @@ namespace Market.Controllers
             ModelState.Remove("Id");
             ModelState.Remove("DateCreate");
 
-            if (viewModel.Id == 0)
-            {
+
                 List<byte[]> imageDataList = new List<byte[]>();
 
                 if (avatars != null && avatars.Length > 0)
@@ -108,11 +107,7 @@ namespace Market.Controllers
                 }
 
                 await _productService.Create(viewModel, imageDataList);
-            }
-            else
-            {
-                await _productService.Edit(viewModel, viewModel.Id);
-            }
+
 
             return RedirectToAction("GetProducts");
         }

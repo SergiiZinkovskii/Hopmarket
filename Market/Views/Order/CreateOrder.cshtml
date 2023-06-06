@@ -27,38 +27,39 @@
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label asp-for="@Model.FirstName" class="col-form-label text-black-50"></label>
-                        <input type="text" class="form-control" asp-for="@Model.FirstName">
+                            <input type="text" class="form-control" asp-for="@Model.FirstName" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label asp-for="@Model.LastName" class="col-form-label text-black-50"></label>
-                        <input type="text" class="form-control" asp-for="@Model.LastName">
+                            <input type="text" class="form-control" asp-for="@Model.LastName" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label asp-for="@Model.MiddleName" class="col-form-label text-black-50"></label>
-                        <input type="text" class="form-control" asp-for="@Model.MiddleName">
+                            <input type="text" class="form-control" asp-for="@Model.MiddleName" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label asp-for="@Model.Address" class="col-form-label text-black-50"></label>
-                        <input type="text" class="form-control" asp-for="@Model.Address">
+                            <input type="text" class="form-control" asp-for="@Model.Address" required>
                     </div>
 
 
                     <div class="form-group col-md-4">
                         <label asp-for="@Model.Quantity" class="col-form-label text-black-50"></label>
-                        <input type="text" class="form-control" asp-for="@Model.Quantity">
+                            <input type="text" class="form-control" asp-for="@Model.Quantity" required>
                     </div>
                         <div class="row">
                             <div class="form-group col-md-4">
                                 <label asp-for="@Model.Phone" class="col-form-label text-black-50"></label>
-                                <input type="text" class="form-control" asp-for="@Model.Phone">
+                                <input type="text" class="form-control" asp-for="@Model.Phone" required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label asp-for="@Model.Post" class="col-form-label text-black-50"></label>
-                                <select class="form-control" asp-for="@Model.Post">
+                                <select class="form-control" asp-for="@Model.Post" required>
                                     <option value="Нова Пошта">Нова Пошта</option>
                                     <option value="Укрпошта">Укрпошта</option>
+                                    <option value="Укрпошта">Самовивіз</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-4">
