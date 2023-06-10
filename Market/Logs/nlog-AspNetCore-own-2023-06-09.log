@@ -1,0 +1,10 @@
+2023-06-09 17:19:16.8044|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-09 17:19:16.8406|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-09 17:19:16.8406|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-09 17:19:16.8518|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-09 17:19:16.8518|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\publish\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-09 17:22:29.9097|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-09 17:22:29.9214|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-09 17:22:29.9214|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-09 17:22:29.9214|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-09 17:22:29.9214|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\publish\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
