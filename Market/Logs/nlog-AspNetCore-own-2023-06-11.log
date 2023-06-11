@@ -1,0 +1,5 @@
+2023-06-11 11:52:43.7185|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 |url: |action: |Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ |url: |action: |Microsoft.Extensions.Hosting.Internal.ConsoleLifetime.OnApplicationStarted

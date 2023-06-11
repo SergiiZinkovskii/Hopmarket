@@ -1,0 +1,862 @@
+2023-06-11 11:52:41.9559|0|DEBUG|Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory|Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider 
+2023-06-11 11:52:42.1102|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting starting 
+2023-06-11 11:52:42.2235|0|INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|User profile is available. Using 'C:\Users\zsirc\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2023-06-11 11:52:42.2235|0|DEBUG|Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository|Reading data from file 'C:\Users\zsirc\AppData\Local\ASP.NET\DataProtection-Keys\key-97f5fcc2-e755-4a2b-ab67-ee6776e1349b.xml'. 
+2023-06-11 11:52:42.3444|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager|Found key {97f5fcc2-e755-4a2b-ab67-ee6776e1349b}. 
+2023-06-11 11:52:42.3879|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver|Considering key {97f5fcc2-e755-4a2b-ab67-ee6776e1349b} with expiration date 2023-07-10 13:56:20Z as default key. 
+2023-06-11 11:52:42.3879|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-11 11:52:42.3944|0|DEBUG|Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor|Decrypting secret element using Windows DPAPI. 
+2023-06-11 11:52:42.3944|0|DEBUG|Microsoft.AspNetCore.DataProtection.TypeForwardingActivator|Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60 
+2023-06-11 11:52:42.3944|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC. 
+2023-06-11 11:52:42.4087|0|DEBUG|Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngCbcAuthenticatedEncryptorFactory|Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC. 
+2023-06-11 11:52:42.4087|0|DEBUG|Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider|Using key {97f5fcc2-e755-4a2b-ab67-ee6776e1349b} as the default key. 
+2023-06-11 11:52:42.4087|0|DEBUG|Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService|Key ring with default key {97f5fcc2-e755-4a2b-ab67-ee6776e1349b} was loaded during application startup. 
+2023-06-11 11:52:43.6100|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer|Using development certificate: CN=localhost (Thumbprint: B4D129714BA05F67B9DF26E4C849EB0D8CFBEBA5) 
+2023-06-11 11:52:43.7185|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:7067 
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5098 
+2023-06-11 11:52:43.7859|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Market 
+2023-06-11 11:52:43.7859|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh 
+2023-06-11 11:52:43.7859|0|DEBUG|Microsoft.AspNetCore.Hosting.Diagnostics|Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net 
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2023-06-11 11:52:43.7859|0|INFO|Microsoft.Hosting.Lifetime|Content root path: C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\ 
+2023-06-11 11:52:43.7859|0|DEBUG|Microsoft.Extensions.Hosting.Internal.Host|Hosting started 
+2023-06-11 11:52:43.8562|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRAB4SAP2TJ" received FIN. 
+2023-06-11 11:52:43.8693|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TJ" accepted. 
+2023-06-11 11:52:43.8693|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TJ" started. 
+2023-06-11 11:52:43.9233|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Failed to authenticate HTTPS connection. System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-06-11 11:52:44.2574|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TJ" stopped. 
+2023-06-11 11:52:44.2574|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRAB4SAP2TJ" sending FIN because: "The Socket transport's send loop completed gracefully." 
+2023-06-11 11:52:45.8344|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TK" accepted. 
+2023-06-11 11:52:45.8344|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TK" started. 
+2023-06-11 11:52:45.9776|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware|Connection 0HMRAB4SAP2TK established using the following protocol: Tls13 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending SETTINGS frame for stream ID 0 with length 18 and flags NONE. 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received SETTINGS frame for stream ID 0 with length 30 and flags NONE. 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2023-06-11 11:52:46.0520|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 1 with length 469 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:46.1223|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received SETTINGS frame for stream ID 0 with length 0 and flags ACK. 
+2023-06-11 11:52:46.1441|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/ - - 
+2023-06-11 11:52:46.2415|0|DEBUG|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|Wildcard detected, all requests with hosts will be allowed. 
+2023-06-11 11:52:46.2415|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:46.2524|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The request path / does not match a supported file type 
+2023-06-11 11:52:46.3955|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|1 candidate(s) found for the request path '/' 
+2023-06-11 11:52:46.3955|0|DEBUG|Microsoft.AspNetCore.Routing.Matching.DfaMatcher|Endpoint 'Market.Controllers.HomeController.Index (Market)' with route pattern '{controller=Home}/{action=Index}/{id?}' is valid for the request path '/' 
+2023-06-11 11:52:46.3955|0|DEBUG|Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware|Request matched endpoint 'Market.Controllers.HomeController.Index (Market)' 
+2023-06-11 11:52:46.4741|0|DEBUG|Microsoft.AspNetCore.Authentication.Cookies.CookieAuthenticationHandler|AuthenticationScheme: Cookies was not authenticated. 
+2023-06-11 11:52:46.4939|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executing endpoint 'Market.Controllers.HomeController.Index (Market)' 
+2023-06-11 11:52:46.6587|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Market.Controllers.HomeController (Market). 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of authorization filters (in the following order): None 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000) 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of exception filters (in the following order): None 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter 
+2023-06-11 11:52:46.6587|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:46.6587|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing controller factory for controller Market.Controllers.HomeController (Market) 
+2023-06-11 11:52:46.6587|0|DEBUG|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed controller factory for controller Market.Controllers.HomeController (Market) 
+2023-06-11 11:52:46.6587|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2023-06-11 11:52:46.6587|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-11 11:52:46.6587|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-11 11:52:46.6587|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executing action method Market.Controllers.HomeController.Index (Market) - Validation state: Valid 
+2023-06-11 11:52:46.6755|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action method Market.Controllers.HomeController.Index (Market), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.7305ms. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:46.6755|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Before executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2023-06-11 11:52:46.6755|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view 'Index' in controller 'Home'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Account/Login.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Account/Register.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Basket/AdminDetail.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Basket/Detail.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Basket/GetItem.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Comment/GetComments.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Company/About.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Company/Delivery.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Home/Index.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Order/CreateOrder.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Product/Compare.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Product/GetCategory.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Product/GetProduct.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Product/GetProducts.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Product/Save.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Profile/Detail.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/Error.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/_ValidationScriptsPartial.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/User/GetUsers.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/User/Save.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewImports.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/_ViewStart.cshtml'. 
+2023-06-11 11:52:46.6900|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Initializing Razor view compiler with compiled view: '/Views/Shared/_Layout.cshtml'. 
+2023-06-11 11:52:46.6900|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Located compiled view for view at path '/Views/Home/Index.cshtml'. 
+2023-06-11 11:52:46.7932|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Invalidating compiled view at path '/Views/Home/Index.cshtml' with a file since the checksum did not match. 
+2023-06-11 11:52:50.0516|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Home\Index.cshtml' started. 
+2023-06-11 11:52:52.9571|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Home\Index.cshtml' completed in 2902.7478ms. 
+2023-06-11 11:52:52.9571|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Could not find a file for view at path '/Views/Home/_ViewStart.cshtml'. 
+2023-06-11 11:52:52.9571|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Located compiled view for view at path '/Views/_ViewStart.cshtml'. 
+2023-06-11 11:52:52.9717|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Invalidating compiled view at path '/Views/_ViewStart.cshtml' with a file since the checksum did not match. 
+2023-06-11 11:52:53.0253|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\_ViewStart.cshtml' started. 
+2023-06-11 11:52:53.0978|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\_ViewStart.cshtml' completed in 72.4206ms. 
+2023-06-11 11:52:53.0978|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Could not find a file for view at path '/_ViewStart.cshtml'. 
+2023-06-11 11:52:53.0978|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executing ViewResult, running view Index. 
+2023-06-11 11:52:53.0978|0|DEBUG|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|The view path '/Views/Home/Index.cshtml' was found in 6419.5584ms. 
+2023-06-11 11:52:53.2112|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2112|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Clothes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Clothes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Clothes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Clothes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MobileAccessories 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MobileAccessories 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MobileAccessories 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MobileAccessories 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ForChild 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ForChild 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ForChild 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ForChild 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BeautyAndHealth 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BeautyAndHealth 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BeautyAndHealth 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BeautyAndHealth 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MilitaryEquipment 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MilitaryEquipment 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MilitaryEquipment 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MilitaryEquipment 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricalAppliances 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricalAppliances 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricalAppliances 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricalAppliances 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dishes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dishes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dishes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dishes 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AppliancesForHome 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AppliancesForHome 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AppliancesForHome 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AppliancesForHome 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Lamp 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Lamp 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Lamp 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Lamp 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.2202|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=TourismProducts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=TourismProducts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=TourismProducts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=TourismProducts 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=KitchenBlenders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=KitchenBlenders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=KitchenBlenders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=KitchenBlenders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Massagers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Massagers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Massagers/GetCategory and ?category=Massagers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Massagers/GetCategory?category=Massagers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MeatGrinders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MeatGrinders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MeatGrinders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MeatGrinders 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SurveillanceCameras 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SurveillanceCameras 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SurveillanceCameras 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SurveillanceCameras 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dashcams 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dashcams 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dashcams 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dashcams 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricShavers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricShavers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricShavers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricShavers 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CarAudio 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CarAudio 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CarAudio 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CarAudio 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Souvenirs 
+2023-06-11 11:52:53.2365|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Souvenirs 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Souvenirs 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Souvenirs 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsHealthLeisure 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsHealthLeisure 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsHealthLeisure 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsHealthLeisure 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ChildrensPools 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ChildrensPools 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ChildrensPools 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ChildrensPools 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Electronics 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Electronics 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Electronics 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Electronics 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=HomeAndGarden 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=HomeAndGarden 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=HomeAndGarden 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=HomeAndGarden 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsFitnessTourism 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsFitnessTourism 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsFitnessTourism 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsFitnessTourism 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=EverythingForKitchen 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=EverythingForKitchen 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=EverythingForKitchen 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=EverythingForKitchen 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AutoProducts 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AutoProducts 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.2517|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AutoProducts 
+2023-06-11 11:52:53.2664|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AutoProducts 
+2023-06-11 11:52:53.2664|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine|View lookup cache miss for view '_Layout' in controller 'Home'. 
+2023-06-11 11:52:53.2664|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Could not find a file for view at path '/Views/Home/_Layout.cshtml'. 
+2023-06-11 11:52:53.2664|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Located compiled view for view at path '/Views/Shared/_Layout.cshtml'. 
+2023-06-11 11:52:53.3531|0|TRACE|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Invalidating compiled view at path '/Views/Shared/_Layout.cshtml' with a file since the checksum did not match. 
+2023-06-11 11:52:53.4625|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Shared\_Layout.cshtml' started. 
+2023-06-11 11:52:53.8316|0|DEBUG|Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.RuntimeViewCompiler|Compilation of the generated code for the Razor file at 'C:\Users\zsirc\OneDrive\Desktop\Hopmarket\Market\Views\Shared\_Layout.cshtml' completed in 368.8824ms. 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetProducts and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetProducts 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Company/About and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Company/About 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Company/Delivery and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Company/Delivery 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Account/Register and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Account/Register 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Account/Login and  
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Account/Login 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MilitaryEquipment 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MilitaryEquipment 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dishes 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dishes 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AppliancesForHome 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AppliancesForHome 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Clothes 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Clothes 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricalAppliances 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricalAppliances 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BeautyAndHealth 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BeautyAndHealth 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MobileAccessories 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MobileAccessories 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ForChild 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ForChild 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Lamp 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Lamp 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=BagsBackpacksBelts 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=TourismProducts 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=TourismProducts 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=PersonalProtectiveEquipment 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Massagers 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Massagers 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=MeatGrinders 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=MeatGrinders 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=KitchenBlenders 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=KitchenBlenders 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SurveillanceCameras 
+2023-06-11 11:52:53.8651|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SurveillanceCameras 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Dashcams 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Dashcams 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ElectricShavers 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ElectricShavers 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CarAudio 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CarAudio 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Souvenirs 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Souvenirs 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=CurlingIronsAndHairStraighteners 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsHealthLeisure 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsHealthLeisure 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=ChildrensPools 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=ChildrensPools 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=Electronics 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=Electronics 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=HomeAndGarden 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=HomeAndGarden 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=FlashlightsLampsLighters 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=SportsFitnessTourism 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=SportsFitnessTourism 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=EverythingForKitchen 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=EverythingForKitchen 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Product/GetCategory and ?category=AutoProducts 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Product/GetCategory?category=AutoProducts 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Basket/Detail and  
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Basket/Detail 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in  and  
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result / 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Company/About and  
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Company/About 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Found the endpoints Route: {controller=Home}/{action=Index}/{id?} for address Microsoft.AspNetCore.Routing.RouteValuesAddress 
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Successfully processed template {controller=Home}/{action=Index}/{id?} for Route: {controller=Home}/{action=Index}/{id?} resulting in /Company/Delivery and  
+2023-06-11 11:52:53.8758|0|DEBUG|Microsoft.AspNetCore.Routing.DefaultLinkGenerator|Link generation succeeded for endpoints Route: {controller=Home}/{action=Index}/{id?} with result /Company/Delivery 
+2023-06-11 11:52:54.1167|0|INFO|Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor|Executed ViewResult - view Index executed in 7435.2943ms. 
+2023-06-11 11:52:54.1167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|After executing action result Microsoft.AspNetCore.Mvc.ViewResult. 
+2023-06-11 11:52:54.1167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:54.1167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:54.1167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:54.1167|0|TRACE|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Filters.SaveTempDataFilter. 
+2023-06-11 11:52:54.1167|0|INFO|Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker|Executed action Market.Controllers.HomeController.Index (Market) in 7459.8027ms 
+2023-06-11 11:52:54.1167|0|INFO|Microsoft.AspNetCore.Routing.EndpointMiddleware|Executed endpoint 'Market.Controllers.HomeController.Index (Market)' 
+2023-06-11 11:52:54.1836|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup is scheduled to include browser refresh script injection. 
+2023-06-11 11:52:54.2648|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 1 with length 67 and flags END_HEADERS. 
+2023-06-11 11:52:54.2648|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1033 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1089 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1094 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1145 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1138 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1150 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1024 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 451 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 573 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1056 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1060 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1049 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1069 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1051 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1049 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1075 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1062 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1063 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 63 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 995 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1055 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1054 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1064 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1066 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1059 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1063 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1059 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1065 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 697 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 365 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1063 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1054 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1054 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 769 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 65 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received WINDOW_UPDATE frame for stream ID 0 with length 4 and flags 0x0. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 265 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 1055 and flags NONE. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received WINDOW_UPDATE frame for stream ID 1 with length 4 and flags 0x0. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 302 and flags NONE. 
+2023-06-11 11:52:54.2668|0|DEBUG|Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware|Response markup was updated to include browser refresh script injection. 
+2023-06-11 11:52:54.2668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 1 with length 0 and flags END_STREAM. 
+2023-06-11 11:52:54.2857|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/ - - - 200 - text/html;+charset=utf-8 8147.1147ms 
+2023-06-11 11:52:54.4374|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 3 with length 126 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 5 with length 74 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 7 with length 70 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.4488|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/css/site.css - - 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 9 with length 69 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.4488|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/css/backImage.css - - 
+2023-06-11 11:52:54.4488|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/css/menu.css - - 
+2023-06-11 11:52:54.4488|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/css/card.css - - 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.4488|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/backImage.css was not modified 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/site.css was not modified 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/card.css was not modified 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/menu.css was not modified 
+2023-06-11 11:52:54.4779|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /css/backImage.css 
+2023-06-11 11:52:54.4779|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /css/menu.css 
+2023-06-11 11:52:54.4779|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /css/site.css 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 5 with length 70 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.4779|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /css/card.css 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 7 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 3 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.4779|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 9 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/css/menu.css - - - 304 - text/css 30.2833ms 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/css/backImage.css - - - 304 - text/css 30.4374ms 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/css/site.css - - - 304 - text/css 30.5478ms 
+2023-06-11 11:52:54.4779|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/css/card.css - - - 304 - text/css 30.1799ms 
+2023-06-11 11:52:54.5017|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 11 with length 71 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5017|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/css/label.css - - 
+2023-06-11 11:52:54.5017|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5017|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5017|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /css/label.css was not modified 
+2023-06-11 11:52:54.5017|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /css/label.css 
+2023-06-11 11:52:54.5017|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 11 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5017|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/css/label.css - - - 304 - text/css 0.6160ms 
+2023-06-11 11:52:54.5188|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 13 with length 61 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5188|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - - 
+2023-06-11 11:52:54.5188|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 13 with length 60 and flags END_HEADERS. 
+2023-06-11 11:52:54.5188|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 13 with length 11982 and flags NONE. 
+2023-06-11 11:52:54.5188|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 13 with length 0 and flags END_STREAM. 
+2023-06-11 11:52:54.5188|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 9.5548ms 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 15 with length 107 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 17 with length 70 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/js/site.js?v=KUXAIwZe_veqoTCWjjXhEy0tSUjwlQofq5SSefq1BWI - - 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/js/modal.js - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/modal.js was not modified 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /js/site.js was not modified 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /js/site.js 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /js/modal.js 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 15 with length 78 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 17 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/js/modal.js - - - 304 - application/javascript 1.6178ms 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/js/site.js?v=KUXAIwZe_veqoTCWjjXhEy0tSUjwlQofq5SSefq1BWI - - - 304 - application/javascript 1.7117ms 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 19 with length 129 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 21 with length 73 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/slide-1.jpg - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 23 with length 73 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/slide-2.jpg - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/slide-3.jpg - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 25 with length 81 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/slide-1.jpg was not modified 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/slide-2.jpg was not modified 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/slide-1.jpg 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/slide-2.jpg 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 19 with length 66 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 21 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/slide-3.jpg was not modified 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/slide-3.jpg 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/slide-2.jpg - - - 304 - image/jpeg 1.3796ms 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/slide-1.jpg - - - 304 - image/jpeg 1.6125ms 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 23 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/slide-3.jpg - - - 304 - image/jpeg 2.1086ms 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/odyag.webp - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 27 with length 90 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 29 with length 91 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/mobilni-aksesuari.webp - - 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 31 with length 91 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-ditej.webp - - 
+2023-06-11 11:52:54.5335|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/odyag.webp was not modified 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5335|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/odyag.webp 
+2023-06-11 11:52:54.5335|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 25 with length 66 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/odyag.webp - - - 304 - image/webp 1.6658ms 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/krasa-ta-zdorovya.webp - - 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/mobilni-aksesuari.webp was not modified 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/tovari-dlya-ditej.webp was not modified 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/tovari-dlya-ditej.webp 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/mobilni-aksesuari.webp 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 29 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 27 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-ditej.webp - - - 304 - image/webp 1.6656ms 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/mobilni-aksesuari.webp - - - 304 - image/webp 2.2517ms 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/krasa-ta-zdorovya.webp was not modified 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/krasa-ta-zdorovya.webp 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 31 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/krasa-ta-zdorovya.webp - - - 304 - image/webp 2.5731ms 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 33 with length 96 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 35 with length 83 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/vijskove-obmundiruvannya.webp - - 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 37 with length 82 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 39 with length 91 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/electro.webp - - 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/tehnika-dlya-domu.webp - - 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/vijskove-obmundiruvannya.webp was not modified 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/vijskove-obmundiruvannya.webp 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 33 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/posud.webp - - 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/tehnika-dlya-domu.webp was not modified 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/electro.webp was not modified 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/electro.webp 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/vijskove-obmundiruvannya.webp - - - 304 - image/webp 1.8266ms 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/posud.webp was not modified 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/posud.webp 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 35 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/tehnika-dlya-domu.webp 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/electro.webp - - - 304 - image/webp 4.4074ms 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 37 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 39 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/tehnika-dlya-domu.webp - - - 304 - image/webp 4.6389ms 
+2023-06-11 11:52:54.5481|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/posud.webp - - - 304 - image/webp 5.2724ms 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 41 with length 83 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 43 with length 206 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/lihtari.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 45 with length 177 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 47 with length 98 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 49 with length 150 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 51 with length 140 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 53 with length 86 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 55 with length 93 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 57 with length 90 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 59 with length 88 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 61 with length 92 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 63 with length 84 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 65 with length 157 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 67 with length 96 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 69 with length 89 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 71 with length 85 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-turizmu.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 73 with length 90 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/kuhonni-kombajni.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/masazheri.webp - - 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/zasobi-individualnogo-zahistu.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 75 with length 97 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/sumki-ryukzaki-remeni.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 77 with length 91 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 79 with length 88 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/myasorubki.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/videoreyestratori.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/kuhonni-kombajni.webp was not modified 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/lihtari.webp was not modified 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/kameri-sposterezhennya.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/myasorubki.webp was not modified 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/masazheri.webp was not modified 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/lihtari.webp 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/tovari-dlya-turizmu.webp was not modified 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 41 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/tovari-dlya-turizmu.webp 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 45 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-turizmu.webp - - - 304 - image/webp 6.4811ms 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/kuhonni-kombajni.webp 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 49 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/zasobi-individualnogo-zahistu.webp was not modified 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/myasorubki.webp 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/kuhonni-kombajni.webp - - - 304 - image/webp 6.8854ms 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/elektrobritvi.webp - - 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/masazheri.webp 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/avtomobilna-akustika.webp - - 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/videoreyestratori.webp was not modified 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/videoreyestratori.webp 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/sumki-ryukzaki-remeni.webp was not modified 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/sumki-ryukzaki-remeni.webp 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/lihtari.webp - - - 304 - image/webp 10.2220ms 
+2023-06-11 11:52:54.5644|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/suveniri.webp - - 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 53 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 51 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/suveniri.webp was not modified 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/masazheri.webp - - - 304 - image/webp 10.1428ms 
+2023-06-11 11:52:54.5644|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/zasobi-individualnogo-zahistu.webp 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/myasorubki.webp - - - 304 - image/webp 6.3187ms 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 47 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/schiptsi-ta-plojki.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/zasobi-individualnogo-zahistu.webp - - - 304 - image/webp 11.5363ms 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/sport-zdorovya-vidpochinok.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 43 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/sumki-ryukzaki-remeni.webp - - - 304 - image/webp 9.3513ms 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/dityachi-basejni.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5644|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/elektrobritvi.webp was not modified 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/elektrobritvi.webp 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/avtomobilna-akustika.webp was not modified 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/avtomobilna-akustika.webp 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/suveniri.webp 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/dityachi-basejni.webp was not modified 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/dityachi-basejni.webp 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/schiptsi-ta-plojki.webp was not modified 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/schiptsi-ta-plojki.webp 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/kameri-sposterezhennya.webp was not modified 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 57 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/kameri-sposterezhennya.webp 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/videoreyestratori.webp - - - 304 - image/webp 13.2585ms 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 55 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/elektronika.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/kameri-sposterezhennya.webp - - - 304 - image/webp 14.0690ms 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 59 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/elektrobritvi.webp - - - 304 - image/webp 12.5847ms 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/lihtari-lampi-zapalnichki.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/elektronika.webp was not modified 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/elektronika.webp 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 71 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/elektronika.webp - - - 304 - image/webp 3.3950ms 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/sport-fitnes-turizm.webp - - 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-domu.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 63 with length 99 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/suveniri.webp - - - 304 - image/webp 13.6801ms 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/vse-dlya-kuhni.webp - - 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/sport-zdorovya-vidpochinok.webp was not modified 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/sport-zdorovya-vidpochinok.webp 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 67 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/lihtari-lampi-zapalnichki.webp was not modified 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 69 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/lihtari-lampi-zapalnichki.webp 
+2023-06-11 11:52:54.5803|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/tovari-dlya-domu.webp was not modified 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/dityachi-basejni.webp - - - 304 - image/webp 12.8364ms 
+2023-06-11 11:52:54.5950|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/tovari-dlya-domu.webp 
+2023-06-11 11:52:54.5803|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/sport-zdorovya-vidpochinok.webp - - - 304 - image/webp 12.6479ms 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 65 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/schiptsi-ta-plojki.webp - - - 304 - image/webp 16.4790ms 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/sport-fitnes-turizm.webp was not modified 
+2023-06-11 11:52:54.5950|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/sport-fitnes-turizm.webp 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/vse-dlya-kuhni.webp was not modified 
+2023-06-11 11:52:54.5950|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/vse-dlya-kuhni.webp 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 61 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/avtomobilna-akustika.webp - - - 304 - image/webp 22.2852ms 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 75 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 81 with length 85 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/lihtari-lampi-zapalnichki.webp - - - 304 - image/webp 11.2618ms 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 73 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/img/categoryImage/avtotovari.webp - - 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" received HEADERS frame for stream ID 83 with length 67 and flags END_STREAM, END_HEADERS, PRIORITY. 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware|All hosts are allowed. 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 77 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 79 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - - 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/sport-fitnes-turizm.webp - - - 304 - image/webp 11.3568ms 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/tovari-dlya-domu.webp - - - 304 - image/webp 14.4825ms 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/vse-dlya-kuhni.webp - - - 304 - image/webp 9.5033ms 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Range header's value is empty. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|The file /img/categoryImage/avtotovari.webp was not modified 
+2023-06-11 11:52:54.5950|0|DEBUG|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|Handled. Status code: 304 File: /img/categoryImage/avtotovari.webp 
+2023-06-11 11:52:54.5950|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 81 with length 55 and flags END_STREAM, END_HEADERS. 
+2023-06-11 11:52:54.5950|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/img/categoryImage/avtotovari.webp - - - 304 - image/webp 1.6164ms 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending HEADERS frame for stream ID 83 with length 149 and flags END_HEADERS. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 9986 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7540|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 10240 and flags NONE. 
+2023-06-11 11:52:54.7668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 9517 and flags NONE. 
+2023-06-11 11:52:54.7668|0|TRACE|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" sending DATA frame for stream ID 83 with length 0 and flags END_STREAM. 
+2023-06-11 11:52:54.7668|0|INFO|Microsoft.AspNetCore.Hosting.Diagnostics|Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 164.4987ms 
+2023-06-11 11:53:02.3213|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRAB4SAP2TK" received FIN. 
+2023-06-11 11:53:02.3358|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Http2|Connection id "0HMRAB4SAP2TK" is closed. The last processed stream ID was 83. 
+2023-06-11 11:53:02.3358|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets|Connection id "0HMRAB4SAP2TK" sending FIN because: "The client closed the connection." 
+2023-06-11 11:53:02.3522|0|DEBUG|Microsoft.AspNetCore.Server.Kestrel.Connections|Connection id "0HMRAB4SAP2TK" stopped. 
