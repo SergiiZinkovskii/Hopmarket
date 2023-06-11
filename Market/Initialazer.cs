@@ -13,7 +13,7 @@ namespace Market
     {
         public static void InitializeRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IBaseRepository<Product>, ProductRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IBaseRepository<User>, UserRepository>();
             services.AddScoped<IBaseRepository<Profile>, ProfileRepository>();
             services.AddScoped<IBaseRepository<Basket>, BasketRepository>();
