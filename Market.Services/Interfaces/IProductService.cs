@@ -10,9 +10,11 @@ namespace Market.Service.Interfaces
 
         IBaseResponse<List<Product>> GetProducts();
 
-        Task<IBaseResponse<ProductViewModel>> GetProduct(long id);
+        Task<ProductViewModel?> GetProductAsync(long id,
+	        CancellationToken cancellationToken);
 
-        Task<BaseResponse<Dictionary<long, string>>> GetProduct(string term);
+
+		Task<BaseResponse<Dictionary<long, string>>> GetProductAsync(string term);
 
         Task<IBaseResponse<Product>> Create(ProductViewModel model, List<byte[]> imageDataList);
 

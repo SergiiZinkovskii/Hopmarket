@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Services", "..\Marke
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FEDAEF33-1B61-4776-B789-2036CED19972}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{E0A8B515-6058-4A16-8F6B-7CDC92AF1F91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Services.Tests", "..\Test\Market.Services.Tests.csproj", "{E0A8B515-6058-4A16-8F6B-7CDC92AF1F91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
