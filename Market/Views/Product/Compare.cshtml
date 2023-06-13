@@ -138,7 +138,7 @@
         $("#firstProductId").on("change", function () {
             const id = this.value;
             if (id === "") return;
-            $.get("/Product/GetProduct", { id: id, isJson: true }, function (data) {
+            $.get("/Product/GetProductAsync", { id: id, isJson: true }, function (data) {
                 firstCar = data;
                 fillData(firstCar, "firstProductdId");
             });

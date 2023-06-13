@@ -7,13 +7,13 @@ using Market.Domain.ViewModels.Product;
 using Market.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Market.Service.Implementations
+namespace Market.Services.Services
 {
     public class ProductService : IProductService
     {
-        private readonly IBaseRepository<Product> _productRepository;
+        private readonly IProductRepository _productRepository;
 
-        public ProductService(IBaseRepository<Product> productRepository)
+        public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }
@@ -22,7 +22,8 @@ namespace Market.Service.Implementations
         {
             try
             {
-                var types = ((TypeProduct[])Enum.GetValues(typeof(TypeProduct)))
+                var types = ((TypeProduct[])Enum.GetValues(
+		                typeof(TypeProduct)))
                     .ToDictionary(k => (int)k, t => t.GetDisplayName());
 
                 return new BaseResponse<Dictionary<int, string>>()
@@ -31,6 +32,8 @@ namespace Market.Service.Implementations
                     StatusCode = StatusCode.OK
                 };
             }
+
+            // How can I get exceptions here?
             catch (Exception ex)
             {
                 return new BaseResponse<Dictionary<int, string>>()
@@ -41,53 +44,31 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<ProductViewModel>> GetProduct(long id)
+        public async Task<ProductViewModel?> GetProductAsync(long id,
+	        CancellationToken cancellationToken)
         {
-            try
-            {
-                var product = await _productRepository.GetAll()
-                    .Include(p => p.Photos) // Включити завантаження фотографій
-                    .FirstOrDefaultAsync(x => x.Id == id);
+	        var product = await _productRepository.Find(id, cancellationToken);
 
-                if (product == null)
-                {
-                    return new BaseResponse<ProductViewModel>()
-                    {
-                        Description = "Товар не знайдено",
-                        StatusCode = StatusCode.UserNotFound
-                    };
-                }
+		        if (product == null)
+		        {
+			        return null;
+		        }
 
-                var data = new ProductViewModel()
-                {
-                    Id = product.Id,
-                    DateCreate = product.DateCreate.ToLongDateString(),
-                    Description = product.Description,
-                    Name = product.Name,
-                    Price = product.Price,
-                    TypeProduct = product.TypeProduct.GetDisplayName(),
-                    Power = product.Power,
-                    ProdModel = product.Model,
-                    Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
-                };
-
-                return new BaseResponse<ProductViewModel>()
-                {
-                    StatusCode = StatusCode.OK,
-                    Data = data
-                };
-            }
-            catch (Exception ex)
-            {
-                return new BaseResponse<ProductViewModel>()
-                {
-                    Description = $"[GetProduct] : {ex.Message}",
-                    StatusCode = StatusCode.InternalServerError
-                };
-            }
+		        return new ProductViewModel()
+		        {
+			        Id = product.Id,
+			        DateCreate = product.DateCreate.ToLongDateString(),
+			        Description = product.Description,
+			        Name = product.Name,
+			        Price = product.Price,
+			        TypeProduct = product.TypeProduct.GetDisplayName(),
+			        Power = product.Power,
+			        ProdModel = product.Model,
+			        Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
+		        };
         }
 
-        public async Task<BaseResponse<Dictionary<long, string>>> GetProduct(string term)
+        public async Task<BaseResponse<Dictionary<long, string>>> GetProductAsync(string term)
         {
             var baseResponse = new BaseResponse<Dictionary<long, string>>();
             try
