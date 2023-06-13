@@ -23,16 +23,13 @@ namespace Market.Services.Services
 
         public async Task<IBaseResponse<Comment>> Create(int productId, string autor, string text)
         {
-
-
-                var comment = new Comment
+                 var comment = new Comment
                 {
                     ProductId = productId,
                     Text = text,
                     Author = autor// Assuming authentication is enabled
                 };
-
-                await _commentRepository.Create(comment);
+            await _commentRepository.Create(comment);
             return new BaseResponse<Comment>()
             {
                 Description = "Відгук залишено",
@@ -40,15 +37,11 @@ namespace Market.Services.Services
             };
         }
 
-
-
-
         public async Task<BaseResponse<IEnumerable<CommentViewModel>>> GetComments(int productId)
         {
             var comments = await _commentRepository.GetAll()
                 .Where(c => c.ProductId == productId)
                 .ToListAsync();
-
             var commentViewModels = comments.Select(c => new CommentViewModel
             {
                 Id = c.Id,
@@ -56,14 +49,12 @@ namespace Market.Services.Services
                 Text = c.Text,
                 Author = c.Author
             });
-
             return new BaseResponse<IEnumerable<CommentViewModel>>
             {
                 Data = commentViewModels,
-                Description = "Comments retrieved successfully",
+                Description = "Відгук додано",
                 StatusCode = StatusCode.OK
             };
         }
-
     }
 }

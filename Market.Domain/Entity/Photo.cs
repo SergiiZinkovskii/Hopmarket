@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Market.Domain.Entity
 {
-
     public class Photo
     {
         public long Id { get; set; }

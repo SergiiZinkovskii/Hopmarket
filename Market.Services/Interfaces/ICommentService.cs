@@ -12,12 +12,7 @@ namespace Market.Services.Interfaces
 {
     public interface ICommentService
     {
-
-        Task<IBaseResponse<Comment>> Create(int productId, string autor, string text);
-
-        
+        Task<IBaseResponse<Comment>> Create(int productId, string autor, string text);   
         Task<BaseResponse<IEnumerable<CommentViewModel>>> GetComments(int productId);
-
-  
     }
 }

@@ -12,11 +12,11 @@ namespace Market.Service.Implementations;
 public class BasketService : IBasketService
 {
     private readonly IBaseRepository<User> _userRepository;
-    private readonly IBaseRepository<Product> _productRepository;
+    private readonly IProductRepository _productRepository;
     private readonly IBaseRepository<Photo> _photoRepository;
     private readonly IBaseRepository<Order> _orderRepository;
 
-    public BasketService(IBaseRepository<User> userRepository, IBaseRepository<Product> productRepository, IBaseRepository<Photo> photoRepository, IBaseRepository<Order> orderRepository)
+    public BasketService(IBaseRepository<User> userRepository, IProductRepository productRepository, IBaseRepository<Photo> photoRepository, IBaseRepository<Order> orderRepository)
     {
         _userRepository = userRepository;
         _productRepository = productRepository;

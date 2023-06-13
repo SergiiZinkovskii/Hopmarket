@@ -12,7 +12,7 @@ namespace Market.Domain.Extensions
                 .GetMember(enumValue.ToString())
                 .First()
                 .GetCustomAttribute<DisplayAttribute>()
-                ?.GetName() ?? "Неопределенный";
+                ?.GetName() ?? "Unspecified";
         }
     }
 }

@@ -185,9 +185,6 @@ namespace Market.Migrations
                     b.Property<int>("TypeProduct")
                         .HasColumnType("int");
 
-                    b.Property<int>("test")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Products", (string)null);
@@ -196,62 +193,57 @@ namespace Market.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4215),
+                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3451),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Zepline",
                             Name = "Мультиварка",
                             Power = 900.0,
                             Price = 2500m,
-                            TypeProduct = 4,
-                            test = 0
+                            TypeProduct = 4
                         },
                         new
                         {
                             Id = 2L,
-                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4298),
+                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3514),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Пончо-намет 3 в 1",
                             Name = "Дощовик",
                             Power = 0.0,
                             Price = 800m,
-                            TypeProduct = 0,
-                            test = 0
+                            TypeProduct = 0
                         },
                         new
                         {
                             Id = 3L,
-                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4302),
+                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3523),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Rainberg RB-653TB",
                             Name = "Пилосос",
                             Power = 4200.0,
                             Price = 3000m,
-                            TypeProduct = 2,
-                            test = 0
+                            TypeProduct = 2
                         },
                         new
                         {
                             Id = 4L,
-                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4305),
+                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3526),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Lacoste",
                             Name = "Труси чоловічі",
                             Power = 900.0,
                             Price = 120m,
-                            TypeProduct = 3,
-                            test = 0
+                            TypeProduct = 3
                         },
                         new
                         {
                             Id = 5L,
-                            DateCreate = new DateTime(2023, 6, 4, 20, 26, 37, 365, DateTimeKind.Local).AddTicks(4308),
+                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3575),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Grunhelm",
                             Name = "М'ясорубка",
                             Power = 900.0,
                             Price = 3000m,
-                            TypeProduct = 4,
-                            test = 0
+                            TypeProduct = 4
                         });
                 });
 

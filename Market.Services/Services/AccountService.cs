@@ -40,7 +40,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<ClaimsIdentity>()
                     {
-                        Description = "Пользователь с таким логином уже есть",
+                        Description = "Користувач з таким логіном або паролем вже є",
                     };
                 }
 
@@ -70,7 +70,7 @@ namespace Market.Service.Implementations
                 return new BaseResponse<ClaimsIdentity>()
                 {
                     Data = result,
-                    Description = "Объект добавился",
+                    Description = "Додано",
                     StatusCode = StatusCode.OK
                 };
             }
@@ -94,7 +94,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<ClaimsIdentity>()
                     {
-                        Description = "Пользователь не найден"
+                        Description = "Користуваяа не знайдено"
                     };
                 }
 
@@ -102,7 +102,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<ClaimsIdentity>()
                     {
-                        Description = "Неверный пароль или логин"
+                        Description = "Невірний логін чи пароль"
                     };
                 }
                 var result = Authenticate(user);
@@ -134,7 +134,7 @@ namespace Market.Service.Implementations
                     return new BaseResponse<bool>()
                     {
                         StatusCode = StatusCode.UserNotFound,
-                        Description = "Пользователь не найден"
+                        Description = "Користувача не знайдено"
                     };
                 }
 
@@ -145,7 +145,7 @@ namespace Market.Service.Implementations
                 {
                     Data = true,
                     StatusCode = StatusCode.OK,
-                    Description = "Пароль обновлен"
+                    Description = "Пароль оновлено"
                 };
 
             }

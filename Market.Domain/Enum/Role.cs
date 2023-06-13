@@ -4,11 +4,11 @@ namespace Market.Domain.Enum
 {
     public enum Role
     {
-        [Display(Name = "Пользователь")]
+        [Display(Name = "user")]
         User = 0,
-        [Display(Name = "Модератор")]
+        [Display(Name = "moderator")]
         Moderator = 1,
-        [Display(Name = "Админ")]
+        [Display(Name = "admin")]
         Admin = 2,
     }
 }

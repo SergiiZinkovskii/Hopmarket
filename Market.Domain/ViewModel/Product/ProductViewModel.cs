@@ -41,8 +41,5 @@ namespace Market.Domain.ViewModels.Product
         public string TypeProduct { get; set; }
 
         public List<byte[]> Photos { get; set; }
-
-
-
     }
 }

@@ -103,7 +103,6 @@ namespace Market.Controllers
 			}
 
 			await _productService.Create(viewModel, imageDataList);
-
 			return RedirectToAction("GetProducts");
 		}
 
@@ -125,7 +124,6 @@ namespace Market.Controllers
 			{
 				return Json(response.Data);
 			}
-
 			return View("Error", $"{response.Description}");
 		}
 
@@ -141,7 +139,6 @@ namespace Market.Controllers
 		public async Task<IActionResult> Edit(ProductViewModel viewModel)
 		{
 			await _productService.Edit(viewModel, viewModel.Id);
-
 			return RedirectToAction("GetProducts");
 		}
 	}

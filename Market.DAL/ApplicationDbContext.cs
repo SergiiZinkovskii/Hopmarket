@@ -14,13 +14,9 @@ namespace Market.DAL
         }
 
         public DbSet<Product> Products { get; set; }
-
         public DbSet<Profile> Profiles { get; set; }
-
         public DbSet<User> Users { get; set; }
-
         public DbSet<Comment> Comments { get; set; }
-
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Photo> Photos { get; set; }
@@ -31,23 +27,23 @@ namespace Market.DAL
             {
                 builder.ToTable("Users").HasKey(x => x.Id);
 
-                builder.HasData(new User[]
-                {
-                    new User()
-                    {
-                        Id = 1,
-                        Name = "Admin",
-                        Password = HashPasswordHelper.HashPassowrd("123456"),
-                        Role = Role.Admin
-                    },
-                    new User()
-                    {
-                        Id = 2,
-                        Name = "Moderator",
-                        Password = HashPasswordHelper.HashPassowrd("654321"),
-                        Role = Role.Moderator
-                    }
-                });
+                //builder.HasData(new User[]
+                //{
+                //    new User()
+                //    {
+                //        Id = 1,
+                //        Name = "Admin",
+                //        Password = HashPasswordHelper.HashPassowrd("123456"),
+                //        Role = Role.Admin
+                //    },
+                //    new User()
+                //    {
+                //        Id = 2,
+                //        Name = "Moderator",
+                //        Password = HashPasswordHelper.HashPassowrd("654321"),
+                //        Role = Role.Moderator
+                //    }
+                //});
 
                 builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
@@ -69,69 +65,69 @@ namespace Market.DAL
             {
                 builder.ToTable("Products").HasKey(x => x.Id);
 
-                builder.HasData(new Product[]
-                {
-                new Product
-                {
-                    Id = 1,
-                    Name = "Мультиварка",
-                    Description = new string('A', 50),
-                    DateCreate = DateTime.Now,
-                    Price = 2500,
-                    Power = 900,
-                    Model = "Zepline",
-                    TypeProduct = TypeProduct.ElectricalAppliances
-                },
+                //builder.HasData(new Product[]
+                //{
+                //new Product
+                //{
+                //    Id = 1,
+                //    Name = "Мультиварка",
+                //    Description = new string('A', 50),
+                //    DateCreate = DateTime.Now,
+                //    Price = 2500,
+                //    Power = 900,
+                //    Model = "Zepline",
+                //    TypeProduct = TypeProduct.ElectricalAppliances
+                //},
 
 
-                new Product
-                {
-                    Id = 2,
-                    Name = "Дощовик",
-                    Description = new string('A', 50),
-                    DateCreate = DateTime.Now,
-                    Price = 800,
-                    Model = "Пончо-намет 3 в 1",
-                    TypeProduct = TypeProduct.MilitaryEquipment
-                },
+                //new Product
+                //{
+                //    Id = 2,
+                //    Name = "Дощовик",
+                //    Description = new string('A', 50),
+                //    DateCreate = DateTime.Now,
+                //    Price = 800,
+                //    Model = "Пончо-намет 3 в 1",
+                //    TypeProduct = TypeProduct.MilitaryEquipment
+                //},
 
 
-                new Product
-                {
-                    Id = 3,
-                    Name = "Пилосос",
-                    Description = new string('A', 50),
-                    DateCreate = DateTime.Now,
-                    Price = 3000,
-                    Power = 4200,
-                    Model = "Rainberg RB-653TB",
-                    TypeProduct = TypeProduct.AppliancesForHome
-                },
-                new Product
-                {
-                    Id = 4,
-                    Name = "Труси чоловічі",
-                    Description = new string('A', 50),
-                    DateCreate = DateTime.Now,
-                    Price = 120,
-                    Power = 900,
-                    Model = "Lacoste",
-                    TypeProduct = TypeProduct.Clothes
-                }, 
-                new Product
-                {
-                    Id = 5,
-                    Name = "М'ясорубка",
-                    Description = new string('A', 50),
-                    DateCreate = DateTime.Now,
-                    Price = 3000,
-                    Power = 900,
-                    Model = "Grunhelm",
-                    TypeProduct = TypeProduct.ElectricalAppliances
-                }
+                //new Product
+                //{
+                //    Id = 3,
+                //    Name = "Пилосос",
+                //    Description = new string('A', 50),
+                //    DateCreate = DateTime.Now,
+                //    Price = 3000,
+                //    Power = 4200,
+                //    Model = "Rainberg RB-653TB",
+                //    TypeProduct = TypeProduct.AppliancesForHome
+                //},
+                //new Product
+                //{
+                //    Id = 4,
+                //    Name = "Труси чоловічі",
+                //    Description = new string('A', 50),
+                //    DateCreate = DateTime.Now,
+                //    Price = 120,
+                //    Power = 900,
+                //    Model = "Lacoste",
+                //    TypeProduct = TypeProduct.Clothes
+                //}, 
+                //new Product
+                //{
+                //    Id = 5,
+                //    Name = "М'ясорубка",
+                //    Description = new string('A', 50),
+                //    DateCreate = DateTime.Now,
+                //    Price = 3000,
+                //    Power = 900,
+                //    Model = "Grunhelm",
+                //    TypeProduct = TypeProduct.ElectricalAppliances
+                //}
 
 
-                }) ;
+                //}) ;
             });
 
             modelBuilder.Entity<Profile>(builder =>

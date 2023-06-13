@@ -6,7 +6,6 @@ namespace Market.Domain.ViewModels.Account
     {
         [Required(ErrorMessage = "Вкажіть ім'я")]
         public string UserName { get; set; }
-
         [Required(ErrorMessage = "Введіть пароль")]
         [DataType(DataType.Password)]
         [Display(Name = "Пароль")]

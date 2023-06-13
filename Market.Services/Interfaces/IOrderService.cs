@@ -7,7 +7,6 @@ namespace Market.Service.Interfaces
     public interface IOrderService
     {
         Task<IBaseResponse<Order>> Create(CreateOrderViewModel model);
-
         Task<IBaseResponse<bool>> Delete(long id);
     }
 }

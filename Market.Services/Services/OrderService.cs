@@ -30,7 +30,7 @@ namespace Market.Service.Implementations
                 {
                     return new BaseResponse<Order>()
                     {
-                        Description = "Пользователь не найден",
+                        Description = "Користувача не знайдено",
                         StatusCode = StatusCode.UserNotFound
                     };
                 }
@@ -48,8 +48,7 @@ namespace Market.Service.Implementations
                     Post = model.Post,
                     Payment = model.Payment,
                     Comments = model.Comments
-
-    };
+                };
 
                 await _orderRepository.Create(order);
 
@@ -82,7 +81,7 @@ namespace Market.Service.Implementations
                     return new BaseResponse<bool>()
                     {
                         StatusCode = StatusCode.OrderNotFound,
-                        Description = "Заказ не найден"
+                        Description = "Замовлення не знайдено"
                     };
                 }
 
