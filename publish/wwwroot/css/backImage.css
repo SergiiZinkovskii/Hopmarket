@@ -1,0 +1,6 @@
+﻿.backgroundImage {
+    background-color: #333333;
+/*    background-image: url("https://img.freepik.com/free-vector/supermarket-cart-icon-template_23-2147495466.jpg?w=740&t=st=1682609147~exp=1682609747~hmac=7fe91e767ed2cec0bd9a32f1ac70add9d013f9f68e5646dc98e467fa8cbdc374");
+*/    background-size: cover;
+    background-attachment: fixed;
+}
