@@ -36,5 +36,10 @@ namespace Market.DAL.Repositories
 
             return entity;
         }
+
+        public Task<Order> Find(long id, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

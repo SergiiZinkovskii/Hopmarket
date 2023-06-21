@@ -28,6 +28,11 @@ namespace Market.DAL.Repositories
 
         }
 
+        public Task<Comment> Find(long id, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
         public IQueryable<Comment> GetAll()
         {
             return _db.Comments;

@@ -1,5 +1,6 @@
 ﻿using Market.DAL.Interfaces;
 using Market.Domain.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
@@ -37,5 +38,9 @@ namespace Market.DAL.Repositories
             return entity;
         }
 
+        public async Task<Basket> Find(long id, CancellationToken cancellationToken)
+        {
+            return await GetAll().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+        }
     }
 }

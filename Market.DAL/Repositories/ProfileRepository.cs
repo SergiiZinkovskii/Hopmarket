@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Market.DAL.Interfaces;
 using Market.Domain.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
@@ -37,6 +38,11 @@ namespace Market.DAL.Repositories
             await _dbContext.SaveChangesAsync();
 
             return entity;
+        }
+
+        public async Task<Profile> Find(long id, CancellationToken cancellationToken)
+        {
+            return await GetAll().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
     }
 }
