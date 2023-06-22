@@ -1,6 +1,7 @@
 using AutoFixture.Xunit2;
 using FluentAssertions;
 using Market.DAL.Interfaces;
+using Market.DAL.Repositories;
 using Market.Domain.Entity;
 using Market.Domain.Enum;
 using Market.Domain.Extensions;
@@ -17,12 +18,12 @@ namespace Market.Services.Tests
 	public class ProductServiceTest
 	{
 		private readonly ProductService _productService;
-		private readonly IProductRepository _productRepository;
+		private readonly ProductRepository _productRepository;
 
 
 		public ProductServiceTest()
 		{
-			_productRepository = Substitute.For<IProductRepository>();
+			_productRepository = Substitute.For<ProductRepository>();
 			_productService = new ProductService(_productRepository);
 		}
 
