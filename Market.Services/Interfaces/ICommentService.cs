@@ -14,5 +14,6 @@ namespace Market.Services.Interfaces
     {
         Task<IBaseResponse<Comment>> Create(int productId, string autor, string text);   
         Task<BaseResponse<IEnumerable<CommentViewModel>>> GetComments(int productId);
+        Task<IBaseResponse<bool>> Delete(int id);
     }
 }

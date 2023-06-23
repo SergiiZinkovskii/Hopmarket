@@ -26,24 +26,24 @@
 
     <div class="row">
         <div class="form-group col-md-6 d-none">
-            <label asp-for="@Model.Id" class="col-form-label"></label>
-            <input type="text" class="form-control" id="Id" asp-for="@Model.Id">
+            <label asp-for="Id" class="col-form-label"></label>
+            <input type="text" class="form-control" id="Id" asp-for="Id">
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="@Model.Name" class="col-form-label"></label>
-            <input type="text" class="form-control" asp-for="@Model.Name">
+            <label asp-for="Name" class="col-form-label"></label>
+            <input type="text" class="form-control" asp-for="Name">
         </div>
         <div class="form-group col-md-6">
-            <label asp-for="@Model.ProdModel" class="col-form-label"></label>
-            <input class="form-control" asp-for="@Model.ProdModel" />
+            <label asp-for="ProdModel" class="col-form-label"></label>
+            <input class="form-control" asp-for="ProdModel" />
         </div>
     </div>
-    <label asp-for="@Model.Price" class="col-form-label"></label>
+    <label asp-for="Price" class="col-form-label"></label>
     <div class="row">
         <div class="input-group col-md-6">
-            <input type="text" class="form-control col-md-6" asp-for="@Model.Price" />
+            <input type="text" class="form-control col-md-6" asp-for="Price" />
             <div class="input-group-append">
                 <span class="input-group-text">&#8372;</span>
             </div>
@@ -51,20 +51,20 @@
     </div>
     <div class="row">
         <div class="form-group col-md-12">
-            <label asp-for="@Model.Description" class="col-form-label"></label>
-            <textarea id="description" type="text" class="form-control" asp-for="@Model.Description"></textarea>
+            <label asp-for="Description" class="col-form-label"></label>
+            <textarea id="description" type="text" class="form-control" asp-for="Description"></textarea>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-6">
-            <label asp-for="@Model.TypeProduct" class="col-form-label"></label>
-             @if (User.IsInRole("Admin"))
+            <label asp-for="TypeProduct" class="col-form-label"></label>
+            @if (User.IsInRole("Admin"))
             {
-                <select asp-for="@Model.TypeProduct" class="form-control product-type-select" data-types-url="@Url.Action("GetTypes", "Product")"></select>
+                <select asp-for="TypeProduct" class="form-control product-type-select" data-types-url="@Url.Action("GetTypes", "Product")"></select>
             }
             else
             {
-                <textarea asp-for="@Model.TypeProduct" class="form-control" ></textarea>
+                <textarea asp-for="TypeProduct" class="form-control"></textarea>
 
             }
         </div>
@@ -73,8 +73,8 @@
     {
 
         <div class="form-group col-md-6">
-            <label asp-for="@Model.DateCreate" class="col-form-label"></label>
-            <input class="form-control" asp-for="@Model.DateCreate" />
+            <label asp-for="DateCreate" class="col-form-label"></label>
+            <input class="form-control" asp-for="DateCreate" />
         </div>
     }
 
@@ -86,7 +86,8 @@
             <a id="delete-product-btn" class="btn btn-danger">Видалити</a>
         }
     </div>
-</form >
+</form>
+
 <!-- Розміщення відгуків -->
 <div id="comments-section">
     <h4 style="color: whitesmoke">Відгуки про товар</h4>
@@ -100,15 +101,11 @@
     </form>
 </div>
 
-
-
-
 @section pageScripts
     {
-
-
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+
+        $(document).ready(function () {
             var mainImage = document.querySelector('.main-image');
             var thumbnailImages = document.querySelectorAll('.thumbnail-image');
 
@@ -117,16 +114,12 @@
                     mainImage.src = thumbnail.src;
                 });
             });
-        });
-   
-        $(function () {
+
             var $description = $('#description');
             var lineHeight = parseInt($description.css('lineHeight'));
             var lines = $description.val().split('\n').length;
             $description.height(lineHeight * lines);
-        });
-    
-        document.addEventListener('DOMContentLoaded', function () {
+
             var createOrderBtn = document.getElementById('create-order-btn');
             createOrderBtn.addEventListener('click', function () {
                 var form = document.getElementById('product-form');
@@ -135,9 +128,7 @@
                 var url = '/Order/CreateOrder/' + productId;
                 window.location.href = url;
             });
-        });
-    
-        document.addEventListener('DOMContentLoaded', function () {
+
             var deleteOrderBtn = $('delete-product-btn');
             if (deleteOrderBtn.length > 0) {
                 deleteOrderBtn.addEventListener('click', function () {
@@ -148,68 +139,66 @@
                     window.location.href = url;
                 });
             }
-        });
-   
-        var productId = '@Model.Id';
 
-        $(function () {
-            // Завантаження коментарів
-            loadComments();
+            var productId = '@Model.Id';
 
-            // Відправка форми коментарів
-            $('#comment-form').on('submit', function (e) {
-                e.preventDefault();
+            $(function () {
+                // Load comments
+                loadComments();
 
-                var commentText = $('#comment-text').val();
+                // Submit comment form
+                $('#comment-form').on('submit', function (e) {
+                    e.preventDefault();
 
-                $.ajax({
-                    url: '/Comment/AddComment/' + productId,
-                    type: 'POST',
-                    data: {
-                        productId: productId,
-                        text: commentText
-                    },
-                    success: function () {
-                        // Очистка поля вводу коментаря
-                        $('#comment-text').val('');
+                    var commentText = $('#comment-text').val();
 
-                        // Оновлення списку коментарів
-                        loadComments();
-                    },
-                    error: function (xhr, status, error) {
+                    $.ajax({
+                        url: '/Comment/AddComment/' + productId,
+                        type: 'POST',
+                        data: {
+                            productId: productId,
+                            text: commentText
+                        },
+                        success: function () {
+                            // Clear comment text area
+                            $('#comment-text').val('');
+
+                            // Refresh comments
+                            loadComments();
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(error);
+                        }
+                    });
+                });
+            });
+
+            function loadComments() {
+                var productId = $('#productId').val();
+
+                // Use promise to fetch comments
+                var getCommentsPromise = new Promise(function (resolve, reject) {
+                    $.ajax({
+                        url: '/Comment/GetComments/' + productId,
+                        type: 'POST',
+                        success: function (data) {
+                            resolve(data);
+                        },
+                        error: function (xhr, status, error) {
+                            reject(error);
+                        }
+                    });
+                });
+
+                // Process promise results
+                getCommentsPromise
+                    .then(function (data) {
+                        $('#comments-list').html(data);
+                    })
+                    .catch(function (error) {
                         console.log(error);
-                    }
-                });
-            });
+                    });
+            }
         });
-
-        function loadComments() {
-            var productId = $('#productId').val(); // Отримати значення productId з прихованого поля
-            console.log($('#productId'), productId);
-
-            // Використання проміса для отримання коментарів
-            var getCommentsPromise = new Promise(function (resolve, reject) {
-                $.ajax({
-                    url: '/Comment/GetComments/' + productId,
-                    type: 'POST',
-                    success: function (data) {
-                        resolve(data); // Виклик resolve з отриманими даними
-                    },
-                    error: function (xhr, status, error) {
-                        reject(error); // Виклик reject з помилкою
-                    }
-                });
-            });
-
-            // Обробка результатів проміса
-            getCommentsPromise.then(function (data) {
-                // Оновлення списку коментарів
-                $('#comments-list').html(data);
-            }).catch(function (error) {
-                console.log(error);
-            });
-        }
     </script>
-
-
 }

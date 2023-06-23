@@ -22,9 +22,22 @@ namespace Market.Controllers
             var productComments =  await _commentService.GetComments(id);
                 return PartialView(productComments.Data);
             }
+        
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await _commentService.Delete(id);
+            if (response.StatusCode == Domain.Enum.StatusCode.OK)
+            {
+                return Ok();
+            }
 
-            
-            [HttpPost]
+            return View("Error", $"{response.Description}");
+        }
+
+
+
+        [HttpPost]
             public IActionResult AddComment(int productId, string text)
             {
 

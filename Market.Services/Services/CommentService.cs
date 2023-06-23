@@ -6,6 +6,7 @@ using Market.Services.Interfaces;
 
 using Market.Domain.Enum;
 using Microsoft.EntityFrameworkCore;
+using Market.DAL.Repositories;
 
 namespace Market.Services.Services
 {
@@ -36,6 +37,43 @@ namespace Market.Services.Services
                 StatusCode = StatusCode.OK
             };
         }
+
+
+        public async Task<IBaseResponse<bool>> Delete(int id)
+        {
+            try
+            {
+                var product = await _commentRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
+                if (product == null)
+                {
+                    return new BaseResponse<bool>()
+                    {
+                        Description = "Comment not found",
+                        StatusCode = StatusCode.UserNotFound,
+                        Data = false
+                    };
+                }
+
+                await _commentRepository.Delete(product);
+
+                return new BaseResponse<bool>()
+                {
+                    Data = true,
+                    StatusCode = StatusCode.OK
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<bool>()
+                {
+                    Description = $"[DeleteComment] : {ex.Message}",
+                    StatusCode = StatusCode.InternalServerError
+                };
+            }
+        }
+
+
+
 
         public async Task<BaseResponse<IEnumerable<CommentViewModel>>> GetComments(int productId)
         {

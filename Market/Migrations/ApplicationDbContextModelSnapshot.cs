@@ -188,63 +188,6 @@ namespace Market.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3451),
-                            Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                            Model = "Zepline",
-                            Name = "Мультиварка",
-                            Power = 900.0,
-                            Price = 2500m,
-                            TypeProduct = 4
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3514),
-                            Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                            Model = "Пончо-намет 3 в 1",
-                            Name = "Дощовик",
-                            Power = 0.0,
-                            Price = 800m,
-                            TypeProduct = 0
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3523),
-                            Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                            Model = "Rainberg RB-653TB",
-                            Name = "Пилосос",
-                            Power = 4200.0,
-                            Price = 3000m,
-                            TypeProduct = 2
-                        },
-                        new
-                        {
-                            Id = 4L,
-                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3526),
-                            Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                            Model = "Lacoste",
-                            Name = "Труси чоловічі",
-                            Power = 900.0,
-                            Price = 120m,
-                            TypeProduct = 3
-                        },
-                        new
-                        {
-                            Id = 5L,
-                            DateCreate = new DateTime(2023, 6, 13, 19, 56, 2, 550, DateTimeKind.Local).AddTicks(3575),
-                            Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                            Model = "Grunhelm",
-                            Name = "М'ясорубка",
-                            Power = 900.0,
-                            Price = 3000m,
-                            TypeProduct = 4
-                        });
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.Profile", b =>
@@ -304,22 +247,6 @@ namespace Market.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            Name = "Admin",
-                            Password = "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
-                            Role = 2
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            Name = "Moderator",
-                            Password = "481f6cc0511143ccdd7e2d1b1b94faf0a700a8b49cd13922a70b5ae28acaa8c5",
-                            Role = 1
-                        });
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.Basket", b =>

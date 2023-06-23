@@ -1,4 +1,5 @@
 ﻿using Market.DAL.Interfaces;
+using Market.DAL.Repositories;
 using Market.Domain.Entity;
 using Market.Domain.Enum;
 using Market.Domain.Extensions;
@@ -12,10 +13,18 @@ namespace Market.Services.Services
     public class ProductService : IProductService
     {
         private readonly IBaseRepository<Product> _productRepository;
+        private readonly IBaseRepository<Comment> _commentRepository;
+        private ProductRepository productRepository;
 
-        public ProductService(IBaseRepository<Product> productRepository)
+        public ProductService(IBaseRepository<Product> productRepository, IBaseRepository<Comment> commentRepository)
         {
             _productRepository = productRepository;
+            _commentRepository = commentRepository;
+        }
+
+        public ProductService(ProductRepository productRepository)
+        {
+            this.productRepository = productRepository;
         }
 
         public BaseResponse<Dictionary<int, string>> GetTypes()
@@ -64,7 +73,8 @@ namespace Market.Services.Services
 			        TypeProduct = product.TypeProduct.GetDisplayName(),
 			        Power = product.Power,
 			        ProdModel = product.Model,
-			        Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
+                    Comments = await _commentRepository.GetAll().Where(c => c.ProductId == id).ToListAsync(),
+                    Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
 		        };
         }
 
