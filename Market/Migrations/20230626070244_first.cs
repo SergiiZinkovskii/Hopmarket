@@ -34,19 +34,13 @@ namespace Market.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    test = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Power = table.Column<double>(type: "float", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     DateCreate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TypeProduct = table.Column<int>(type: "int", nullable: false),
-                    Avatar = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Avatar2 = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Avatar3 = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Avatar4 = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    Avatar5 = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
+                    TypeProduct = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -66,6 +60,26 @@ namespace Market.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Photos",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ImageData = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    ProductId = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Photos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Photos_Products_ProductId",
+                        column: x => x.ProductId,
+                        principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -124,7 +138,8 @@ namespace Market.Migrations
                     Post = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Payment = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Comments = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BasketId = table.Column<long>(type: "bigint", nullable: false)
+                    BasketId = table.Column<long>(type: "bigint", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -139,14 +154,14 @@ namespace Market.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Avatar", "Avatar2", "Avatar3", "Avatar4", "Avatar5", "DateCreate", "Description", "Model", "Name", "Power", "Price", "TypeProduct", "test" },
+                columns: new[] { "Id", "DateCreate", "Description", "Model", "Name", "Power", "Price", "TypeProduct" },
                 values: new object[,]
                 {
-                    { 1L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3734), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Zepline", "Мультиварка", 900.0, 2500m, 4, 0 },
-                    { 2L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3811), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Пончо-намет 3 в 1", "Дощовик", 0.0, 800m, 0, 0 },
-                    { 3L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3817), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Rainberg RB-653TB", "Пилосос", 4200.0, 3000m, 2, 0 },
-                    { 4L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3822), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Lacoste", "Труси чоловічі", 900.0, 120m, 3, 0 },
-                    { 5L, null, null, null, null, null, new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3827), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Grunhelm", "М'ясорубка", 900.0, 3000m, 4, 0 }
+                    { 1L, new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3511), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Zepline", "Мультиварка", 900.0, 2500m, 4 },
+                    { 2L, new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3556), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Пончо-намет 3 в 1", "Дощовик", 0.0, 800m, 0 },
+                    { 3L, new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3559), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Rainberg RB-653TB", "Пилосос", 4200.0, 3000m, 2 },
+                    { 4L, new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3562), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Lacoste", "Труси чоловічі", 900.0, 120m, 3 },
+                    { 5L, new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3565), "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Grunhelm", "М'ясорубка", 900.0, 3000m, 4 }
                 });
 
             migrationBuilder.InsertData(
@@ -180,6 +195,11 @@ namespace Market.Migrations
                 column: "BasketId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Photos_ProductId",
+                table: "Photos",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Profiles_UserId",
                 table: "Profiles",
                 column: "UserId",
@@ -196,13 +216,16 @@ namespace Market.Migrations
                 name: "Orders");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Photos");
 
             migrationBuilder.DropTable(
                 name: "Profiles");
 
             migrationBuilder.DropTable(
                 name: "Baskets");
+
+            migrationBuilder.DropTable(
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "Users");

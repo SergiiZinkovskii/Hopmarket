@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230525161014_first")]
+    [Migration("20230626070244_first")]
     partial class first
     {
         /// <inheritdoc />
@@ -124,11 +124,36 @@ namespace Market.Migrations
                     b.Property<long?>("ProductId")
                         .HasColumnType("bigint");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BasketId");
 
                     b.ToTable("Orders", (string)null);
+                });
+
+            modelBuilder.Entity("Market.Domain.Entity.Photo", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<long>("ProductId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Photos", (string)null);
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.Product", b =>
@@ -138,21 +163,6 @@ namespace Market.Migrations
                         .HasColumnType("bigint");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<byte[]>("Avatar")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("Avatar2")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("Avatar3")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("Avatar4")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("Avatar5")
-                        .HasColumnType("varbinary(max)");
 
                     b.Property<DateTime>("DateCreate")
                         .HasColumnType("datetime2");
@@ -178,9 +188,6 @@ namespace Market.Migrations
                     b.Property<int>("TypeProduct")
                         .HasColumnType("int");
 
-                    b.Property<int>("test")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.ToTable("Products", (string)null);
@@ -189,62 +196,57 @@ namespace Market.Migrations
                         new
                         {
                             Id = 1L,
-                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3734),
+                            DateCreate = new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3511),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Zepline",
                             Name = "Мультиварка",
                             Power = 900.0,
                             Price = 2500m,
-                            TypeProduct = 4,
-                            test = 0
+                            TypeProduct = 4
                         },
                         new
                         {
                             Id = 2L,
-                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3811),
+                            DateCreate = new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3556),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Пончо-намет 3 в 1",
                             Name = "Дощовик",
                             Power = 0.0,
                             Price = 800m,
-                            TypeProduct = 0,
-                            test = 0
+                            TypeProduct = 0
                         },
                         new
                         {
                             Id = 3L,
-                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3817),
+                            DateCreate = new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3559),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Rainberg RB-653TB",
                             Name = "Пилосос",
                             Power = 4200.0,
                             Price = 3000m,
-                            TypeProduct = 2,
-                            test = 0
+                            TypeProduct = 2
                         },
                         new
                         {
                             Id = 4L,
-                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3822),
+                            DateCreate = new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3562),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Lacoste",
                             Name = "Труси чоловічі",
                             Power = 900.0,
                             Price = 120m,
-                            TypeProduct = 3,
-                            test = 0
+                            TypeProduct = 3
                         },
                         new
                         {
                             Id = 5L,
-                            DateCreate = new DateTime(2023, 5, 25, 19, 10, 14, 387, DateTimeKind.Local).AddTicks(3827),
+                            DateCreate = new DateTime(2023, 6, 26, 10, 2, 44, 76, DateTimeKind.Local).AddTicks(3565),
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                             Model = "Grunhelm",
                             Name = "М'ясорубка",
                             Power = 900.0,
                             Price = 3000m,
-                            TypeProduct = 4,
-                            test = 0
+                            TypeProduct = 4
                         });
                 });
 
@@ -345,6 +347,17 @@ namespace Market.Migrations
                     b.Navigation("Basket");
                 });
 
+            modelBuilder.Entity("Market.Domain.Entity.Photo", b =>
+                {
+                    b.HasOne("Market.Domain.Entity.Product", "Product")
+                        .WithMany("Photos")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Market.Domain.Entity.Profile", b =>
                 {
                     b.HasOne("Market.Domain.Entity.User", "User")
@@ -359,6 +372,11 @@ namespace Market.Migrations
             modelBuilder.Entity("Market.Domain.Entity.Basket", b =>
                 {
                     b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Market.Domain.Entity.Product", b =>
+                {
+                    b.Navigation("Photos");
                 });
 
             modelBuilder.Entity("Market.Domain.Entity.User", b =>
