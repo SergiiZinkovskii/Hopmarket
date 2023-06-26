@@ -38,12 +38,12 @@ namespace Market.Controllers
 
 
         [HttpPost]
-            public IActionResult AddComment(int productId, string text)
+            public async Task <IActionResult> AddComment(int productId, string text)
             {
 
             string _author = User.Identity.Name; 
                 
-            _commentService.Create(productId ,_author, text);
+            await _commentService.CreateAsync(productId ,_author, text);
                 return Ok();
             }
         }

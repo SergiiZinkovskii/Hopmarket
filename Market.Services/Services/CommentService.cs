@@ -22,7 +22,7 @@ namespace Market.Services.Services
             _commentRepository = commentRepository;
         }
 
-        public async Task<IBaseResponse<Comment>> Create(int productId, string autor, string text)
+        public async Task<IBaseResponse<Comment>> CreateAsync(int productId, string autor, string text)
         {
                  var comment = new Comment
                 {

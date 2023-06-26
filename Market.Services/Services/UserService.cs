@@ -69,7 +69,7 @@ namespace Market.Service.Implementations
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[UserService.Create] error: {ex.Message}");
+                _logger.LogError(ex, $"[UserService.CreateAsync] error: {ex.Message}");
                 return new BaseResponse<User>()
                 {
                     StatusCode = StatusCode.InternalServerError,

@@ -148,7 +148,7 @@ namespace Market.Services.Services
             {
                 return new BaseResponse<Product>()
                 {
-                    Description = $"[Create] : {ex.Message}",
+                    Description = $"[CreateAsync] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
                 };
             }

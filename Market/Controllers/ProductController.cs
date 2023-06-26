@@ -48,8 +48,6 @@ namespace Market.Controllers
 			return View("Error", $"{response.Description}");
 		}
 
-		public IActionResult Compare() => PartialView();
-
 
 		[HttpGet]
 		public async Task<IActionResult> Save(int id, CancellationToken cancellationToken)
