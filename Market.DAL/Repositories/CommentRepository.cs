@@ -1,5 +1,6 @@
 ﻿using Market.DAL.Interfaces;
 using Market.Domain.Entity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,9 +29,9 @@ namespace Market.DAL.Repositories
 
         }
 
-        public Task<Comment> Find(long id, CancellationToken cancellationToken)
+        public async Task<Comment> Find(long id, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await GetAll().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
         }
 
         public IQueryable<Comment> GetAll()

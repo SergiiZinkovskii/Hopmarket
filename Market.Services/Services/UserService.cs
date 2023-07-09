@@ -29,7 +29,7 @@ namespace Market.Service.Implementations
             _proFileRepository = proFileRepository;
         }
 
-        public async Task<IBaseResponse<User>> Create(UserViewModel model)
+        public async Task<IBaseResponse<User>> CreateAsync(UserViewModel model)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<BaseResponse<IEnumerable<UserViewModel>>> GetUsers()
+        public async Task<BaseResponse<IEnumerable<UserViewModel>>> GetUsersAsync()
         {
             try
             {
@@ -132,7 +132,7 @@ namespace Market.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<bool>> DeleteUser(long id)
+        public async Task<IBaseResponse<bool>> DeleteUserAsync(long id)
         {
             try
             {

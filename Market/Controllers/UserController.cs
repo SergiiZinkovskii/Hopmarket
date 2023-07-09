@@ -20,7 +20,7 @@ namespace Market.Controllers
 
         public async Task<IActionResult> GetUsers()
         {
-            var response = await _userService.GetUsers();
+            var response = await _userService.GetUsersAsync();
             if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
                 return View(response.Data);
@@ -30,7 +30,7 @@ namespace Market.Controllers
 
         public async Task<IActionResult> DeleteUser(long id)
         {
-            var response = await _userService.DeleteUser(id);
+            var response = await _userService.DeleteUserAsync(id);
             if (response.StatusCode == Domain.Enum.StatusCode.OK)
             {
                 return RedirectToAction("GetUsers");
@@ -45,7 +45,7 @@ namespace Market.Controllers
         {
             if (ModelState.IsValid)
             {
-                var response = await _userService.Create(model);
+                var response = await _userService.CreateAsync(model);
                 if (response.StatusCode == Domain.Enum.StatusCode.OK)
                 {
                     return Json(new { description = response.Description });

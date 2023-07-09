@@ -5,9 +5,6 @@ using Market.DAL.Repositories;
 using Market.Domain.Entity;
 using Market.Domain.Enum;
 using Market.Domain.Extensions;
-using Market.Domain.Response;
-using Market.Domain.ViewModels.Product;
-using Market.Service.Implementations;
 using Market.Services.Services;
 using NSubstitute;
 using Shouldly;
@@ -15,16 +12,19 @@ using Xunit;
 
 namespace Market.Services.Tests
 {
-	public class ProductServiceTest
+    public class ProductServiceTest
 	{
 		private readonly ProductService _productService;
-		private readonly ProductRepository _productRepository;
+		private readonly IBaseRepository<Product> _productRepository;
+        private readonly IBaseRepository<Comment> _commentRepository;
 
 
-		public ProductServiceTest()
+        public ProductServiceTest()
 		{
-			_productRepository = Substitute.For<ProductRepository>();
-			_productService = new ProductService(_productRepository);
+
+			_productRepository = Substitute.For<IBaseRepository<Product>>();
+            _commentRepository = Substitute.For<IBaseRepository<Comment>>();
+            _productService = new ProductService(_productRepository, _commentRepository);
 		}
 
 		[Fact]

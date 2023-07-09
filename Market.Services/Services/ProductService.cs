@@ -22,10 +22,10 @@ namespace Market.Services.Services
             _commentRepository = commentRepository;
         }
 
-        public ProductService(ProductRepository productRepository)
-        {
-            this.productRepository = productRepository;
-        }
+        //public ProductService(IBaseRepository<Product> productRepository)
+        //{
+        //    this.productRepository = (ProductRepository?)productRepository;
+        //}
 
         public BaseResponse<Dictionary<int, string>> GetTypes()
         {
@@ -73,7 +73,7 @@ namespace Market.Services.Services
 			        TypeProduct = product.TypeProduct.GetDisplayName(),
 			        Power = product.Power,
 			        ProdModel = product.Model,
-                    Comments = await _commentRepository.GetAll().Where(c => c.ProductId == id).ToListAsync(),
+                    Comments = await _commentRepository.Find(product.Id, cancellationToken),
                     Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
 		        };
         }

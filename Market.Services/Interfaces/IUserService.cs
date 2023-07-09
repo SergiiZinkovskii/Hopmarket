@@ -8,9 +8,9 @@ namespace Market.Service.Interfaces
 {
     public interface IUserService
     {
-        Task<IBaseResponse<User>> Create(UserViewModel model);
+        Task<IBaseResponse<User>> CreateAsync(UserViewModel model);
         BaseResponse<Dictionary<int, string>> GetRoles();
-        Task<BaseResponse<IEnumerable<UserViewModel>>> GetUsers();
-        Task<IBaseResponse<bool>> DeleteUser(long id);
+        Task<BaseResponse<IEnumerable<UserViewModel>>> GetUsersAsync();
+        Task<IBaseResponse<bool>> DeleteUserAsync(long id);
     }
 }
