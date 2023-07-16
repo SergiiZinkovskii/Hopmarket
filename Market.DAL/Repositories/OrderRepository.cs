@@ -3,7 +3,7 @@ using Market.Domain.Entity;
 
 namespace Market.DAL.Repositories
 {
-    public class OrderRepository : IBaseRepository<Order>
+    public class OrderRepository : IOrderRepository
     {
         private readonly ApplicationDbContext _db;
 

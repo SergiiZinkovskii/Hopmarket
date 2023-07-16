@@ -18,11 +18,11 @@ namespace Market.Service.Implementations
     public class UserService : IUserService
     {
         private readonly ILogger<UserService> _logger;
-        private readonly IBaseRepository<Profile> _proFileRepository;
-        private readonly IBaseRepository<User> _userRepository;
+        private readonly IProfileRepository _proFileRepository;
+        private readonly IUserRepository _userRepository;
 
-        public UserService(ILogger<UserService> logger, IBaseRepository<User> userRepository,
-            IBaseRepository<Profile> proFileRepository)
+        public UserService(ILogger<UserService> logger, IUserRepository userRepository,
+            IProfileRepository proFileRepository)
         {
             _logger = logger;
             _userRepository = userRepository;

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
-    public class ProfileRepository : IBaseRepository<Profile>
+    public class ProfileRepository : IProfileRepository
     {
         private readonly ApplicationDbContext _dbContext;
 

@@ -13,10 +13,10 @@ namespace Market.Services.Services
     public class CommentService : ICommentService
 
     {
-        private readonly IBaseRepository<User> _userRepository;
-        private readonly IBaseRepository<Comment> _commentRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly ICommentRepository _commentRepository;
 
-        public CommentService(IBaseRepository<User> userRepository, IBaseRepository<Comment> commentRepository)
+        public CommentService(IUserRepository userRepository, ICommentRepository commentRepository)
         {
             _userRepository = userRepository;
             _commentRepository = commentRepository;

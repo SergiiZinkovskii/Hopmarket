@@ -4,13 +4,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
-    public class ProductRepository : IBaseRepository<Product>
+    public class ProductRepository : IProductRepository
     {
         private readonly ApplicationDbContext _db;
 
         public ProductRepository(ApplicationDbContext db)
         {
             _db = db;
+        }
+
+        public ProductRepository()
+        {
         }
 
         public async Task<Product?> Find(long id, CancellationToken cancellationToken)

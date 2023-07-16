@@ -6,7 +6,7 @@ namespace Market.DAL.Interfaces
 {
     public interface IBaseRepository<T>
     {
-        Task<T> Find(long id, CancellationToken cancellationToken);
+        
         Task Create(T entity);
 
         IQueryable<T> GetAll();

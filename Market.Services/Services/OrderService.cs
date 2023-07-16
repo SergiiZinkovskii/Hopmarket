@@ -10,10 +10,10 @@ namespace Market.Service.Implementations
 {
     public class OrderService : IOrderService
     {
-        private readonly IBaseRepository<User> _userRepository;
-        private readonly IBaseRepository<Order> _orderRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly IOrderRepository _orderRepository;
 
-        public OrderService(IBaseRepository<User> userRepository, IBaseRepository<Order> orderRepository)
+        public OrderService(IUserRepository userRepository, IOrderRepository orderRepository)
         {
             _userRepository = userRepository;
             _orderRepository = orderRepository;

@@ -17,9 +17,9 @@ namespace Market.Service.Implementations
     public class ProfileService : IProfileService
     {
         private readonly ILogger<ProfileService> _logger;
-        private readonly IBaseRepository<Profile> _profileRepository;
+        private readonly IProfileRepository _profileRepository;
 
-        public ProfileService(IBaseRepository<Profile> profileRepository,
+        public ProfileService(IProfileRepository profileRepository,
             ILogger<ProfileService> logger)
         {
             _profileRepository = profileRepository;

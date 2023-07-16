@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Market.DAL.Repositories
 {
-    public class CommentRepository : IBaseRepository<Comment>
+    public class CommentRepository : ICommentRepository
     {
         private readonly ApplicationDbContext _db;
         public CommentRepository(ApplicationDbContext dbContext)
@@ -29,10 +29,13 @@ namespace Market.DAL.Repositories
 
         }
 
-        public async Task<Comment> Find(long id, CancellationToken cancellationToken)
+        public async Task<List<Comment>> FindAsync(long productId)
         {
-            return await GetAll().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+            return await _db.Comments
+       .Where(c => c.ProductId == productId)
+       .ToListAsync();
         }
+
 
         public IQueryable<Comment> GetAll()
         {

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
-    public class BasketRepository : IBaseRepository<Basket>
+    public class BasketRepository : IBasketRepository
     {
         private readonly ApplicationDbContext _db;
 
@@ -38,9 +38,6 @@ namespace Market.DAL.Repositories
             return entity;
         }
 
-        public async Task<Basket> Find(long id, CancellationToken cancellationToken)
-        {
-            return await GetAll().FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
-        }
+
     }
 }

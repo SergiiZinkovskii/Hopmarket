@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Market.DAL.Repositories
 {
-    public class PhotoRepository : IBaseRepository<Photo>
+    public class PhotoRepository : IPhotoRepository
     {
         private readonly ApplicationDbContext _db;
 

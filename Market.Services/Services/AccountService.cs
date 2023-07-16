@@ -16,14 +16,14 @@ namespace Market.Service.Implementations
 {
     public class AccountService : IAccountService
     {
-        private readonly IBaseRepository<Profile> _proFileRepository;
-        private readonly IBaseRepository<User> _userRepository;
-        private readonly IBaseRepository<Basket> _basketRepository;
+        private readonly IProfileRepository _proFileRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly IBasketRepository _basketRepository;
         private readonly ILogger<AccountService> _logger;
 
-        public AccountService(IBaseRepository<User> userRepository,
-            ILogger<AccountService> logger, IBaseRepository<Profile> proFileRepository,
-            IBaseRepository<Basket> basketRepository)
+        public AccountService(IUserRepository userRepository,
+            ILogger<AccountService> logger, IProfileRepository proFileRepository,
+            IBasketRepository basketRepository)
         {
             _userRepository = userRepository;
             _logger = logger;

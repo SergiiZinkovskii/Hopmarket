@@ -12,20 +12,16 @@ namespace Market.Services.Services
 {
     public class ProductService : IProductService
     {
-        private readonly IBaseRepository<Product> _productRepository;
-        private readonly IBaseRepository<Comment> _commentRepository;
-        private ProductRepository productRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly ICommentRepository _commentRepository;
+        
 
-        public ProductService(IBaseRepository<Product> productRepository, IBaseRepository<Comment> commentRepository)
+        public ProductService(IProductRepository productRepository, ICommentRepository commentRepository)
         {
             _productRepository = productRepository;
             _commentRepository = commentRepository;
         }
 
-        //public ProductService(IBaseRepository<Product> productRepository)
-        //{
-        //    this.productRepository = (ProductRepository?)productRepository;
-        //}
 
         public BaseResponse<Dictionary<int, string>> GetTypes()
         {
@@ -42,7 +38,6 @@ namespace Market.Services.Services
                 };
             }
 
-            // How can I get exceptions here?
             catch (Exception ex)
             {
                 return new BaseResponse<Dictionary<int, string>>()
@@ -73,7 +68,7 @@ namespace Market.Services.Services
 			        TypeProduct = product.TypeProduct.GetDisplayName(),
 			        Power = product.Power,
 			        ProdModel = product.Model,
-                    Comments = await _commentRepository.Find(product.Id, cancellationToken),
+                    Comments = await _commentRepository.FindAsync(product.Id),
                     Photos = product.Photos.Select(p => p.ImageData).ToList() // Список фото товару
 		        };
         }

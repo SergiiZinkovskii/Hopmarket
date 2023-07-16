@@ -13,13 +13,13 @@ namespace Market
     {
         public static void InitializeRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IBaseRepository<Product>, ProductRepository>();
-            services.AddScoped<IBaseRepository<User>, UserRepository>();
-            services.AddScoped<IBaseRepository<Profile>, ProfileRepository>();
-            services.AddScoped<IBaseRepository<Basket>, BasketRepository>();
-            services.AddScoped<IBaseRepository<Order>, OrderRepository>();
-            services.AddScoped<IBaseRepository<Comment>, CommentRepository>();
-            services.AddScoped<IBaseRepository<Photo>, PhotoRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProfileRepository, ProfileRepository>();
+            services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository >();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+            services.AddScoped<IPhotoRepository, PhotoRepository>();
         }
 
         public static void InitializeServices(this IServiceCollection services)
@@ -31,7 +31,7 @@ namespace Market
             services.AddScoped<IBasketService, BasketService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ICommentService, CommentService>();
-         
+
         }
     }
 }
