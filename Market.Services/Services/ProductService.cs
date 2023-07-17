@@ -117,7 +117,7 @@ namespace Market.Services.Services
                     Description = model.Description,
                     DateCreate = DateTime.Now,
                     Power = model.Power,
-                    TypeProduct = (TypeProduct)Convert.ToInt32(model.TypeProduct),
+                    TypeProduct = Enum.Parse<TypeProduct>(model.TypeProduct),
                     Price = model.Price,
                     Photos = new List<Photo>()
                 };
@@ -228,6 +228,7 @@ namespace Market.Services.Services
         {
             try
             {
+                // ToDo Move this to repository level
                 var products = _productRepository.GetAll()
                     .Include(p => p.Photos) 
                     .ToList();
